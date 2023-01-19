@@ -18,7 +18,7 @@ const Text = () => {
               <div className='fieldcont'>
                 
                   <div class="form-group">
-                    <label className="p-2">Campaign Nick Name</label><br/>
+                    <label className="p-2">Campaign  Name</label><br/>
 
                     <input type="text" name="" class="form-control " id="carddesc" placeholder="Campaign Nick Name" required minlength="5" maxlength="10" size="10"/>
                   </div>
