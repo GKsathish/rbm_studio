@@ -1,0 +1,194 @@
+
+.textcont{
+    background: #dee2e6;
+    padding:20px;
+    
+ }
+ h1{
+    margin-top:20px;
+    padding:15px;
+    color:#763B75;
+ }
+
+ /* .img-preview2 {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 492px;
+    width: 260px !important;
+    background-size: auto;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 43px;
+    border-bottom-left-radius: 60px 59px;
+    border-bottom-right-radius: 63px;
+} */
+
+ .fieldcont{
+    background: #fff;
+    height:500px;
+    width: 45%;
+    margin:20px;
+    padding:50px;
+    border-radius: 5px;
+    
+ }
+ .fieldcont1{
+    background: #fff;
+    height:560px;
+    width: 45%;
+    margin:20px;
+    padding:20px;
+    border-radius: 5px;
+ }
+.btn{
+    background:#763B75;
+    padding:10px;
+    height:50px;
+    width:200px;
+    border-radius: 5px;
+    color:#fff;
+    border: none;
+    margin-right:35px;
+}
+.btn1{
+    background:#763B75;
+    padding:10px;
+    height:50px;
+    width:200px;
+    border-radius: 5px;
+    color:#fff;
+    border: none;
+    margin-left:75px;
+}
+
+
+
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+ .rowcont{
+    display: flex;
+    justify-content: flex-start;
+ }
+
+
+ .form-group label {
+    font-size: 14px;
+    
+    line-height: 1;
+    vertical-align: top;
+    margin-bottom: 15px;
+}
+.form-control {
+    border: 1px solid #ccc;
+    font-family: "ubuntu-regular", sans-serif;
+    font-size: 0.8125rem;
+}
+textarea.form-control {
+    min-height: 2.875rem;
+}
+.form-control {
+    display: block;
+    width: 92%;
+    padding: 10px 20px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1;
+    /* color: #212529; */
+    background-color: color(white);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.form-control1 {
+    display: block;
+    width: 100%;
+    padding:  15px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1;
+    /* color: #212529; */
+    background-color: color(white);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+
+
+ .myst{
+   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+   height: 440px;
+   width: 220px;
+           font-size:30px;
+         
+           margin-left:112px;
+
+           
+           padding:20px;
+
+
+           
+           }
+
+
+
+@media only screen and (max-width:1020px){
+    .rowcont{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+     }
+     .fieldcont1{
+        width:80%;
+        padding:20px;
+        margin:20px;
+     }
+     .fieldcont{
+        width: 80%;
+        padding:20px;
+        margin:20px;
+
+     }
+     .btn{
+        margin:3px;
+        width: 120px;
+     }
+     .btn1{
+        margin:3px;
+        width:120px;
+     }
+     .form-control{
+        width:85% !important;
+     }
+
+
+ .myst{
+   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+   height: 442px;
+   width: 222px;
+           font-size:30px;
+         
+           margin-left:-4px;
+
+           
+
+
+           
+           }
+
+ }
