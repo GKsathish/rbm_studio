@@ -1,3 +1,8 @@
+
+body{
+ margin: left 0;%;
+
+}
 .App {
   text-align: center;
 }
@@ -67,3 +72,6 @@
   min-width: 0;
   width: 100%;
 }
+
+/* ----------------------php style. css ----------------------- */
+  
