@@ -7,46 +7,49 @@ const Text = () => {
 
 
   return (
-<div className='textcont'>
+<div className='textcontT'>
   <div > <h1 >Text Message Campaign</h1>
 
     </div>   
 
-        <div className='rowcont'>
+        <div className='rowcontT'>
 
           
-              <div className='fieldcont'>
+              <div className='fieldcontT'>
                 
-                  <div class="form-group">
+                  <div class="form-groupT">
                     <label className="p-2">Campaign  Name</label><br/>
 
-                    <input type="text" name="" class="form-control " id="carddesc" placeholder="Campaign Nick Name" required minlength="5" maxlength="10" size="10"/>
+                    <input type="text" name="" class="form-controlT" id="carddesc" placeholder="Campaign Nick Name" required minlength="5" maxlength="10" size="10"/>
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-groupT">
                     <label>Select agent</label><br/>
-                    <select class="form-control1"  name="agent" required>
+                    <select class="form-controlT"  name="agent" required>
                       <option>--Select Agent--</option>
 
 
                     </select>
                   </div>
-                  <div class="form-group">
+                
+               
+
+                  <div class="form-groupT">
                     <label>Message</label><br/>
                     
-                    <textarea class="form-control" id="messagetext" name="textmessage" rows="5" placeholder="Please enter text message" minlength="10" maxlength="320" size="320" required></textarea>
+                    <textarea class="form-controlT" id="messagetext" name="textmessage" rows="5" placeholder="Please enter text message" minlength="10" maxlength="320" size="320" required></textarea>
                   </div>
                   
-                  <div class="form-group">
+                  <div class="form-groupT">
                     <label>Select Base File</label><br/>
-                    <select class="form-control1"  name="rcsfilenamerich" required>
+                    <select class="form-controlT"  name="rcsfilenamerich" required>
                       <option>--Select File--</option>
 
 
                     </select>
                   </div>
-                  <button type="submit" name="textsubmit" class="btn " >Test Campaign</button>
-                  <button type="submit" name="settest" class="btn1" >Set Campaign</button>
+                  <button type="submit" name="textsubmit" class="btnT " >Test Campaign</button>
+                  <button type="submit" name="settest" class="btnT1" >Set Campaign</button>
                 
               
           
@@ -55,7 +58,7 @@ const Text = () => {
 
               </div>
           
-              <div className='fieldcont1'>
+              <div className='fieldcontT1'>
               
                           
                               <center>Message Preview</center><br/>

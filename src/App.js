@@ -9,6 +9,7 @@ import Richcard from './Component/Campaign/Richcard';
 import Corousel from './Component/Campaign/Corousel';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Reports from './Component/Reports/Reports';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         
         <Route path="/Richcard" element={<Richcard/>}/>
         <Route path="/Corousel" element={<Corousel/>}/>
+        <Route path="/Reports" element={<Reports/>}/>
 
       
       </Routes>

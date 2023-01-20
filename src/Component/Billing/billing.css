@@ -1,0 +1,116 @@
+.rowcont{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+ }
+
+
+.cont-add{
+  background: #ffff;
+  width:45%;
+  height:350px;
+  padding:20px;
+  margin:20px;
+  border-radius: 5px    ;
+}
+.main-panel{
+    background:#dee2e6;
+    padding: 10px;
+}
+.page-title{
+    margin-top:5px;
+    padding-left:20px;
+    color:#763B75;
+
+}
+.form-controlB{
+    width:91% !important;
+    margin-bottom:20px;
+    padding: 10px;
+}
+.bbtnB{
+    background:#763B75;
+    padding:10px;
+    height:50px;
+    width:200px;
+    border-radius: 5px;
+    color:#fff;
+    border: none;
+    margin-right:2px;
+}
+
+.bbtnBB{
+
+    background:#763B75;
+    padding:10px;
+    height:50px;
+    width:200px;
+    border-radius: 5px;
+    color:#fff;
+    border: none;
+}
+
+.Invoice{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-add1{
+    background: #ffff;
+    width:40%;
+    height:10%;
+    padding:10px;
+    margin:20px;
+    border-radius: 5px    
+}
+
+.form-controlBB{
+    width:95% !important;
+    padding: 10px;
+    margin-bottom: 20px;
+
+ }
+@media only screen and (max-width:1020px){
+    .cont-add {
+        background: #ffff;
+        width: 80%;
+        height: 20%;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+    }
+
+
+    .rowcont{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+     }
+     .fieldcont1{
+        width:80%;
+        padding:20px;
+        margin:20px;
+     }
+     .fieldcont{
+        width: 80%;
+        padding:20px;
+        margin:20px;
+
+     }
+     .bbtnB{
+        margin:5px;
+        width: 110px;
+     }
+
+     .form-controlB{
+        width:80% !important;
+        padding: 10px;
+     }
+     .form-controlBB{
+        width:89% !important;
+        padding: 10px;
+        margin-bottom: 20px;
+     }
+
+
+}

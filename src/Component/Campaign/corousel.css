@@ -1,5 +1,5 @@
 
-.textcontT{
+.textcont{
     background: #dee2e6;
     padding:20px;
     
@@ -22,24 +22,24 @@
     border-bottom-right-radius: 63px;
 } */
 
- .fieldcontT{
+ .fieldcont{
     background: #fff;
-    height:500px;
+    height:100%;
     width: 45%;
     margin:20px;
     padding:50px;
     border-radius: 5px;
     
  }
- .fieldcontT1{
+ .fieldcont1{
     background: #fff;
-    height:560px;
+    height:100%;
     width: 45%;
     margin:20px;
     padding:20px;
     border-radius: 5px;
  }
-.btnT{
+.btn{
     background:#763B75;
     padding:10px;
     height:50px;
@@ -49,7 +49,7 @@
     border: none;
     margin-right:35px;
 }
-.btnT1{
+.btn1{
     background:#763B75;
     padding:10px;
     height:50px;
@@ -63,32 +63,31 @@
 
 
 
-  .form-groupT {
+  .form-group {
     margin-bottom: 20px;
   }
- .rowcontT{
+ .rowcont{
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
  }
 
 
- .form-groupT label {
+ .form-group label {
     font-size: 14px;
     
     line-height: 1;
     vertical-align: top;
     margin-bottom: 15px;
 }
-.form-controlT {
+.form-control {
     border: 1px solid #ccc;
     font-family: "ubuntu-regular", sans-serif;
     font-size: 0.8125rem;
 }
-textarea.form-controlT {
+textarea.form-control {
     min-height: 2.875rem;
 }
-.form-controlT {
+.form-control {
     display: block;
     width: 92%;
     padding: 10px 20px;
@@ -108,7 +107,7 @@ textarea.form-controlT {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
-.form-controlT1 {
+.form-control1 {
     display: block;
     width: 100%;
     padding:  15px;
@@ -148,32 +147,50 @@ textarea.form-controlT {
 
 
 
+           .card1 {
+            padding: 20px;
+            border: 1px solid #763B75;
+            margin-bottom: 30px;
+        }
+
+        .cr {
+            padding: 10px;
+            background: #F6B23C;
+            width: 96%;
+            color: #333;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+
+
+
 @media only screen and (max-width:1020px){
-    .rowcontT{
+    .rowcont{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
      }
-     .fieldcontT1{
+     .fieldcont1{
         width:80%;
         padding:20px;
         margin:20px;
      }
-     .fieldcontT{
+     .fieldcont{
         width: 80%;
         padding:20px;
         margin:20px;
 
      }
-     .btnT{
+     .btn{
         margin:3px;
         width: 120px;
      }
-     .btnT1{
+     .btn1{
         margin:3px;
         width:120px;
      }
-     .form-controlT{
+     .form-control{
         width:85% !important;
      }
 
