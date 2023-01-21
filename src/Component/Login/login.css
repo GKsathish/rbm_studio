@@ -1,0 +1,51 @@
+.log-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.r-cont{
+width:50%;
+padding-top:200px;
+}
+.l-cont{
+    width:50%;
+    /* height: px; */
+
+}
+.log-img{
+    height: 100vh;
+    width: 100%;
+}
+.form-controll{
+    width:60%;
+    padding: 10px;
+    margin: 10px;
+}
+.btnl{
+  margin-top: 10px;
+  height: 40px;
+  background:#763B75;
+  width:150px; 
+  color:#fff;
+  border-radius: 15px;
+  padding: 10px; 
+  border: none;
+}
+.login{
+    background-image: url("/home/satish/rbm_studio/public/images/login_slide.jpeg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width:100%;
+   
+    /* align-items: center; */
+}
+.log{
+    text-align: center;
+    color:white;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+

@@ -1,5 +1,5 @@
 
-.textcontT{
+.textcontR{
     background: #dee2e6;
     padding:10px;
     margin-left:10%;
@@ -24,24 +24,24 @@
     border-bottom-right-radius: 63px;
 } */
 
- .fieldcontT{
+ .fieldcontR{
     background: #fff;
-    height:500px;
+    height:750px;
     width: 40%;
     margin:20px;
     padding:50px;
     border-radius: 5px;
     
  }
- .fieldcontT1{
+ .fieldcontR1{
     background: #fff;
-    height:560px;
+    height:810px;
     width: 40%;
     margin:20px;
     padding:20px;
     border-radius: 5px;
  }
-.btnT{
+.btnR{
     background:#763B75;
     padding:10px;
     height:50px;
@@ -52,7 +52,7 @@
     /* margin-right:25px; */
     margin-right: 35px;
 }
-.btnT1{
+.btnR1{
     background:#763B75;
     padding:10px;
     height:50px;
@@ -67,32 +67,32 @@
 
 
 
-  .form-groupT {
+  .from-groupR {
     margin-bottom: 20px;
   }
- .rowcontT{
+ .rowcontR{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
  }
 
 
- .form-groupT label {
+ .from-groupR label {
     font-size: 14px;
     
     line-height: 1;
     vertical-align: top;
     margin-bottom: 15px;
 }
-.form-controlT {
+.from-controlR {
     border: 1px solid #ccc;
     font-family: "ubuntu-regular", sans-serif;
     font-size: 0.8125rem;
 }
-textarea.form-controlT {
+textarea.from-controlR {
     min-height: 2.875rem;
 }
-.form-controlT {
+.from-controlR {
     display: block;
     width: 92%;
     padding: 10px 20px;
@@ -112,7 +112,7 @@ textarea.form-controlT {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
-.form-controlT1 {
+.from-controlR1 {
     display: block;
     width: 100%;
     padding:  15px;
@@ -153,31 +153,31 @@ textarea.form-controlT {
 
 
 @media only screen and (max-width:1020px){
-    .rowcontT{
+    .rowcontR{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
      }
-     .fieldcontT1{
+     .fieldcontR1{
         width:80%;
         padding:20px;
         margin:20px;
      }
-     .fieldcontT{
+     .fieldcontR{
         width: 80%;
         padding:20px;
         margin:20px;
 
      }
-     .btnT{
+     .btnR{
         margin:3px;
         width: 120px;
      }
-     .btnT1{
+     .btnR1{
         margin:3px;
         width:120px;
      }
-     .form-controlT{
+     .from-controlR{
         width:85% !important;
      }
 

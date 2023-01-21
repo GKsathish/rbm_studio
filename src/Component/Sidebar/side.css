@@ -7,10 +7,11 @@
     z-index: 100;
     padding: 48px 0 0;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background: #fff!important;
 }
 #sidebar-wrapper{
     min-height: 100vh !important;
-    width: 100vw;
+    width: 10vw;
     margin-left: -1rem;
     -webkit-transition: margin .25s ease-out;
     -moz-transition: margin .25s ease-out;
@@ -24,5 +25,5 @@
 
 #page-content-wrapper {
     min-width: 0;
-    width: 100%;
+    width: 20%;
 }

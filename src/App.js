@@ -4,9 +4,12 @@ import Billing from './Component/Billing/Billing';
 import Rcscheck from './Component/Home/Rcscheck';
 import Login from './Component/Login/Login';
 import Text from './Component/Campaign/Text';
+import Newtext from './Component/Campaign/Newtext';
+import Userprofile from './Component/Userprofile/Userprofile';
 import Dashboard from './Component/Dashboard/Dashboard';
 import Richcard from './Component/Campaign/Richcard';
 import Corousel from './Component/Campaign/Corousel';
+import Header from './Component/Header/Header';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Reports from './Component/Reports/Reports';
@@ -14,6 +17,7 @@ import Reports from './Component/Reports/Reports';
 function App() {
   return (
     <>
+   {/* <Header/>  */}
 {/* <Sidebar/> */}
     <BrowserRouter>
       <Routes>
@@ -22,10 +26,12 @@ function App() {
 
         <Route  path="/Creatagent" element={<Creatagent/>}/>
         <Route path="/Billing" element={<Billing/>}/>
+        <Route path="/Userprofile" element={<Userprofile/>}/>
 
         <Route path="/Rcscheck" element={<Rcscheck/>}/>
         <Route path="/Text" element={<Text/>}/>
-        
+        <Route path="/Newtext" element={<Newtext/>}/>
+
         <Route path="/Richcard" element={<Richcard/>}/>
         <Route path="/Corousel" element={<Corousel/>}/>
         <Route path="/Reports" element={<Reports/>}/>

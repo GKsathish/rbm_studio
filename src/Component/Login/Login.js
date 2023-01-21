@@ -1,42 +1,58 @@
 import React from 'react'
+import './login.css'
 
 const Login = () => {
   return (
     
-<div class="login">
-	<div class="row">
-		<div class="col-lg-6" style={{padding: "0"}}>
-			<img src="images/login_slide.jpeg" class="log-img" alt="image1"/>
-		</div>
-            <div class="col-lg-6">
-                <div class="login-form">
-                    <h2 class="hello">Hello!</h2>
-                    <p class="hello-tag">Welcome to rbm.studio</p>
+	<div className="log-cont">
+		<div className="l-cont">
+            {/* <h1>Left area</h1> */}
+                <div className="login">
+
+
+
+<div className='log'>
+                    <h2>Hello!</h2>
+                    <p >Welcome to rbm.studio</p>
                     <br/>
+                    <p >Sign in</p>
+    
+    </div>
+                </div>
+                
+
+		</div>
+            <div className='r-cont'>
+                <div style={{textAlign:"center", margin:20  }}>
+                  
                     <form action="#" method="POST">
-                        <p class="hello-tag" style={{fontSize: "20"}}>Sign in</p>
-                        <div class="form-group form-login">
-                            <input type="text" class="form-control"  name="username" id="username" placeholder="E-mail" required/>
+                        <center><h2>Sign In</h2></center>
+                        <div>
+                            {/* <label>Email</label> */}
+                            <input type="text" class="form-controll"  name="username" id="username" placeholder="E-mail" required/>
                         </div>
-                        <div class="form-group form-login">
-                            <span class="eye">
+                        <div>
+                            {/* <span class="eye">
                                 <i class="fa fa-eye-slash"></i>
-                            </span>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required />
+                            </span> */}
+                            {/* <label>Password</label> */}
+
+                            <input type="password" class="form-controll" name="password" id="password" placeholder="Password" required />
                             
                         </div>
-                        <center style={{color:"red"}}></center>
-                        <div class="form-group form-login">
+                        
+                        <div >
                         <a href="forgetpassword.php" class="forgotpassword">Forgot password</a>
                         </div>
-                        <div class="form-group form-login">
-                            <button  name='loginsubmit' type="submit" class="rbmbnt">Login</button>
+                        <div >
+                            <button  name='loginsubmit' type="submit" className="btnl">Login</button>
                         </div>
                     </form>
                 </div>
+                {/* <h1>Right area</h1> */}
             </div>
     </div>
-</div>
+
 
 
   )
