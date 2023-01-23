@@ -7,11 +7,11 @@
 
 .cont-add{
   background: #ffff;
-  width:45%;
-  height:350px;
+  width:49%;
+  height:450px;
   padding:20px;
   margin:20px;
-  border-radius: 5px    ;
+  border-radius: 5px;
 }
 .main-panel{
     background:#dee2e6;
@@ -53,6 +53,11 @@
 .Invoice{
     display: flex;
     justify-content: space-between;
+    background: #efeeee82;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding: 10px;
+
 }
 
 .cont-add1{
@@ -65,7 +70,7 @@
 }
 
 .form-controlBB{
-    width:95% !important;
+    width:91%!important;
     padding: 10px;
     margin-bottom: 20px;
 
@@ -73,9 +78,9 @@
 @media only screen and (max-width:1020px){
     .cont-add {
         background: #ffff;
-        width: 80%;
+        width: 90%;
         height: 20%;
-        padding: 20px;
+        padding: 10px;
         margin: 20px;
         border-radius: 5px;
     }
@@ -107,7 +112,7 @@
         padding: 10px;
      }
      .form-controlBB{
-        width:89% !important;
+        width:81% !important;
         padding: 10px;
         margin-bottom: 20px;
      }

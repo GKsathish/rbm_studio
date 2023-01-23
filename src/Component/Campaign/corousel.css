@@ -195,10 +195,10 @@ textarea.form-control {
      }
 
 
- .myst{
+ .mystC{
    background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-   height: 442px;
-   width: 222px;
+   /* height: 442px;
+   width: 222px; */
            font-size:30px;
          
            margin-left:-4px;

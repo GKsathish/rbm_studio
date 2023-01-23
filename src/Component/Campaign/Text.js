@@ -62,7 +62,7 @@ const Text = () => {
               
                           
                               <center>Message Preview</center><br/>
-                              <div className='myst'>
+                              <div className='mystT'>
 
                               <div className="larger-banner"><br/>
                                       <small>

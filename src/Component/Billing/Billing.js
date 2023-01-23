@@ -14,17 +14,22 @@ const Billing = () => {
         <div >
           <div className='rowcont'>
                   <div className="cont-add">
-		                 <h3>Current Balance</h3>
+		                 <h5>Current Balance</h5>
                     <small>last payment 12/05/2022 </small>
 		                    <br/>
-                    <h3>Add Money</h3>
+                        <br/>
                     
-                       <input type="text" className="form-controlB"   placeholder=""/>
-                   
+                    <div>
+                      
+                    <h5>Add Money</h5>
+                    
+                    <input type="text" className="form-controlB"   placeholder=""/>
+                
+           
+                <button type="submit" value="" class="bbtnB"  > Transaction to bank</button>
+                 <button type="submit" value="" class="bbtnB"> Proceed to Pay</button>
               
-                   <button type="submit" value="" class="bbtnB"  > Transaction to bank</button>
-                    <button type="submit" value="" class="bbtnB"> Proceed to Pay</button>
-                 
+                      </div>
 
                 </div>
 
@@ -43,14 +48,14 @@ const Billing = () => {
                       <p>Taxes</p>
                       <p>Billable Amount</p>
                       <p>GST @18%</p>
-                      <h4>Payed Amount</h4>
+                      <h4><b>Payed Amount</b></h4>
                     </div>
                    
                     <div>
-                        <h6 >₹4,802.98</h6>
-                        <h6 >₹51,025.53</h6>
-                        <h6 >₹9,184.60</h6>
-                        <h3 >₹60,210.13</h3>
+                        <p >₹4,802.98</p>
+                        <p >₹51,025.53</p>
+                        <p >₹9,184.60</p>
+                        <h4 ><b>₹60,210.13</b></h4>
 
                     </div>
                   </div>
@@ -94,13 +99,13 @@ const Billing = () => {
 
                       <div >
                        <label for="">IFSC Code</label>
-                         <div class="col-sm-6">
+                         <div>
                         <input type="text" class="form-controlB" id="" placeholder="Enter IFSC Code number"/>
                       </div>
                       </div>
                       <div >
                        <label for="">Mode of Transfer</label>
-                         <div class="col-sm-6">
+                         <div >
                         <select class="form-controlBB" id="exampleFormControlSelect1">
                       <option>--select --</option>
                       <option>IMPS</option>

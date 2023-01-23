@@ -93,7 +93,7 @@ const Richcard = () => {
               
                           
                               <center>Card Preview</center><br/>
-                              <div className='myst'>
+                              <div className='mystR'>
 
                               <div className="larger-banner"><br/>
                                       <small>

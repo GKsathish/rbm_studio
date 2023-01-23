@@ -26,7 +26,7 @@
 
  .fieldcontT{
     background: #fff;
-    height:500px;
+    /* height:500px; */
     width: 40%;
     margin:20px;
     padding:50px;
@@ -35,7 +35,7 @@
  }
  .fieldcontT1{
     background: #fff;
-    height:560px;
+    /* height:560px; */
     width: 40%;
     margin:20px;
     padding:20px;
@@ -135,13 +135,13 @@ textarea.form-controlT {
 
 
 
- .myst{
-   background-image:url("/home/satish/rbm_studio/public/images/phone_test123.png");
-   height: 440px;
-   width: 220px;
-           font-size:30px;
+ .mystT{
+   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+   height: 480px;
+   width: 260px;
+           font-size:20px;
          
-           margin-left:112px;
+           margin-left:60px;
 
            
            padding:20px;
@@ -182,10 +182,10 @@ textarea.form-controlT {
      }
 
 
- .myst{
+ .mystT{
    background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-   height: 442px;
-   width: 222px;
+   /* height: 480px;
+   width: 222px; */
            font-size:30px;
          
            margin-left:-4px;

@@ -127,7 +127,7 @@ const Corousel = () => {
               
                           
                               <center>Corousel Preview</center><br/>
-                              <div className='myst'>
+                              <div className='mystC'>
 
                               <div className="larger-banner"><br/>
                                       <small>

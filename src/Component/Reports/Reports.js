@@ -9,12 +9,12 @@ const Reports = () => {
             {/* <div class="page-header">
              
             </div> */}
+                              <h4 style={{color: "#763b75" ,padding:8,fontSize:20}}>Reports</h4>
 
             <div class="col-lg-12 grid-margin stretch-card">
                     <div class="table-responsive-lg">
                             <div class="card scroll_dash">
                               <div class="card-body">
-                              <h4 style={{color: "#763b75" ,paddingLeft:0,fontSize:20}}>Reports</h4>
   
                                <div className="tab-cont ">
                                   <div class="form-group">

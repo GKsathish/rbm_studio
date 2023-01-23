@@ -7,7 +7,7 @@
     padding: 10px;
 }
 .user-subcont{
-    height:300px;
+    /* height:300px; */
     width:600px;
     border-radius: 8px;
     background: #fff;
@@ -18,6 +18,18 @@ h4{
     margin-bottom: 0px;
     margin-top: 10px;
 }
+.bbtnu{
+    background:#763B75;
+    padding:10px;
+    height:30px;
+    width:80px;
+    border-radius: 1px;
+    color:#fff;
+    border: none;
+    margin-left:80%;
+    float: right;
+}
+
 .tab{
     height:50px;
     width:200px;
@@ -42,23 +54,32 @@ h4{
     display: flex;
     justify-content: flex-start;
 }
+.teamcont{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
 
 @media only screen and (max-width:1020px){
 
     .user-subcont{
         height:300px;
-        width:400px;
+        width:260px;
         border-radius: 8px;
         background: #fff;
         margin: 10px;
         padding: 10px;
+        overflow-x:scroll;
     }
     .user-maincont{
-        width:100%;
+        width:80%;
         /* padding:%; */
         background:#dee2e6;
         margin-left: 10%;
         height: 100vh;
         padding: 10px;
+    }
+    .bttnu{
+        margin-left: 100%;
     }
 }
