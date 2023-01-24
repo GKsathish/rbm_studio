@@ -12,6 +12,11 @@ import Corousel from './Component/Campaign/Corousel';
 import Header from './Component/Header/Header';
 import Userprogile from './Component/Userprofile/Userprogile';
 import CampaignA from './Component/Approval/CampaignA';
+import Agent from './Component/Approval/Agent';
+import User from './Component/Approval/User';
+import Support from './Component/Support/Support';
+import Forgotpassword from './Component/Forgotpassword/Forgotpassword';
+import Faq from './Component/Foq/Faq';
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -20,9 +25,11 @@ import Reports from './Component/Reports/Reports';
 function App() {
   return (
     <>
-{/* <Sidebar/> */}
+    {/* <Sidebar/> */}
+
     <BrowserRouter>
-    {/* <Header/>  */}
+    <Header/> 
+    {/* <Sidebar/> */}
 
       <Routes>
       {/* <Route exact path="/Side" element={<Sidebar/>}/> */}
@@ -43,6 +50,12 @@ function App() {
         <Route path="/Corousel" element={<Corousel/>}/>
         <Route path="/Reports" element={<Reports/>}/>
         <Route path="/CampaignA" element={<CampaignA/>}/>
+        <Route path="/User" element={<User/>}/>
+        <Route path="/Agent" element={<Agent/>}/>
+        <Route path="/Support" element={<Support/>}/>
+        <Route path="/Faq" element={<Faq/>}/>
+
+        <Route path="/Forgotpassword" element={<Forgotpassword/>}/>
 
       
       </Routes>

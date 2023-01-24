@@ -1,0 +1,161 @@
+.agt-cont{
+    background: #dee2e6;
+    height:100vh;
+    
+    padding: 10px;
+    
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    /* padding:10px; */
+}
+.left-cont{
+    width:60%;
+    height:100vh;
+    background: #fff;
+}
+.right-cont{
+    width:40%;
+    height:100vh;
+    /* background: rgb(236, 68, 68); */
+ background: #fff;
+ margin-left: 10px;
+}
+.num{
+    display: flex;
+    justify-content: space-around;
+}
+
+span p{
+    text-align: center;
+    margin-top: 25px;
+    color:#fff;
+}
+span{
+    background: #763B75;
+    border-radius: 50%;
+    height:70px;
+    width:70px;
+    margin:40px; 
+}
+
+
+
+
+  .form-groupCrt {
+    margin: 20px;
+  }
+ 
+
+
+ .form-groupCrt label {
+    font-size: 14px;
+    
+    line-height: 1;
+    vertical-align: top;
+    margin-bottom: 15px;
+}
+.form-controlCrt {
+    border: 1px solid #ccc;
+    font-family: "ubuntu-regular", sans-serif;
+    font-size: 0.8125rem;
+}
+textarea.form-controlCrt {
+    min-height: 2rem;
+}
+.form-controlCrt {
+    display: block;
+    width: 90%;
+    padding: 10px 20px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1;
+    /* color: #212529; */
+    background-color: color(white);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+
+
+
+  .mystCtr{
+   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+   height: 440px;
+   width: 220px;
+           font-size:20px;
+         
+           margin-left:120px;
+
+           
+           padding:20px;
+
+
+           
+           }
+
+
+
+
+           .leftinside{
+            /* padding: 20px; */
+           }
+
+
+
+@media only screen and (max-width:1020px){
+    /* .rowcontT{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+     } */
+     /* .fieldcontT1{
+        width:80%;
+        padding:20px;
+        margin:20px;
+     }
+     .fieldcontT{
+        width: 80%;
+        padding:20px;
+        margin:20px;
+
+     } */
+        /* .btnT{
+            margin:3px;
+            width: 120px;
+        }
+        .btnT1{
+            margin:3px;
+            width:120px;
+        } */
+     .form-controlCtr{
+        width:85% !important;
+     }
+
+     .main{
+        display: flex;
+        flex-direction: column;
+        /* padding:10px; */
+    }
+    .left-cont{
+        width:100%;
+    }
+  .right-cont{
+    width: 100%;
+  }
+  .mystCtr{
+    margin-left:10px;
+
+  }
+
+ }

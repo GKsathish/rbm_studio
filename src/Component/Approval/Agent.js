@@ -1,42 +1,26 @@
 import React from 'react'
-import './rcscheck.css'
+import './campaigna.css'
 
-const Rcscheck = () => {
-	return (
-		<div className="rcs-cont">
-			<div class="rcs-card">
-				<h4 class="card-title" style={{textAlign:'center',color:'purple',marginBottom:10,fonWeight:'bold'}}> RCS Check</h4>
-				{/* <p class="card-description"> </p> */}
-				<form >
-					{/* <h3 style={{ textAlign: "center" }}>RCS Check</h3> */}
-					<div class="form-groupRcs" >
-						<input type="file" name="fileToUpload" class="form-controlRC" id="card1urltitle req5" placeholder="CSV format only with MSISDN Header" accept=".csv,.CSV" />
-					
-							<button class="file-upload-browse btnRcs" type="submit" name="uploadsubmit" >Check now</button>
-						
-					</div>
-
-				</form>
-			</div>
-
-
-			<div class="main-panel "  style={{paddingTop: 10}}>
-          {/* <div class="content-wrapper"> */}
+const Agent = () => {
+  return (
+    <div class="main-panel textcont"  style={{paddingTop: 10}}>
+          <div class="content-wrapper">
             {/* <div class="page-header">
              
             </div> */}
-                              <h4 style={{color: "#763b75" ,padding:8,fontSize:20}}>Reports</h4>
+                              <h4 style={{color: "#763b75" ,padding:8,fontSize:20}}>Agent Approval</h4>
 
             <div class="col-lg-12 grid-margin stretch-card">
                     <div class="table-responsive-lg">
                             <div class="card scroll_dash">
-                              <div class="card-bodyRc">
+                              <div class="card-body">
   
-                               <div className="tab-contRC ">
-                                  <div class="form-groupRC">
-									<label >Search:</label>
-                                    <input type="search" placeholder='search' className="form-controlRC" />
-                                    {/* <button onclick="Export()" class="rbtn">Export</button> */}
+                               <div className="tab-cont ">
+                                  <div class="form-group">
+                                    <input type="search" placeholder='search' className="form-control" />
+                                    <button onclick="Export()" class="rbtn">Approve</button>
+                                    <button onclick="Export()" class="rbtn">Reject</button>
+
                                   </div> 
                                <table className="table table-striped display" id="example">
                                       <thead>
@@ -48,14 +32,16 @@ const Rcscheck = () => {
                                                               </div>
                                                         </th>
                                                                           {/* <th> Campaign Name <p class="arrow"><i class="icon-long-arrow-up" id="up" style="float: right;"></i></p><p class="arrow"><i class="icon-long-arrow-down" id="up" style="float: right;"></i></p></th>--> */}
-                                                        <th>Uploaded File<span class="sort-by"></span></th>
-                                                        <th style={{width: "300 !important"}}> Uploaded Count <span class="sort-by"></span></th>
-                                                        <th> <span class="sort-by"></span></th>
-                                                        <th> Rcs File<span class="sort-by"></span></th>
-                                                        <th>Rcs Count<span class="sort-by"></span></th>
+                                                        <th>Nick Name<span class="sort-by"></span></th>
+                                                        <th style={{width: "300 !important"}}> Msg Type <span class="sort-by"></span></th>
+                                                        <th> Title<span class="sort-by"></span></th>
+                                                        <th> Description <span class="sort-by"></span></th>
+                                                        <th> Date<span class="sort-by"></span></th>
                                                                           <th> Sent<span class="sort-by"></span></th>
-                                                        <th> Download <span class="sort-by"></span></th>
-                                                                     </tr> 
+                                                        <th> Delivered <span class="sort-by"></span></th>
+                                                        <th> Read <span class="sort-by"></span></th>
+                                                        <th> Status<p class="arrow"><span class="sort-by"></span></p></th>
+                                                                        </tr>
                                         </thead>
 
 
@@ -100,14 +86,9 @@ const Rcscheck = () => {
                     </div>
             </div>
       
-          {/* </div> */}
+          </div>
       </div>
-		</div>
-
-
-
-
-	)
+  )
 }
 
-export default Rcscheck;
+export default Agent

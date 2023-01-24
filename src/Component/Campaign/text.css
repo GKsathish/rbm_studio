@@ -2,7 +2,7 @@
 .textcontT{
     background: #dee2e6;
     padding:10px;
-    margin-left:10%;
+    /* margin-left:10%; */
     margin-top: 0px;
     
  }
@@ -137,8 +137,8 @@ textarea.form-controlT {
 
  .mystT{
    background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-   height: 480px;
-   width: 260px;
+   height: 440px;
+   width: 220px;
            font-size:20px;
          
            margin-left:60px;

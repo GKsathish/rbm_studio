@@ -1,132 +1,433 @@
-import React from 'react'
+import {React,useState} from 'react'
+import './createagent.css'
+// import Createagent1 from './Createagent1';
+// import Createagent2 from './Createagent2';
+// import Createagent3 from '../Createagent3';
 
 const Creatagent = () => {
-  return (
-    <div>
-      <div class="dashbord">
-	<div class="row">
-		<div class="col-lg-8">
-			<div class="agent_form">
-				<div >
-				<h4 class="tittle">rbm Agent</h4>
-				<p>This appears when your agent sends a message to user</p>
-				<form runat="server">
-					<div class="row">
-						<h3 >Title & Images</h3>
-					<div class="col-lg-6">
+	// const {useState} = React;
 
-					 <div >
-					  <small >Large Banner Image (1440x448)</small><br/>
-					   <input type="file" class="form-control" id="imgInp" name="upload"  required />
-				  	</div>
-					</div>
-					<div class="col-lg-6">
-				  	<div>
-					  <small >Small Size Image (224x244)</small><br/>
-					   <input type="file" class="form-control" id="imgInp1" name="upload"  required/>
-				  	</div>
-				  	</div>
-				  </div><br/>
-				    <div class="row">
-					<div class="col-lg-6">
-					 <div >
-				
-					   <input type="text" class="form-control contact" id="displayname" name="number"  placeholder="Display Name" required/>
-				  	</div>
+	const [step,setStep] = useState(0);
+	const [hideButton,setHideButton] = useState(0);
+	
+	const step_form = step;
+	
 
-					</div>
-					<div class="col-lg-6">
-				  	<div>
-				  		
-				  		
-					   <input type="text" class="form-control contact" id="discription" name="labeltext"  placeholder="Description" maxlength="120"  size="120" required/>
-				  	</div>
-				  	</div>
-				  </div><br/>
-				  <div class="row">
-				  	<h3 >Contact Details</h3><br/>
-					<div class="col-lg-6">
-					 <div>
-					   <input type="text" class="form-control contact" id="contact" name="number"  placeholder="Primary Phone Number" maxlength="10"  size="10"required/>
-				  	</div>
-					</div>
-					<div class="col-lg-6">
-				  	<div>
-				  		
-					   <input type="text" class="form-control contact" id="labelforcontact" name="labeltext"  placeholder="Label for primary phone number" required/>
-				  	</div>
-				  	</div>
-				  	<div class="col-lg-6">
-					 <div>
-					   <input type="text" class="form-control contact" id="website" name="number"  placeholder="Primary Website" required/>
-				  	 </div>
-					</div>
-				  </div>
-				  <br/>
-				 
-				  <div class="row">
-				  	<h3 >Email</h3><br/>
-					<div class="col-lg-6">
-						
-					 <div>
-					   <input type="text" class="form-control contact" id="Email" name="number"  placeholder="Primary Email" required />
-				  	</div>
-					</div>
-					
-					<div class="col-lg-6">
-				  	<div>
-					   <input type="text" class="form-control contact" id="Emaillabel" name="labeltext"  placeholder="Label for primary Email" required />
-				  	</div>
-				  	</div>
-				  </div>
-				</form>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<h4 ><small><center class="previewtitle"><b>Preview Your Agent</b></center></small></h4>
-			<div class="img-preview">
-				<div class="larger-banner">
-					<small><center ><b>Info & options</b></center></small>
-					<img id="blah" src="#" alt="text"/>
-					<div id='displaynametarget'>
-						
-					</div>
-					<small id='discriptiontarget'></small>
-					<b id="websitetarget"></b>
+	if(step_form==0){
 
-					<div class="row info_row">
-						<div class="col-lg-6 col-info">
-							<p class="info"><small>Info</small></p>
+return (
+<Createagent1 /> );
 
-						</div>
+}else if(step_form==1){
 
-						<div class="col-lg-6 col-info">
-							<p class="info"><small>Options</small></p>
-						</div>
-						<div class="infoheight">
-							<i class="icon-phone-sign" ></i>
-							<span id="contacttarget"></span>
-							<div id="labelforcontacttarget"></div>
-						</div>
-						
-						<div class="infoheight">
-							<i class="icon-envelope" ></i>
-							<span id="Emailtarget"></span>
-							<div id="Emaillabeltarget"></div>
-						</div>
-						
 
-					</div>
-					
+return (
+<Createagent2 /> );
 
-				</div> 				
-			</div>
-		</div>
-	</div>
-</div>
-    </div>
-  )
+}
+else if(step_form==3){
+
+
+	return (
+	<Createagent3 /> );
+	
+	}
+	
+
 }
 
-export default Creatagent;
+
+
+const Createagent1 = () => {
+	const [step,setStep] = useState(0);
+
+	return (
+	  <div className="agt-cont">
+	  <h4> rbm agent info </h4>
+  
+  <div className='main'>
+  {/* left */}
+  
+  
+   
+  <form className='left-cont'>
+  <div className='num'> 
+	  <span ><p>1</p></span> 
+	  <span ><p>2</p></span>
+	  <span ><p>3</p></span>
+	</div>
+  
+  
+	{/* <!-- One "tab" for each step in the form: --> */}
+	<div className="leftinside">
+  
+  
+				  <h2 style={{marginLeft:15}} >Branding</h2>
+				  <div class="form-groupCrt">
+						  <label>Upload Banner</label><br/>
+						  
+					  
+						 
+							<small >Large Banner Image (1440x448)</small><br/>
+									  <input type="file" class="form-controlCrt" id="imgInp" name="agentbanner"  required=""/>
+					
+						  
+				  </div>
+  
+		  <div class="form-groupCrt">
+						  <label>Upload Logo</label>
+						  
+						  <div class="input-group col-xs-12">
+							
+						   
+							<small >Small Size Image (224x224)</small><br/>
+									   <input type="file" class="form-controlCrt" id="imgInp1" name="agentlogo" required=""/>
+						  
+						  </div>
+				</div>
+  
+  <div class="form-groupCrt">
+		  <label for="exampleInputUsername1">Display Name</label>
+						<input type="text" onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)" class="form-controlCrt" id="displayname" name="agentname" placeholder="Display Name" maxlength="30" size="30" required=""/>
+  
+  </div>
+  
+  <div class="form-groupCrt">
+  
+  <label for="exampleInputUsername1">Descripition</label>
+						<textarea type="text" class="form-controlCrt" id="discription" name="agentdesc" placeholder="Descripition" maxlength="75" size="75" required=""></textarea>
+			  
+  
+  </div>
+  
+  
+  
+  
+  
+  <div >
+		{/* <button type="button" id="prevBtn" onclick="nextPrev(-1)" className='btn'>Previous</button> */}
+		<button type="button" name="createAgent" id="nextBtn"  onClick={()=>{setStep(step+2)}} className='btn'>Next	</button>
+	  </div>
+  
+  
+  
+  
+	</div>
+	{/* 2 */}
+	
+  
+  
+  
+  {/* 3 */}
+  
+	
+  
+	 
+  
+  
+  </form>
+	{/* <!-- Circles which indicates the steps of the form: --> */}
+	 
+  
+  {/* Right */}
+  
+	 <div className='right-cont'>
+	 <div className='fieldcontCtr'>
+              
+                          
+			  <center>Message Preview</center><br/>
+			  <div className='mystCtr'>
+
+			  <div className="larger-banner"><br/>
+					  <small>
+						  <center ><b id="agenttarget">user name</b></center>
+					  </small>
+				  </div>
+				  <div className="cardsviewdetails">
+					  <p id="textpreview"><span id="textpreview2"></span></p>
+
+				  </div>
+
+			  </div>
+				  
+			
+		  
+	
+  
+</div>
+	 </div>
+  
+  
+  </div>
+  
+  </div>
+  
+	)
+  }
+
+
+  const Createagent2 = () => {
+	const [step,setStep] = useState(0);
+
+	return (
+		<div className="agt-cont">
+	  <h4> rbm agent info </h4>
+  
+  <div className='main'>
+  {/* left */}
+  
+  
+   
+  <form className='left-cont'>
+  
+	{/* 2 */}
+	<div >
+  
+	  <h2>Point of Contact</h2>
+  
+	  <div class="form-groupCrt">
+  
+			  <label for="exampleInputUsername1">Primary phone Number</label>
+						  <input type="number" class="form-controlCrt" id="contact" name="agentpnumber" placeholder="Primary phone Number" maxlength="15" size="15" required=""/>
+  </div>
+		  <div class="form-groupCrt">
+  
+				<label for="exampleInputUsername1">Label phone Number</label>
+						<input type="text" class="form-controlCrt" onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)" id="labelforcontact" name="agentplabel" placeholder="Label for primary phone Number" required=""/>
+					
+		  </div>
+  
+		  <div class="form-groupCrt">
+  
+			  <label for="exampleInputUsername1">Primary Website</label>
+						<input type="url" class="form-controlCrt" id="website" name="agentwebsite" placeholder="Primary Website" required=""/>
+  
+				  </div>
+		  <div class="form-groupCrt">
+  
+			  <label for="exampleInputUsername1"> Label Primary Website</label>
+						<input type="text" onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)" class="form-controlCrt" id="websitelabel" name="agentwebsitelabel" placeholder="Label Primary website" required=""/>
+   
+  
+				  </div>
+		  <div class="form-groupCrt">
+  
+			  <label for="exampleInputUsername1">Email</label>
+						<input type="email" class="form-controlCrt" name="agentemail" id="Email" placeholder="Email" required=""/>
+  
+  
+				  </div>
+  
+		  <div class="form-groupCrt">
+  
+			  <label for="exampleInputUsername1">Label Primary Email</label>
+						<input type="email" class="form-controlCrt" onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)" id="Emaillabel" name="agentemaillabel" placeholder="Label for primary Email" required=""/>
+  
+  
+				  </div>
+  
+		  <div class="form-groupCrt">
+  
+			  <label for="exampleInputPassword1">Privacy Policy*</label>
+						<input type="url" class="form-controlCrt" id="Privacy_Policy" name="privacy" placeholder="Please enter Privacy policy URL" required=""/>
+			  
+				  </div>
+  
+		  <div class="form-groupCrt">
+  
+			  <label for="exampleInputConfirmPassword1">Terms and Conditions*</label>
+						<input type="url" class="form-controlCrt" id="terms_of_Services" name="terms" placeholder="Please enter Terms and Conditions" required=""/>
+  
+  
+				  </div>
+  
+  
+  
+				  <div >
+		<button type="button" id="prevBtn" onclick="nextPrev(-1)" className='btn'>Previous</button>
+		<button type="button" name="createAgent" id="nextBtn" onclick="nextPrev(1)" className='btn'>Next</button>
+	  </div>
+  
+  
+	</div>
+  
+  
+  
+  {/* 3 */}
+  
+	
+	 
+  
+  
+  </form>
+	{/* <!-- Circles which indicates the steps of the form: --> */}
+	 
+  
+  {/* Right */}
+  
+	 <div className='right-cont'>
+	 <div className='fieldcontCtr'>
+              
+                          
+			  <center>Message Preview</center><br/>
+			  <div className='mystCtr'>
+
+			  <div className="larger-banner"><br/>
+					  <small>
+						  <center ><b id="agenttarget">user name</b></center>
+					  </small>
+				  </div>
+				  <div className="cardsviewdetails">
+					  <p id="textpreview"><span id="textpreview2"></span></p>
+
+				  </div>
+
+			  </div>
+				  
+			
+		  
+	
+  
+</div>
+	 </div>
+  
+  
+  </div>
+  
+  </div>
+  
+	)
+  }
+  
+ 
+  const Createagent3 = () => {
+	const [step,setStep] = useState(0);
+	// const step_form = step+1;
+
+	return (
+	  <div className="agt-cont">
+	  <h4> rbm agent info </h4>
+  
+  <div className='main'>
+  {/* left */}
+  
+  
+   
+  <form className='left-cont'>
+  
+  
+  
+  {/* 3 */}
+  
+	<div >
+  
+	  <h2 class="rbm_agent_heading">Agent Experince</h2>
+	  <div class="form-groupCrt">
+	  <label for="mob">Agent Experince</label>
+	  <input type="text" name="agent_experince" class="form-controlCrt" id="mob" placeholder="Please Provide your Experince" required=""/>
+	  </div>
+	  <div class="form-groupCrt">
+	  <label for="address">What actions trigger Messages to users?</label>
+	  <textarea class="form-controlCrt" name="actions" placeholder="What actions trigger Messages to users?" required=""></textarea>
+	  </div>
+  
+		  
+  
+  
+  <div class="form-groupCrt">
+  
+  <label for="address">Select the Required Operator
+  </label>
+  <div class="row_operator">
+				  <div class="coloumn_operator">
+  
+								  <input type="checkbox" name="operator[]" value="Airtel" class="form-check-input" required=""/>  
+  
+						  <svg width="90" height="40">
+							  <image href="https://assets.airtel.in/static-assets/new-home/img/airtel-red.svg?v=1653038873041" width="90" height="40"></image>
+						  </svg>
+					  
+					  </div>
+					  <div class="coloumn_operator">
+						  <input type="checkbox" name="operator[]" value="VI" class="form-check-input" required=""/>  
+						  <svg width="90" height="40">
+							  <image href="https://www.myvi.in/content/dam/neogold/vi-logo.svg" width="90" height="40"></image>
+						  </svg>
+					  
+				  </div>
+						  <div class="coloumn_operator">
+						  <input type="checkbox" name="operator[]" value="Bsnl" class="form-check-input" required=""/>  
+							  <svg width="90" height="40">
+							  <image href="https://www.bsnl.co.in/Logo-New.png" width="90" height="40"></image>
+  
+						  </svg>
+					  
+					  </div>	
+						  
+					  <div class="coloumn_operator">
+					  
+							  <input type="checkbox" name="operator[]" value="Jio" class="form-check-input" required=""/>  
+						  
+						  <svg width="90" height="40">
+							  <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Reliance_Jio_Logo_%28October_2015%29.svg/800px-Reliance_Jio_Logo_%28October_2015%29.svg.png" width="90" height="40"></image>
+						  </svg>
+					  
+					  </div>
+  
+  
+  </div>
+  </div>
+  
+  <div >
+		<button type="button" id="prevBtn" onclick="nextPrev(-1)" className='btn'>Previous</button>
+		<button type="button" name="createAgent" id="nextBtn"  onClick={()=>{setStep(step+2)}} className='btn'>Submit</button>
+	  </div>
+  
+	</div>
+  
+	 
+  
+  
+  </form>
+	{/* <!-- Circles which indicates the steps of the form: --> */}
+	 
+  
+  {/* Right */}
+  
+	 <div className='right-cont'>
+	 <div className='fieldcontCtr'>
+              
+                          
+			  <center>Message Preview</center><br/>
+			  <div className='mystCtr'>
+
+			  <div className="larger-banner"><br/>
+					  <small>
+						  <center ><b id="agenttarget">user name</b></center>
+					  </small>
+				  </div>
+				  <div className="cardsviewdetails">
+					  <p id="textpreview"><span id="textpreview2"></span></p>
+
+				  </div>
+
+			  </div>
+				  
+			
+		  
+	
+  
+</div>
+	 </div>
+  
+  
+  </div>
+  
+  </div>
+  
+	  
+	)
+  }
+  
+
+export  default Creatagent
