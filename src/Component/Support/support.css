@@ -1,0 +1,47 @@
+
+.container{
+    background:#dee2e6;
+    height:100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+}
+.subcontainer{
+    /* padding:10%; */
+    background: #fff;
+    border-radius: 8px;
+    width:800px;
+    height:500px;
+    /* padding: 30px; */
+    display: flex;
+    justify-content: center;
+    
+
+}
+.form-controls {
+    border: 1px solid #ccc;
+    font-family: "ubuntu-regular", sans-serif;
+    font-size: 18px;
+    width: 60% !important;
+    margin-right: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.btns{
+
+    width:65%;
+    margin-left:10px;
+    /* margin-right: 18px; */
+    background: #763B75;
+    /* padding: 10px; */
+    height: 50px;
+    /* width: 400px; */
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    
+}
+   
