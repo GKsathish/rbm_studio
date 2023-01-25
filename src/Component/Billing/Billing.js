@@ -38,7 +38,7 @@ const Billing = () => {
                   
                     <h5>Payed Amount</h5>
                      
-                     <h3>₹60,210.<span class="letter">13</span></h3>
+                     <h3>₹60,210.13</h3>
 
                       <h5>Invoice Breakup</h5>
 

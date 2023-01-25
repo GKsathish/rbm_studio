@@ -1,6 +1,6 @@
 .agt-cont{
     background: #dee2e6;
-    height:100vh;
+    /* height:100vh; */
     
     padding: 10px;
     
@@ -40,7 +40,19 @@ span{
     width:70px;
     margin:40px; 
 }
+.btncre{
 
+  /* margin-top: 10px; */
+  height: 40px;
+  background:#763B75;
+  width:150px; 
+  color:#fff;
+  border-radius: 4px;
+  padding: 10px; 
+  border: none;
+  margin: 10px;
+  padding-left: 10px;
+}
 
 
 
@@ -91,8 +103,8 @@ textarea.form-controlCrt {
 
   .mystCtr{
    background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-   height: 440px;
-   width: 220px;
+   height: 480px;
+   width: 260px;
            font-size:20px;
          
            margin-left:120px;
@@ -142,6 +154,7 @@ textarea.form-controlCrt {
         width:85% !important;
      }
 
+
      .main{
         display: flex;
         flex-direction: column;
@@ -156,6 +169,10 @@ textarea.form-controlCrt {
   .mystCtr{
     margin-left:10px;
 
+  }
+  .agt-cont{
+    background: #dee2e6;
+    padding:10px;   
   }
 
  }

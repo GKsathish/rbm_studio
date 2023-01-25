@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './reports.css';
 
 const Reports = () => {
@@ -31,15 +32,15 @@ const Reports = () => {
                                                               </div>
                                                         </th>
                                                                           {/* <th> Campaign Name <p class="arrow"><i class="icon-long-arrow-up" id="up" style="float: right;"></i></p><p class="arrow"><i class="icon-long-arrow-down" id="up" style="float: right;"></i></p></th>--> */}
-                                                        <th>Nick Name<span class="sort-by"></span></th>
-                                                        <th style={{width: "300 !important"}}> Msg Type <span class="sort-by"></span></th>
-                                                        <th> Title<span class="sort-by"></span></th>
-                                                        <th> Description <span class="sort-by"></span></th>
-                                                        <th> Date<span class="sort-by"></span></th>
-                                                                          <th> Sent<span class="sort-by"></span></th>
-                                                        <th> Delivered <span class="sort-by"></span></th>
-                                                        <th> Read <span class="sort-by"></span></th>
-                                                        <th> Status<p class="arrow"><span class="sort-by"></span></p></th>
+                                                        <th> <p class="arrow sort-by"></p>sNick Name</th>
+                                                        <th style={{width: "300 !important"}}> <p class="arrow sort-by"></p> Msg Type</th>
+                                                        <th> Title <p class="arrow sort-by"></p></th>
+                                                        <th> Description <p class="arrow sort-by"></p></th>
+                                                        <th> Date <p class="arrow sort-by"></p></th>
+                                                                          <th> Sent <p class="arrow sort-by"></p></th>
+                                                        <th> Delivered <p class="arrow sort-by"></p></th>
+                                                        <th> Read <p class="arrow sort-by"></p></th>
+                                                        <th> Status<p class="arrow sort-by"></p></th>
                                                                         </tr>
                                         </thead>
 

@@ -48,13 +48,12 @@ const Rcscheck = () => {
                                                               </div>
                                                         </th>
                                                                           {/* <th> Campaign Name <p class="arrow"><i class="icon-long-arrow-up" id="up" style="float: right;"></i></p><p class="arrow"><i class="icon-long-arrow-down" id="up" style="float: right;"></i></p></th>--> */}
-                                                        <th>Uploaded File<span class="sort-by"></span></th>
-                                                        <th style={{width: "300 !important"}}> Uploaded Count <span class="sort-by"></span></th>
-                                                        <th> <span class="sort-by"></span></th>
-                                                        <th> Rcs File<span class="sort-by"></span></th>
-                                                        <th>Rcs Count<span class="sort-by"></span></th>
-                                                                          <th> Sent<span class="sort-by"></span></th>
-                                                        <th> Download <span class="sort-by"></span></th>
+                                                        <th>Uploaded File<p class="sort-by"></p></th>
+                                                        <th style={{width: "300 !important"}}> Uploaded Count <p class="sort-by"></p></th>
+                                                        <th> Rcs File<p class="sort-by"></p></th>
+                                                        <th>Rcs Count<p class="sort-by"></p></th>
+                                                                          <th> Sent<p class="sort-by"></p></th>
+                                                        <th> Download <p class="sort-by"></p></th>
                                                                      </tr> 
                                         </thead>
 

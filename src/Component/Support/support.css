@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     
+    /* margin-bottom: 10px; */
 
 }
 .form-controls {
@@ -32,16 +33,52 @@
 }
 .btns{
 
-    width:65%;
+    width:70%;
     margin-left:10px;
     /* margin-right: 18px; */
     background: #763B75;
     /* padding: 10px; */
-    height: 50px;
+    height: 45px;
     /* width: 400px; */
-    border-radius: 20px;
+    border-radius: 25px;
     color: #fff;
     border: none;
-    
+    width:350px;
 }
-   
+ .contact_info{
+    /* margin-left: 60px; */
+    /* margin-right: 10px; */
+    /* margin-top: 140px; */
+    /* margin-right: 20px; */
+    color:#fff;
+    background: #000;
+    height:150px;
+    width:160px;
+    padding:20px;
+    border-radius: 10px 0px 0px 10px;
+    /* margin-top: 120px; */
+    /* margin-right: 100px !impo    margin-right: 100px;
+rtant; */
+
+
+ }  
+ .right{
+background:#763B75;
+height:500;
+width:100;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* padding: 10px; */
+ }
+
+ @media only screen and (max-width:1020px){
+.container{
+    width:80%;
+}
+.subcontainer{
+    overflow-x: scroll;
+}
+
+ }

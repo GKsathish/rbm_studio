@@ -101,7 +101,7 @@ const Richcard = () => {
                                       </small>
                                   </div>
                                   <div className="cardsviewdetails">
-                                      <p id="textpreview"><span id="textpreview2"></span></p>
+                                      <p id="textpreview"></p>
 
                                   </div>
 
