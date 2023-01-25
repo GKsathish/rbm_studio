@@ -1,9 +1,11 @@
 import React from 'react'
+import Sidebar from '../Sidebar/Sidebar'
 import './rcscheck.css'
 
 const Rcscheck = () => {
 	return (
-		<div className="rcs-cont">
+		<><Sidebar/>
+    <div className="rcs-cont">
 			<div class="rcs-card">
 				<h4 class="card-title" style={{textAlign:'center',color:'purple',marginBottom:10,fonWeight:'bold'}}> RCS Check</h4>
 				{/* <p class="card-description"> </p> */}
@@ -101,7 +103,7 @@ const Rcscheck = () => {
       
           {/* </div> */}
       </div>
-		</div>
+		</div></>
 
 
 

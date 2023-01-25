@@ -1,13 +1,16 @@
 import React from 'react'
+// import { Sidebar } from 'react-pro-sidebar'
+// import Header from '../Header/Header'
+import  Sidebar from '../Sidebar/Sidebar'
 import './dashboard.css'
 
 const Dashboard = () => {
   return (
-    
-
-
-
+    <>
+    {/* <Header/> */}
+    <Sidebar/>
 <div class="main-panel">
+    
     <div class="content-wrapper" >
         <div class="page-header">
             <h3 class="page-title">
@@ -65,7 +68,7 @@ const Dashboard = () => {
     </div>
 
 </div>
-
+</>
   )
 }
 

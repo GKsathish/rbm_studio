@@ -1,8 +1,11 @@
 import React from 'react'
+import Sidebar from '../Sidebar/Sidebar'
 import './campaigna.css'
 
 const Agent = () => {
   return (
+    <>
+    <Sidebar/>
     <div class="main-panel textcont"  style={{paddingTop: 10}}>
           <div class="content-wrapper">
             {/* <div class="page-header">
@@ -87,7 +90,7 @@ const Agent = () => {
             </div>
       
           </div>
-      </div>
+      </div></>
   )
 }
 

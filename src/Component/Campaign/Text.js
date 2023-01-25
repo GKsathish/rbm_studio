@@ -1,4 +1,5 @@
 import React from 'react'
+import Sidebar from '../Sidebar/Sidebar';
 import './text.css';
 
 
@@ -7,6 +8,8 @@ const Text = () => {
 
 
   return (
+<>
+<Sidebar/>
 <div className='textcontT'>
   <div > <h1 >Text Message Campaign</h1>
 
@@ -85,7 +88,7 @@ const Text = () => {
 
               
         </div>
-  </div>
+  </div></>
 
   )
 }

@@ -428,6 +428,7 @@
 
 // export  default Creatagent
 import React from 'react'
+import Sidebar  from '../Sidebar/Sidebar'
 import './createagent.css'
 
 // import Createagent1 from './Createagent1';
@@ -809,6 +810,7 @@ const Creatagent = ()=>{
 	return (
 	
 	<>
+	<Sidebar/>
 		<div class="form">
 			<div className="card">
 				<div>{

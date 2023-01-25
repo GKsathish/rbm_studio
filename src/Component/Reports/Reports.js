@@ -1,10 +1,13 @@
 import React from 'react'
+import Sidebar from '../Sidebar/Sidebar'
 
 import './reports.css';
 
 const Reports = () => {
   return (
     
+      <>
+      <Sidebar/>
       <div class="main-panel textcont"  style={{paddingTop: 10}}>
           <div class="content-wrapper">
             {/* <div class="page-header">
@@ -87,7 +90,7 @@ const Reports = () => {
             </div>
       
           </div>
-      </div>
+      </div></>
         
         
          

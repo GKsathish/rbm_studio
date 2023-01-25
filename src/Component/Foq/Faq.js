@@ -81,6 +81,7 @@
 // export default Faq
 
 import React, { useState, useRef } from "react";
+import Sidebar from '../Sidebar/Sidebar';
 import './faq.css'
 // import ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
 
@@ -166,25 +167,25 @@ const Faq = () => {
     }
     
     return (
-        <>
-            <div className="container-fluid mt-5 mb-5">
-                <div className="row justify-content-center">
-                    <div className="col-md-8 mt-2">
-                        <div className="card">
-                            <div className="card-body">
-                              {/* <h4 className="form-heading mb-4 text-primary text-center mt-3">React Accordion</h4> */}
-                                {faqs.map((faq, index) => {
-                                     return (
-                                            <AccordionItem key={index} active={active} handleToggle={handleToggle} faq={faq} />
-                                        )
-                                    })
-                                }
-                            </div>
-                        </div>
+        <><Sidebar/> <div className="container-fluid mt-5 mb-5">
+        <div className="row justify-content-center">
+            <div className="col-md-8 mt-2">
+                <div className="card">
+                    <div className="card-body">
+                      {/* <h4 className="form-heading mb-4 text-primary text-center mt-3">React Accordion</h4> */}
+                        {faqs.map((faq, index) => {
+                             return (
+                                    <AccordionItem key={index} active={active} handleToggle={handleToggle} faq={faq} />
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
-        </>
+        </div>
+    </div></>
+           
+        
     );
 };
 

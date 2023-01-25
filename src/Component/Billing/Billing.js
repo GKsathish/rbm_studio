@@ -1,10 +1,13 @@
 import React from 'react'
+import  Sidebar from '../Sidebar/Sidebar'
+
 import './billing.css'
 
 const Billing = () => {
   return (
-    
-<div class="main-panel">
+    <>
+    <Sidebar/>
+    <div class="main-panel">
     <div class="content-wrapper"  >
         <div class="page-header" >
               <h2 class="page-title" >Payments</h2>
@@ -186,7 +189,8 @@ const Billing = () => {
 
 
 
-    </div>
+    </div></>
+
 
   )
 }

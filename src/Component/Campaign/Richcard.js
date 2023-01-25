@@ -1,9 +1,13 @@
 import React from 'react'
+import  Sidebar from '../Sidebar/Sidebar'
+
 import './richcard.css'
 
 const Richcard = () => {
   return (
-    <div className='textcontR'>
+    <>
+<Sidebar/>
+<div className='textcontR'>
   <div > <h1 >Rich Card</h1>
 
     </div>   
@@ -117,6 +121,7 @@ const Richcard = () => {
               
         </div>
   </div>
+    </>
   )
 }
 

@@ -1,9 +1,13 @@
 import React from 'react'
+// import { Sidebar } from 'react-pro-sidebar'
+import  Sidebar from '../Sidebar/Sidebar'
 import './campaigna.css'
 
 
 const User = () => {
   return (
+    <>
+    <Sidebar/>
     <div class="main-panel textcont"  style={{paddingTop: 10}}>
           <div class="content-wrapper">
             {/* <div class="page-header">
@@ -88,7 +92,7 @@ const User = () => {
             </div>
       
           </div>
-      </div>
+      </div></>
   )
 }
 

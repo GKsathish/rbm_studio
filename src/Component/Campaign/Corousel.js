@@ -1,9 +1,13 @@
 import React from 'react';
+import  Sidebar from '../Sidebar/Sidebar'
+
 import './corousel.css';
 
 
 const Corousel = () => {
   return (
+    <>
+    <Sidebar/>
     <div className='textcont'>
   <div > <h1 >Corousel</h1>
 
@@ -150,7 +154,8 @@ const Corousel = () => {
 
               
         </div>
-  </div>
+  </div></>
+    
 
 
   )

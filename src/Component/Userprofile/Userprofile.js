@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { Sidebar } from 'react-pro-sidebar';
 
 import './usrprofile.css'
 
@@ -9,7 +10,8 @@ const Userprofile = () => {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
-<div class="user-maincont" >
+    <><Sidebar/>
+    <div class="user-maincont" >
           
         
 
@@ -167,7 +169,8 @@ const Userprofile = () => {
 
             
 
-    </div>
+    </div></>
+
 
     )
 }
