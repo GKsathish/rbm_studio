@@ -1,4 +1,4 @@
-.textcont {
+.textcontre {
     background: #dee2e6;
     /* padding:10px; */
     padding-left: 4%;
@@ -282,7 +282,7 @@ td {
 }
 
 @media only screen and (max-width:1020px) {
-    .textcont{
+    .textcontre{
         padding-left: 6%;
         /* padding-right: 6%; */
     }

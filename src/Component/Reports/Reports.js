@@ -10,7 +10,7 @@ const Reports = () => {
       <>
       <Header/>
       <Sidebar/>
-      <div class="main-panel textcont">
+      <div class="main-panel textcontre">
           <div class="content-wrapper">
             {/* <div class="page-header">
              

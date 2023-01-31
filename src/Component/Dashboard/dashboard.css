@@ -20,7 +20,7 @@
     margin: 16px;
 }
 .ban-card1{
-    width:290px;
+    width:25%;
     height:180px;
 
     color:#fff;
@@ -36,7 +36,7 @@
 }
 
 .ban-card2{
-    width:290px;
+    width:25%;
     height:180px;
 
     color:#fff;
@@ -47,12 +47,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 3%;
-    margin: 20px;
+    margin: 10px;
 
 }
 
 .ban-card3{
-    width:290px;
+    width:25%;
     height:180px;
 
     color:#fff;
@@ -63,11 +63,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 3%;
-    margin: 20px;
+    margin: 10px;
 
 }
 .ban-card4{
-    width:290px;
+    width:25%;
     height:180px;
 
     color:#fff;
@@ -78,7 +78,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 3%;
-    margin: 20px;
+    margin: 10px;
 }
 
 .second-card{
@@ -93,7 +93,7 @@
 }
 .left-card{
     height: 300px;
-    width:700px;
+    width:50%;
     background: #fff;
     margin: 5px;
     border-radius: 8px;
@@ -102,7 +102,7 @@
 
 .right-card{
     height: 300px;
-    width:700px;
+    width:50%;
     background: #fff;
     margin: 5px;
     border-radius: 8px;
@@ -199,4 +199,16 @@
         margin-left: 50px;
         color: #763B75;
     }
+   .first-card,.second-card,.third-card,.fourth-card{
+        width: 95%;
+        /* overflow-x: scroll; */
+    }
+    .left-card,.right-card{
+        width:90%;
+    }
+    .ban-card1,.ban-card2,.ban-card3,.ban-card4{
+        width: 82%;
+
+    }
+   
 }

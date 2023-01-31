@@ -9,7 +9,7 @@ const Corousel = () => {
     <>
     <Header/>
     <Sidebar/>
-    <div className='textcont'>
+    <div className='textcontcor'>
    <h4 className='crtitle'>Corousel</h4>
 
    
