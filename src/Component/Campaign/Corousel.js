@@ -10,9 +10,9 @@ const Corousel = () => {
     <Header/>
     <Sidebar/>
     <div className='textcont'>
-  <div > <h1 >Corousel</h1>
+   <h4 className='crtitle'>Corousel</h4>
 
-    </div>   
+   
 
         <div className='rowcont'>
 
