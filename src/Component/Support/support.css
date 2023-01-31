@@ -1,23 +1,24 @@
 
-.container{
+.containersu{
     background:#dee2e6;
     height:100vh;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    /* padding: 10px; */
+    width: 100%;
 
 }
 .si{
     font-display: flex;
     
 }
-.subcontainer{
+.subcontainersu{
     /* padding:10%; */
     background: #fff;
     border-radius: 8px;
-    width:800px;
+    /* width:800px; */
     height:500px;
     /* padding: 30px; */
     display: flex;
@@ -54,35 +55,51 @@
     /* margin-right: 10px; */
     /* margin-top: 140px; */
     /* margin-right: 20px; */
-    color:#fff;
+    color:#fff !important;
     background: #000;
     height:150px;
-    width:160px;
+    /* width:160px; */
     padding:20px;
     border-radius: 10px 0px 0px 10px;
+    
     /* margin-top: 120px; */
     /* margin-right: 100px !impo    margin-right: 100px;
 rtant; */
 
 
- }  
+ } 
+ 
  .right{
 background:#763B75;
 height:500;
-width:100;
+/* width:189; */
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 /* padding: 10px; */
  }
+ .subsu{
+   padding: 5%;
+ }
 
  @media only screen and (max-width:1020px){
-.container{
-    width:80%;
+.containersu{
+    width:100%;
+ /* overflow-x: scroll; */
 }
-.subcontainer{
+.subcontainersu{
+    width: 100%;
     overflow-x: scroll;
-}
 
+}
+.subsu{
+    padding-left: 5%;
+    /* width:500px; */
+    /* width:100vw; */
+    /* overflow-x: scroll; */
+
+  }
+  
+ 
  }

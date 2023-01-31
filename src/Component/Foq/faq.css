@@ -1,12 +1,12 @@
 .faq-container{
-    background:#dee2e6;
+    background:#dee2e6 !important;
     height:100vh;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
-
+width:100%;
 }
 /* .accordian{
  height:20px;
@@ -105,4 +105,19 @@ a, a:hover, a:focus {
 }
 .rc-collapse.show{
     height: auto;
+}
+
+.fas{
+    margin: 5%;
+}
+
+@media  only screen and (max-width:1000px) {
+    
+.fas{
+    margin-left: 25px;
+    width:90% !important;
+    /* overflow:unset; */
+    
+}
+
 }

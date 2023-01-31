@@ -10,12 +10,12 @@ const Support = () => {
     <Header/>
     <Sidebar/>
     </div>
-    <div  className='container'>
+    <div  className='containersu'>
 				  
-    <form  className="subcontainer">
-      <div style={{padding:30}}>
-                                  <h3>Contact Us</h3>
-    <p>Feel Free to contact us any time. We will get back to you as soon as we can!.</p><br/>
+    <form  className="subcontainersu">
+      <div className='subsu'>
+                              <h4>Contact Us</h4>
+    <h5>Feel Free to contact us any time. We will get back to you as soon as we can!.</h5><br/>
     
   
     
@@ -29,10 +29,10 @@ const Support = () => {
               
       
       <div className="contact_info">
-                          <h4>Contact Info</h4>
+                          <h3>Contact Info</h3>
                     
                           {/* <i class="fas fa-headset"></i> */}
-                          <p>+91 9010761000</p>
+                          <h6>+91 9010761000</h6>
                     
                       
                           {/* <i class="fas fa-envelope-open-text"></i> */}
@@ -40,7 +40,7 @@ const Support = () => {
                       
                       
                           {/* <i class="fas fa-map-marked-alt"></i> */}
-                          <p>India &amp; UAE</p>
+                          <h6>India &amp; UAE</h6>
                     
 
                   </div>

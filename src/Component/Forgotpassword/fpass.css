@@ -1,11 +1,24 @@
+.contpas{
+    background: #dedede;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .password-box {
-    width: 450px;
-    margin: 25px auto;
-    height: 400px;
+    width: 500px;
+    /* margin: 25px auto; */
+    /* height: 500px; */
     border: 1px solid rgba(204, 193, 193, 0.863);
-    padding: 10px;
+    /* padding: 10px; */
+
+
     text-align: center;
     background: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
 
 }
 
@@ -31,10 +44,10 @@
 
 }
 
-.btn {
+.btnfaa{
     width: 80%;
-    margin-left: 18px;
-    margin-right: 18px;
+    /* margin-left: 18px; */
+    /* margin-right: 18px; */
     background: #763B75;
     /* padding: 10px; */
     height: 50px;
@@ -42,6 +55,7 @@
     border-radius: 5px;
     color: #fff;
     border: none;
+    margin: 15px;
     /* margin-right: 35px; */
 
 }
@@ -49,12 +63,13 @@
 @media only screen and (max-width:1020px) {
 
     .password-box {
-        width: 348px;
-        margin: 25px auto;
-        height: 459px;
+        width: 350px;
+        margin: 20px;
+        height: 650px;
         border: 1px solid rgb(226, 225, 225);
-        padding: 5px;
+        padding: 10px;
         text-align: center;
         background: #fff;
+
     }
 }

@@ -11,10 +11,10 @@ const Billing = () => {
     <Sidebar/>
     <div class="main-panel">
     <div class="content-wrapper"  >
-        <div class="page-header" >
-              <h2 class="page-title" >Payments</h2>
+        {/* <div class="page-header" > */}
+              <h4 class="page-title" >Payments</h4>
               
-        </div>
+        {/* </div> */}
             <div>
         <div >
           <div className='rowcont'>
@@ -136,8 +136,8 @@ const Billing = () => {
 
 <div class="cont-add">
 	
-                <div class="card1">
-                  <div class="card-body1">
+                <div class="cardb">
+                  <div class="card-bodyb">
                    <h4>Transactional  Details</h4>
                     <table class="table">
                       <thead>
