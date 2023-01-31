@@ -461,7 +461,7 @@ const Creatagent = ()=>{
 	}
 	const Createagent1 = () => {
 		return (
-		  <div className="agt-cont">
+		  <div>
 		  <h4> rbm agent info </h4>
 	  
 	  <div className='main'>
@@ -586,7 +586,7 @@ const Creatagent = ()=>{
 	
 	const Createagent2 = () => {
 		return (
-	  <div className="agt-cont">
+	  <div>
 		  <h4> rbm agent info </h4>
 	  
 	  <div className='main'>
@@ -678,7 +678,7 @@ const Creatagent = ()=>{
 	
 	  const Createagent3 = () => {
 		return (
-		  <div className="agt-cont">
+		  <div>
 		  <h4> rbm agent info </h4>
 	  
 	  <div className='main'>
@@ -816,7 +816,7 @@ const Creatagent = ()=>{
 	<Sidebar/>
 	
 	
-				<div>{
+				<div className="agt-cont">{
 					<Form />}
 					</div>
 	

@@ -212,7 +212,7 @@ const routes = [
 ];
 
 const Sidebar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const inputAnimation = {
     hidden: {
@@ -339,7 +339,7 @@ const Sidebar = ({ children }) => {
           </section>
         </motion.div>
 
-        <main>{children}</main>
+        {/* <main>{children}</main> */}
       </div>
     </>
   );

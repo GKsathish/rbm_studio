@@ -13,7 +13,7 @@ const Dashboard = () => {
     </div>
 
     <div  className='countct'>
-      <h4 className='title'>Dashboard</h4>
+      <h4 className='titledash'>Dashboard</h4>
       <div className='first-card'>
         <div className='ban-card1'>
               <h3>Total Campaigns</h3>
@@ -41,7 +41,7 @@ const Dashboard = () => {
         <hr></hr>
 
         </div>
-        <div className='left-card'>
+        <div className='right-card'>
         <h3>Delivered</h3>
         <hr></hr>
 

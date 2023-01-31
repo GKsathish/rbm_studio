@@ -2,12 +2,12 @@
 .textcont{
     background: #dee2e6;
     padding:20px;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     
  }
- h1{
-    margin-top:20px;
-    padding:15px;
+ .crtitle{
+    /* margin-top:20px; */
+    padding-left:6%;
     color:#763B75;
  }
  .rowcont{
@@ -30,7 +30,7 @@
  .fieldcont{
     background: #fff;
     height:100%;
-    width: 45%;
+    width: 55%;
     margin:20px;
     padding:50px;
     border-radius: 5px;
@@ -38,7 +38,7 @@
  }
  .fieldcont1{
     background: #fff;
-    height:100%;
+    height:100vh;
     width: 45%;
     margin:20px;
     padding:20px;
@@ -177,13 +177,13 @@ textarea.form-controlcr {
         justify-content: flex-start;
      }
      .fieldcont1{
-        width:80%;
+        width:90%;
         padding:20px;
         margin:20px;
         height: 100vh;
      }
      .fieldcont{
-        width: 80%;
+        width: 90%;
         padding:20px;
         margin:20px;
 
@@ -214,6 +214,15 @@ textarea.form-controlcr {
    
               
               }
+              .textcont{
+               margin-left: 4%;
+              }
+
+.crtitle {
+    /* margin-top: 20px; */
+    padding-left: 10%;
+    color: #763B75;
+}
    
 
  }

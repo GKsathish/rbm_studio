@@ -3,9 +3,13 @@
     /* height:100vh; */
     
     /* padding: 10px; */
-    margin-left:15%;
+    /* margin-left:4%; */
+    padding-left:6%;
+    padding-right: 4%;
 }
-
+h4{
+  color:#763B75;
+}
 .main{
     display: flex;
     flex-direction: row;
@@ -15,6 +19,7 @@
     width:60%;
     height:100vh;
     background: #fff;
+    padding: 5px;
 }
 .right-cont{
     width:40%;
@@ -22,6 +27,7 @@
     /* background: rgb(236, 68, 68); */
  background: #fff;
  margin-left: 10px;
+ padding: 5px;
 }
 .num{
     display: flex;
@@ -157,14 +163,22 @@ textarea.form-controlCrt {
     }
   .right-cont{
     width: 100%;
+    margin-top:10px;
+    margin-left:3px;
   }
   .mystCtr{
-    margin-left:10px;
+    margin-left:-20px;
 
   }
+  
   .agt-cont{
     background: #dee2e6;
-    padding:10px;   
-  }
+    /* height:100vh; */
+    
+    /* padding: 10px; */
+    /* margin-left:4%; */
+    padding-left:14%;
+    padding-right: 4%;
+}
 
  }

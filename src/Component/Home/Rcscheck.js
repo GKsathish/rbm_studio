@@ -24,7 +24,7 @@ const Rcscheck = () => {
 			</div>
 
 
-			<div class="main-panel "  style={{paddingTop: 10}}>
+			<div class="main-panel" >
           {/* <div class="content-wrapper"> */}
             {/* <div class="page-header">
              
@@ -105,7 +105,8 @@ const Rcscheck = () => {
       
           {/* </div> */}
       </div>
-		</div></>
+		</div>
+    </>
 
 
 

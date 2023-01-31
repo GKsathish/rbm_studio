@@ -1,15 +1,17 @@
 
 .textcontR{
     background: #dee2e6;
-    padding:10px;
-    margin-left:15%;
+    padding:5%;
+    /* margin-left:15%; */
     margin-top: 0px;
     
  }
- h1{
-    margin-top:20px;
-    padding:15px;
+ .titlerich{
+    /* margin-top:20px; */
+    /* padding:15px; */
+    /* padding-left: %; */
     color:#763B75;
+    padding-left: 2%;
  }
 
  /* .img-preview2 {
@@ -27,7 +29,7 @@
  .fieldcontR{
     background: #fff;
     /* height:800px; */
-    width: 40%;
+    width: 50%;
     margin:20px;
     padding:50px;
     border-radius: 5px;
@@ -36,7 +38,7 @@
  .fieldcontR1{
     background: #fff;
     /* height:810px; */
-    width: 40%;
+    width: 50%;
     margin:20px;
     padding:20px;
     border-radius: 5px;
@@ -136,11 +138,11 @@ textarea.from-controlR {
 
 
  .mystR{   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-   height: 440px;
-   width: 220px;
+   height: 481px;
+   width: 261px;
            font-size:20px;
          
-           margin-left:60px;
+           margin-left:120px;
 
            
            padding:20px;
@@ -157,12 +159,12 @@ textarea.from-controlR {
         justify-content: flex-start;
      }
      .fieldcontR1{
-        width:80%;
+        width:90%;
         padding:20px;
         margin:20px;
      }
      .fieldcontR{
-        width: 80%;
+        width: 90%;
         padding:20px;
         margin:20px;
 
@@ -176,7 +178,7 @@ textarea.from-controlR {
         width:120px;
      }
      .from-controlR{
-        width:85% !important;
+        width:95% !important;
      }
 
 
@@ -194,4 +196,17 @@ textarea.from-controlR {
            
            }
 
+           .textcontR{
+            background: #dee2e6;
+            padding-left:8%;
+            /* margin-left:15%; */
+            margin-top: 0px;
+            
+         }
+         .titlerich{
+            color:#763B75;
+            padding-left: 5%;
+             }
+
  }
+

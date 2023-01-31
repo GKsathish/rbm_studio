@@ -1,8 +1,12 @@
 .countct{
-    margin-left: 18%;
+    /* margin-left: 18%; */
+    
+    padding: 2%;
+    background:#dee2e6;
+    width: 100%;
 }
-.title{
-    margin: 20px;
+.titledash{
+    margin-left: 20px;
     color:#763B75;
 }
 .first-card{
@@ -13,11 +17,11 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px;
+    margin: 16px;
 }
 .ban-card1{
-    width:250px;
-    height:150px;
+    width:290px;
+    height:180px;
 
     color:#fff;
     background: rgb(226, 20, 5);
@@ -32,8 +36,8 @@
 }
 
 .ban-card2{
-    width:250px;
-    height:150px;
+    width:290px;
+    height:180px;
 
     color:#fff;
     background: rgb(203, 216, 22);
@@ -43,13 +47,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 3%;
-    margin: 10px;
+    margin: 20px;
 
 }
 
 .ban-card3{
-    width:250px;
-    height:150px;
+    width:290px;
+    height:180px;
 
     color:#fff;
     background: rgb(74, 33, 187);
@@ -59,12 +63,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 3%;
-    margin: 10px;
+    margin: 20px;
 
 }
 .ban-card4{
-    width:250px;
-    height:150px;
+    width:290px;
+    height:180px;
 
     color:#fff;
     background: rgb(124, 218, 202);
@@ -74,12 +78,12 @@
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 3%;
-    margin: 10px;
+    margin: 20px;
 }
 
 .second-card{
     height: 20%;
-    width:96%;
+    width:100%;
     margin: 15px;
     padding: 5px;
     /* background: #fff; */
@@ -109,7 +113,7 @@
 
 .third-card{
     height: 20%;
-    width:96%;
+    width:100%;
     margin: 15px;
     padding: 5px;
     /* background: #fff; */
@@ -119,7 +123,7 @@
 }
 .fourth-card{
     height: 20%;
-    width:96%;
+    width:100%;
     margin: 15px;
     padding: 5px;
     /* background: #fff; */
@@ -139,4 +143,60 @@
 .cnt{
     display: flex;
     justify-content: flex-start;
+}
+@media only screen and (max-width:1000px){
+    .countct{
+        /* margin: 2%; */
+        padding:3%;
+    }
+    .first-card{
+       
+        /* margin-left: 18%; */
+        display: flex;
+        flex-direction: column;
+        /* padding: 4%; */
+        background:#dee2e6;
+        width: 100%;
+        overflow-x: scroll;
+
+    }
+    .second-card{
+        /* margin-left: 18%; */
+        margin-left: 8%;
+        display: flex;
+        flex-direction: column;
+        padding: 4%;
+        background:#dee2e6;
+        width: 80%;
+        overflow-x: scroll;
+
+    }
+
+    .third-card{
+        /* margin-left: 18%; */
+        margin-left: 8%;
+        display: flex;
+        flex-direction: column;
+        padding: 4%;
+        background:#dee2e6;
+        width: 80%;
+        overflow-x: scroll;
+    }
+
+    .fourth-card{
+        /* margin-left: 18%; */
+        margin-left: 8%;
+        display: flex;
+        flex-direction: column;
+        padding: 4%;
+        background:#dee2e6;
+        width: 80%;
+        overflow-x: scroll;
+    }
+    
+    
+    .titledash {
+        margin-left: 50px;
+        color: #763B75;
+    }
 }

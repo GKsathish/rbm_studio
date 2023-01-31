@@ -10,9 +10,9 @@ const Richcard = () => {
     <Header/>
 <Sidebar/>
 <div className='textcontR'>
-  <div > <h1 >Rich Card</h1>
+   <h4 className='titlerich'>Rich Card</h4>
 
-    </div>   
+      
 
         <div className='rowcontR'>
 
