@@ -1,11 +1,13 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
+import Header from '../Header/Header'
 import './campaigna.css'
 
 const Agent = () => {
   return (
     <>
-    <Sidebar/>
+    <Header/>
+    {/* <Sidebar/> */}
     <div class="main-panel textcont"  style={{paddingTop: 10}}>
           <div class="content-wrapper">
             {/* <div class="page-header">

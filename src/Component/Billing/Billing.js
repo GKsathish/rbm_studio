@@ -1,11 +1,13 @@
 import React from 'react'
 import  Sidebar from '../Sidebar/Sidebar'
+import Header from  '../Header/Header'
 
 import './billing.css'
 
 const Billing = () => {
   return (
     <>
+    <Header/>
     <Sidebar/>
     <div class="main-panel">
     <div class="content-wrapper"  >
@@ -134,14 +136,14 @@ const Billing = () => {
 
 <div class="cont-add">
 	
-                <div class="card">
-                  <div class="card-body">
+                <div class="card1">
+                  <div class="card-body1">
                    <h4>Transactional  Details</h4>
                     <table class="table">
                       <thead>
                         <tr>
-                          <th>Date</th>
-                          <th>Amount</th>
+                          <th >Date</th>
+                          <th >Amount</th>
                           <th>Comments</th>
                         </tr>
                       </thead>

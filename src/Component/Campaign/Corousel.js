@@ -1,12 +1,13 @@
 import React from 'react';
 import  Sidebar from '../Sidebar/Sidebar'
-
+import Header from '../Header/Header'
 import './corousel.css';
 
 
 const Corousel = () => {
   return (
     <>
+    <Header/>
     <Sidebar/>
     <div className='textcont'>
   <div > <h1 >Corousel</h1>

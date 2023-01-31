@@ -2,20 +2,88 @@ import React from 'react'
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { Sidebar } from 'react-pro-sidebar';
+import Header from '../Header/Header';
+import Sidebar from '../Sidebar/Sidebar';
+
 
 import './usrprofile.css'
 
 const Userprofile = () => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(1);
+  // const onClick = () => setShowResults(true)
+  const [showResults, setShowResults] = useState(false)
+  const onClick = () => setShowResults(true)
+  
+  const Results = () => (
+    <div className='popup'>     
+
+      
+      
+
+
+
+
+    
+     
+            <div>
+            <button type="submit" class="bbtnu" name="createuser" onClick={()=>setShowResults(!showResults)}>x</button>
+
+                              <div >
+                                  <label>User Name</label>
+                                  <input type="text" name="username" class="form-controlp" id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
+                              </div>
+
+                              <div >
+                                        <label>Mobile Number</label>
+                                        <input type="text" name="mobile_number" class="form-controlp " id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
+                              </div>
+  
+                              <div >
+                                        <label>Email Id</label>
+                                        <input type="text" name="email_id" class="form-controlp " id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
+                              </div>
+                              <h4 class="card-title">Roles</h4>
+
+
+                              <div class="form-check">
+                                                      <label class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="role" id="optionsRadios1" value="5"/> Comapany Operations <i class="input-helper"></i><i class="input-helper"></i></label>
+                              </div>
+                              <div class="form-check">
+                                                      <label class="form-check-label">
+                                                        <input type="radio" class="form-check-input" name="role" id="optionsRadios1" value="6"/> Company Finance <i class="input-helper"></i><i class="input-helper"></i></label>
+                              </div>
+
+
+
+            </div>
+            <center>
+                <button type="submit" class="bbtnu" name="createuser">Invite</button>
+            </center>
+            <br/>
+          
+
+
+
+
+
+
+
+    </div>
+  )
+  
 
   return (
-    <><Sidebar/>
+    <>
+<Header/>
+<Sidebar/>
+
     <div class="user-maincont" >
           
-        
+    { showResults ? <Results /> : null }
 
-          <h4 style={{color: "#763b75" ,fontSize:20,paddingLeft:10}}>User Porfile</h4>
+
+          <h4 style={{color: "#763b75" ,fontSize:20,paddingLeft:10}}>User Profile</h4>
             
             <div class="user-subcont">
                 <Tabs  selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
@@ -26,10 +94,10 @@ const Userprofile = () => {
       
     </TabList>
              <TabPanel>
-             <div >
+             <div>
                         <div style={{paddingLeft:20}}>
-                          <p style={{fontSize:25,}}>Swetha </p>
-                          <hr ></hr>  
+                          <h5 style={{fontSize:25}}>Swetha </h5>
+                          <hr></hr>  
 
                         </div>
                       
@@ -37,32 +105,33 @@ const Userprofile = () => {
                         
 
                               <div style={{marginRight:10 ,fontSize:18,fontWeight:'bold'}}>
-                                  <p>Role</p>
-                                  <p>Phone</p>
-                                  <p>Email</p>
+                                  <h5>Role</h5>
+                                  <h5>Phone</h5>
+                                  <h5>Email</h5>
                               </div>
 
                               <div style={{marginRight:10 ,fontSize:18}}>
-                                  <p>COMPANY_SUPER_ADMIN</p>
-                                  <p>9010667333</p>
-                                  <p>swetha.s@pyrogroup.com</p>
+                                  <h5>COMPANY_SUPER_ADMIN</h5>
+                                  <h5>9010667333</h5>
+                                  <h5>swetha.s@pyrogroup.com</h5>
                               </div>
 
 
                   
                 
                         </div>
-                    </div>
+              </div>
                 </TabPanel> 
                 <TabPanel>
-                <div className="teamcont">
+
+                <div>
 
                             
                                   
 
 <div class="team">
 
-<button type="submit"  class="bbtnu" value="View Balance" ><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;+Invite</button>
+<button type="submit"  class="bbtnu" value="View Balance" onClick={onClick} ><i class="fa fa-plus" aria-hidden="true"></i>Invite</button>
 
 
 
@@ -117,9 +186,11 @@ const Userprofile = () => {
 </div>
 </div>
 
+
                     </TabPanel>      
                 </Tabs>
             
+              
 
                 {/* <div >
                     
@@ -168,8 +239,10 @@ const Userprofile = () => {
             
 
             
-
-    </div></>
+    </div>
+    
+ 
+    </>
 
 
     )

@@ -1,10 +1,16 @@
 import React from 'react'
+import Header from '../Header/Header'
 import Sidebar from '../Sidebar/Sidebar'
 import './support.css'
 
 const Support = () => {
   return (
-    <><Sidebar/><div  className='container'>
+    <>
+    <div className='si'>
+    <Header/>
+    <Sidebar/>
+    </div>
+    <div  className='container'>
 				  
     <form  className="subcontainer">
       <div style={{padding:30}}>

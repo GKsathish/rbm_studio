@@ -1,11 +1,13 @@
 import React from 'react'
 import  Sidebar from '../Sidebar/Sidebar'
+import Header from '../Header/Header'
 
 import './richcard.css'
 
 const Richcard = () => {
   return (
     <>
+    <Header/>
 <Sidebar/>
 <div className='textcontR'>
   <div > <h1 >Rich Card</h1>

@@ -40,12 +40,23 @@ padding-top:200px;
     /* align-items: center; */
 }
 .log{
-    text-align: center;
+        /* text-align: center; */
     color:white;
-    padding: 0px;
-    margin: 0px;
+    padding-top: 230px;
+    
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
+.btnlog{
+    margin-top: 10px;
+    height: 40px;
+    background:#763B75;
+    width:150px; 
+    color:#fff;
+    border-radius: 15px;
+    padding: 10px; 
+    border:1px solid #fff;
+  }
 

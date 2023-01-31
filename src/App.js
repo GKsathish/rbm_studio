@@ -16,11 +16,13 @@ import Agent from './Component/Approval/Agent';
 import User from './Component/Approval/User';
 import Support from './Component/Support/Support';
 import Forgotpassword from './Component/Forgotpassword/Forgotpassword';
-import Faq from './Component/Foq/Faq';
+import Faq from './Component/Foq/Faq'
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Reports from './Component/Reports/Reports';
+// import Sidebar1 from './Component/Sidebar/Sidebar1';
+import Textside from './Component/Textside/Textside';
 
 function App() {
   return (
@@ -28,9 +30,7 @@ function App() {
     {/* <Sidebar/> */}
 
     <BrowserRouter>
-    {/* <Header/>  */}
-    {/* <Sidebar/> */}
-
+    
       <Routes>
       <Route exact path="/Side" element={<Sidebar/>}/>
 
@@ -56,6 +56,9 @@ function App() {
         <Route path="/Faq" element={<Faq/>}/>
 
         <Route path="/Forgotpassword" element={<Forgotpassword/>}/>
+        <Route exact path="/Sidebar" element={<Sidebar/>}/>
+        <Route exact path="/Header" element={<Header/>}/>
+        <Route exact path="/Textside" element={<Textside/>}/>
 
       
       </Routes>

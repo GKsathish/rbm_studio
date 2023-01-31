@@ -12,11 +12,11 @@ const Login = () => {
 
 
 <div className='log'>
-                    <h2>Hello!</h2>
-                    <p >Welcome to rbm.studio</p>
+                    {/* <h2>Hello!</h2>
+                    <p >Enter your personal details and start journey with us</p>
                     <br/>
-                    <p >Sign in</p>
-    
+                    <button className='btnlog'>Sign Up<button/button>
+     */}
     </div>
                 </div>
                 
@@ -25,7 +25,7 @@ const Login = () => {
             <div className='r-cont'>
                 <div style={{textAlign:"center", margin:20  }}>
                   
-                    <form action="#" method="POST">
+                    <form action="/Creatagent" >
                         <center><h2>Sign In</h2></center>
                         <div>
                             {/* <label>Email</label> */}

@@ -1,0 +1,142 @@
+.countct{
+    margin-left: 18%;
+}
+.title{
+    margin: 20px;
+    color:#763B75;
+}
+.first-card{
+    height:20%;
+    width:100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+}
+.ban-card1{
+    width:250px;
+    height:150px;
+
+    color:#fff;
+    background: rgb(226, 20, 5);
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 3%;
+    margin: 10px;
+
+}
+
+.ban-card2{
+    width:250px;
+    height:150px;
+
+    color:#fff;
+    background: rgb(203, 216, 22);
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 3%;
+    margin: 10px;
+
+}
+
+.ban-card3{
+    width:250px;
+    height:150px;
+
+    color:#fff;
+    background: rgb(74, 33, 187);
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 3%;
+    margin: 10px;
+
+}
+.ban-card4{
+    width:250px;
+    height:150px;
+
+    color:#fff;
+    background: rgb(124, 218, 202);
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 3%;
+    margin: 10px;
+}
+
+.second-card{
+    height: 20%;
+    width:96%;
+    margin: 15px;
+    padding: 5px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.left-card{
+    height: 300px;
+    width:700px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.right-card{
+    height: 300px;
+    width:700px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+
+.third-card{
+    height: 20%;
+    width:96%;
+    margin: 15px;
+    padding: 5px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.fourth-card{
+    height: 20%;
+    width:96%;
+    margin: 15px;
+    padding: 5px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.one-card{
+    height: 300px;
+    width:100%;
+    /* width:700px; */
+    background: #fff;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 10px;
+}
+.cnt{
+    display: flex;
+    justify-content: flex-start;
+}

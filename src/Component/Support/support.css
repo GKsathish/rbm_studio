@@ -9,6 +9,10 @@
     padding: 50px;
 
 }
+.si{
+    font-display: flex;
+    
+}
 .subcontainer{
     /* padding:10%; */
     background: #fff;

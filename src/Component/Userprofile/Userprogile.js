@@ -28,7 +28,7 @@ import './usrprofile.css'
                 </div>
                 {visible ?<div >
                         <div style={{paddingLeft:20}}>
-                          <p style={{fontSize:25,}}>Swetha </p>
+                          <p style={{fontSize:25}}>Swetha </p>
                           <hr ></hr>  
 
                         </div>

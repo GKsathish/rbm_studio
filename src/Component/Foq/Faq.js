@@ -82,6 +82,7 @@
 
 import React, { useState, useRef } from "react";
 import Sidebar from '../Sidebar/Sidebar';
+import Header from '../Header/Header';
 import './faq.css'
 // import ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
 
@@ -167,7 +168,8 @@ const Faq = () => {
     }
     
     return (
-        <><Sidebar/> <div className="container-fluid mt-5 mb-5">
+        <><Header/>
+        <Sidebar/> <div className="container-fluid mt-5 mb-5">
         <div className="row justify-content-center">
             <div className="col-md-8 mt-2">
                 <div className="card">

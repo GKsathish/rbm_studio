@@ -1,10 +1,12 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
+import Header from '../Header/Header'
 import './rcscheck.css'
 
 const Rcscheck = () => {
 	return (
-		<><Sidebar/>
+		<><Header/>
+    <Sidebar/>
     <div className="rcs-cont">
 			<div class="rcs-card">
 				<h4 class="card-title" style={{textAlign:'center',color:'purple',marginBottom:10,fonWeight:'bold'}}> RCS Check</h4>

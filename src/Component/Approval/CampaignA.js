@@ -1,11 +1,16 @@
 import React from 'react'
+import Header from '../Header/Header'
 import Sidebar from '../Sidebar/Sidebar'
+// import Sid from '../Sid/side'
+
 import './campaigna.css'
 
 const CampaignA = () => {
   return (
    <> 
-   <Sidebar/>
+   <Header/>
+   {/* <Sidebar/> */}
+   {/* <Sid/> */}
    <div class="main-panel textcont"  style={{paddingTop: 10}}>
    <div class="content-wrapper">
      {/* <div class="page-header">

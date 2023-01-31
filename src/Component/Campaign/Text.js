@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar';
+import Header from '../Header/Header'
 import './text.css';
 
 
@@ -9,6 +10,7 @@ const Text = () => {
 
   return (
 <>
+<Header/>
 <Sidebar/>
 <div className='textcontT'>
   <div > <h1 >Text Message Campaign</h1>

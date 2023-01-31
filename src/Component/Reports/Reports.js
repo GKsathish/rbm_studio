@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
+import Header from '../Header/Header'
 
 import './reports.css';
 
@@ -7,6 +8,7 @@ const Reports = () => {
   return (
     
       <>
+      <Header/>
       <Sidebar/>
       <div class="main-panel textcont"  style={{paddingTop: 10}}>
           <div class="content-wrapper">

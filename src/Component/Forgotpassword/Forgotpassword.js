@@ -1,10 +1,13 @@
 import React from 'react'
+import Header from '../Header/Header'
+import Sidebar from '../Sidebar/Sidebar'
 import './fpass.css'
 
 const Forgotpassword = () => {
   return (
-
-   <div class="password-box">
+<><Header/>
+<Sidebar/>
+<div class="password-box">
     <form >
       
       {/* <img src="/home/satish/rbm_studio/public/logo192.png" alt="fgshdj" className='ima '/> */}
@@ -43,6 +46,8 @@ const Forgotpassword = () => {
       
   </form>
   </div>
+  </>
+   
   )
 }
 
