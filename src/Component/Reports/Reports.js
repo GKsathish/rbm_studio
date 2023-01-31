@@ -10,12 +10,12 @@ const Reports = () => {
       <>
       <Header/>
       <Sidebar/>
-      <div class="main-panel textcont"  style={{paddingTop: 10}}>
+      <div class="main-panel textcont">
           <div class="content-wrapper">
             {/* <div class="page-header">
              
             </div> */}
-                              <h4 style={{color: "#763b75" ,padding:8,fontSize:20}}>Reports</h4>
+                              <h4 className='reprottitle' >Reports</h4>
 
             <div class="col-lg-12 grid-margin stretch-card">
                     <div class="table-responsive-lg">
@@ -82,6 +82,22 @@ const Reports = () => {
                                   {/* </td> */}
                                         {/* </tr>
                                         <?php  } ?> */}
+                                        <tr>
+                                        <td>1</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+
+                                        <td>test</td>
+
+                                        <td>test</td>
+                                        <td>test</td>
+
+                                        <td>test</td>
+
+                                        </tr>
                                         </tbody>
                                 </table>
                                </div>

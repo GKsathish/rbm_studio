@@ -1,14 +1,15 @@
 
 .textcontT{
     background: #dee2e6;
-    padding:10px;
-    margin-left:15%;
-    margin-top: 0px;
+    padding-left:4%;
+    /* margin-left:15%; */
+    /* margin-top: 0px; */
     
  }
- h1{
-    margin-top:20px;
-    padding:15px;
+ .texttitle{
+    /* margin-top:20px; */
+    padding-top:2%;
+    padding-left: 2%;
     color:#763B75;
  }
 
@@ -27,7 +28,7 @@
  .fieldcontT{
     background: #fff;
     /* height:500px; */
-    width: 40%;
+    width: 60%;
     margin:20px;
     padding:50px;
     border-radius: 5px;
@@ -141,7 +142,7 @@ textarea.form-controlT {
    width: 260px;
            font-size:20px;
          
-           margin-left:60px;
+           margin-left:120px;
 
            
            padding:20px;
@@ -153,18 +154,30 @@ textarea.form-controlT {
 
 
 @media only screen and (max-width:1020px){
+
+
+.textcontT{
+   background: #dee2e6;
+   padding-left:10%;
+   /* margin-left:15%; */
+   /* margin-top: 0px; */
+   
+}
+.texttitle{
+   padding-left:4%;
+}
     .rowcontT{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
      }
      .fieldcontT1{
-        width:80%;
+        width:90%;
         padding:20px;
         margin:20px;
      }
      .fieldcontT{
-        width: 80%;
+        width: 90%;
         padding:20px;
         margin:20px;
 

@@ -13,9 +13,9 @@ const Text = () => {
 <Header/>
 <Sidebar/>
 <div className='textcontT'>
-  <div > <h1 >Text Message Campaign</h1>
+   <h4 className='texttitle'>Text Message Campaign</h4>
 
-    </div>   
+      
 
         <div className='rowcontT'>
 
