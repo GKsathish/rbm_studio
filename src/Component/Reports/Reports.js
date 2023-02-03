@@ -762,21 +762,21 @@ const Reports = () => {
     <>
       <Header />
       <Sidebar />
-              {/* <button onclick="Export()" className="rbtn">Export</button> */}
-              {/* <button onclick="Export()" className="rbtn">Export</button> */}
+      {/* <button onclick="Export()" className="rbtn">Export</button> */}
+      {/* <button onclick="Export()" className="rbtn">Export</button> */}
 
       <div className="textcontre">
-       
-        <h4 className='reprottitle' >Reports</h4>   
-        
+
+        <h4 className='reprottitle' >Reports</h4>
+
         <div className='row'>
           <div className='col-lg-6'>
 
           </div>
           <div className='d-flex justify-content-end col-lg-6 '>
-        <button onclick="Export()" className="rbtne" >Export</button>
+            <button onclick="Export()" className="rbtne" >Export</button>
 
-        </div>
+          </div>
         </div>
 
         {/* <CsvDownloader reports={reports} /> */}
@@ -786,8 +786,8 @@ const Reports = () => {
           striped
           bordered
           small
-        // <button onclick="Export()" className="rbtn">Export</button> 
-         responsive
+          // <button onclick="Export()" className="rbtn">Export</button> 
+          responsive
           data={reports}
           className="tablecont"
         />
