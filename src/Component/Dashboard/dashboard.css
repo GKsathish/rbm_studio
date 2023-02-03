@@ -212,3 +212,10 @@
     }
    
 }
+.dash{
+    display: flex;
+    flex-direction: row;
+}
+.maind{
+    margin-left:20px;
+}

@@ -24,7 +24,7 @@ const User = () => {
   
                                <div className="tab-cont ">
                                   <div class="form-group">
-                                    <input type="search" placeholder='search' className="form-control" />
+                                    <input type="search" placeholder='search' className="form-controlcamp" />
                                     <button onclick="Export()" class="rbtn">Approve</button>
                                     <button onclick="Export()" class="rbtn">Reject</button>
 

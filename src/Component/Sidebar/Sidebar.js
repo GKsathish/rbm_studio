@@ -138,12 +138,16 @@
 
 
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
+import { FaUserAlt, FaHome, FaLock, FaMoneyBill, FaUser,FaBars } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import { BiAnalyse, BiSearch } from "react-icons/bi";
-import { BiCog } from "react-icons/bi";
-import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
+import { BiCog,BiRupee } from "react-icons/bi";
+import { AiFillDashboard,AiFillCheckSquare,AiFillSound } from "react-icons/ai";
 import { BsCartCheck } from "react-icons/bs";
+import { TbReportSearch} from "react-icons/tb";
+import { ImBook } from "react-icons/im";
+import {MdSupportAgent } from "react-icons/md";
+
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
@@ -152,23 +156,23 @@ const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: <FaHome />,
+    icon: <AiFillDashboard/>,
   },
   {
     path: "/Creatagent",
     name: "Createagent",
-    icon: <FaUser />,
+    icon: <FaUserAlt/>,
   },
   {
     path: "/Rcscheck",
     name: "RcsCheck",
-    icon: <MdMessage />,
+    icon: <AiFillCheckSquare/>,
   },
  
   {
-    path: "",
+    path: "/",
     name: "Campaign",
-    icon: <AiTwotoneFileExclamation />,
+    icon: <AiFillSound />,
     subRoutes: [
       {
         path: "/Richcard",
@@ -187,66 +191,85 @@ const routes = [
       },
     ],
   },
+
+  {
+    path: "/CampaignA",
+    name: "Approval",
+    icon: <AiFillSound />,
+    subRoutes: [
+      {
+        path: "/CampaignA",
+        name: "Campaign",
+        icon: <FaUser />,
+      },
+      {
+        path: "/Agent",
+        name: "Agent",
+        icon: <FaLock />,
+      },
+      {
+        path: "/User",
+        name: "User",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
   {
     path: "/Reports",
     name: "Reports",
-    icon: <BsCartCheck />,
+    icon: <TbReportSearch/>,
   },
   {
     path: "/billing",
     name: "Billing",
-    icon: <FaMoneyBill />,
+    icon: <BiRupee />,
   },
   {
     path: "/Faq",
     name: "FAQ",
-    icon: <BiCog />,
+    icon: <ImBook />,
     
     
   },
   {
     path: "/Support",
     name: "Support",
-    icon: <AiFillHeart />,
+    icon: <MdSupportAgent/>,
   },
 ];
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const inputAnimation = {
-    hidden: {
-      width: 0,
-      padding: 0,
-      transition: {
-        duration: 1.2,
-      },
-    },
-    show: {
-      width: "140px",
-      padding: "5px 15px",
-      transition: {
-        duration: 1.2,
-      },
-    },
-  };
+  // const inputAnimation = {
+  //   hidden: {
+  //     width: 0,
+  //     padding: 0,
+  //     // transition: {
+  //     //   duration: 0.0,
+  //     // },
+  //   },
+  //   show: {
+  //     width: "140px",
+  //     padding: "5px 15px",
+     
+  //   },
+  // };
 
-  const showAnimation = {
-    hidden: {
-      width: 0,
-      opacity: 0,
-      transition: {
-        duration: 1.5,
-      },
-    },
-    show: {
-      opacity: 1,
-      width: "auto",
-      transition: {
-        duration: 1.5,
-      },
-    },
-  };
+  // const showAnimation = {
+  //   hidden: {
+  //     width: 0,
+  //     opacity: 0,
+  //     // transition: {
+  //     //   duration: 0.0,
+  //     // },
+  //   },
+  //   show: {
+  //     opacity: 1,
+  //     // width: "auto",
+    
+  //   },
+  // };
 
   return (
     <>
@@ -254,33 +277,31 @@ const Sidebar = ({ children }) => {
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
+          
 
-            transition: {
-              duration: 0.5,
-              type: "spring",
-              damping: 10,
-            },
           }}
           className={`sidebar1 `}
+          // className={`maind`}
         >
           <div className="top_section">
-            <AnimatePresence>
+          <div className="bars">
+              <FaBars onClick={toggle} />
+            </div>
+            {/* <AnimatePresence>
               {isOpen && (
                 <motion.h1
                   variants={showAnimation}
-                  initial="hidden"
-                  animate="show"
+                  initial="show"
+                  // animate="show"
                   exit="hidden"
                   className="logo"
                 >
                   RBM STUDIO
                 </motion.h1>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
 
-            <div className="bars">
-              <FaBars onClick={toggle} />
-            </div>
+            
           </div>
           {/* <div className="search">
             <div className="search_icon">
@@ -306,7 +327,7 @@ const Sidebar = ({ children }) => {
                   <SidebarMenu
                     setIsOpen={setIsOpen}
                     route={route}
-                    showAnimation={showAnimation}
+                    // showAnimation={showAnimation}
                     isOpen={isOpen}
                   />
                 );
@@ -323,7 +344,7 @@ const Sidebar = ({ children }) => {
                   <AnimatePresence>
                     {isOpen && (
                       <motion.div
-                        variants={showAnimation}
+                        // variants={showAnimation}
                         initial="hidden"
                         animate="show"
                         exit="hidden"

@@ -16,6 +16,9 @@ import Agent from './Component/Approval/Agent';
 import User from './Component/Approval/User';
 import Support from './Component/Support/Support';
 import Forgotpassword from './Component/Forgotpassword/Forgotpassword';
+import Forgetpassword from './Component/Forgotpassword/Forgetpassword';
+import Devicedetails from './Component/Device/Devicedetails';
+
 import Faq from './Component/Foq/Faq'
 
 import './App.css';
@@ -51,14 +54,16 @@ function App() {
         <Route path="/Reports" element={<Reports/>}/>
         <Route path="/CampaignA" element={<CampaignA/>}/>
         <Route path="/User" element={<User/>}/>
-        <Route path="/Agent" element={<Agent/>}/>
-        <Route path="/Support" element={<Support/>}/>
-        <Route path="/Faq" element={<Faq/>}/>
+        <Route exact  path="/Agent" element={<Agent/>}/>
+        <Route  exact path="/Support" element={<Support/>}/>
+        <Route exact  path="/Faq" element={<Faq/>}/>
 
-        <Route path="/Forgotpassword" element={<Forgotpassword/>}/>
+        <Route exact path="/Forgotpassword" element={<Forgotpassword/>}/>
         <Route exact path="/Sidebar" element={<Sidebar/>}/>
         <Route exact path="/Header" element={<Header/>}/>
         <Route exact path="/Textside" element={<Textside/>}/>
+        <Route exact path="/Forgetpassword" element={<Forgetpassword/>}/>
+        <Route exact path="/Devicedetails" element={<Devicedetails/>}/>
 
       
       </Routes>

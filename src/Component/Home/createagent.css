@@ -1,6 +1,6 @@
 .agt-cont{
     background: #dee2e6;
-    /* height:100vh; */
+    height:100vh !important;
     
     /* padding: 10px; */
     /* margin-left:4%; */
@@ -17,17 +17,25 @@ h4{
 }
 .left-cont{
     width:60%;
-    height:100vh;
+    /* height:60%; */
+    /* height:100vh !important; */
+
     background: #fff;
     padding: 5px;
+    overflow-x: scroll;
+
 }
 .right-cont{
     width:40%;
-    height:100vh;
+    /* height:100vh !important; */
+
+    /* height:60%; */
     /* background: rgb(236, 68, 68); */
  background: #fff;
  margin-left: 10px;
  padding: 5px;
+ overflow-x: scroll;
+
 }
 .num{
     display: flex;

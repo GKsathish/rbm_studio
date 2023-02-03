@@ -8,7 +8,7 @@ export const SidebarData = [
   {
     title: 'Dashboard',
     path: '/Dashboard',
-    icon: <AiIcons.AiFillHome />,
+    icon: <RiICons.RiDashboardLine/>,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -28,7 +28,7 @@ export const SidebarData = [
   {
     title: 'CreateAgent',
     path: '/Creatagent',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <AiIcons.AiOutlineCheckCircle />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -80,6 +80,33 @@ export const SidebarData = [
       {
         title: 'Text',
         path: '/text',
+        icon: <IoIcons.IoIosPaper />
+      }
+    ]
+  },
+
+  {
+    title: 'Approvals',
+    path: '/CampaignA',
+    icon: <FaIcons.FaEnvelopeOpenText />,
+
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: 'Campaigns',
+        path: '/CampaignA',
+        icon: <IoIcons.IoIosPaper />
+      },
+      {
+        title: 'Agent',
+        path: '/Agent',
+        icon: <IoIcons.IoIosPaper />
+      },
+      {
+        title: 'User',
+        path: '/User',
         icon: <IoIcons.IoIosPaper />
       }
     ]

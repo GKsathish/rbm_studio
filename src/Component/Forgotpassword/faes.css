@@ -1,0 +1,16 @@
+.fheading{
+    background: #763B75;
+    height:60px;
+    text-align: center;
+    color:#fff;
+    padding: 15px;
+    margin: 10px;
+}
+.form{
+    text-align: center;
+}
+@media only screen and (max-width:1080px){
+.form{
+padding: 10%;
+}
+}

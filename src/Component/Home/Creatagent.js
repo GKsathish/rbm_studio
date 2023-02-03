@@ -450,9 +450,9 @@ const Creatagent = ()=>{
 	}else if(step==1){
 	
 	return (
-	<Createagent3 /> );
+	<Createagent2 /> );
 	
-	}else if(step==1){
+	}else if(step==2){
 	
 	return (
 	<Createagent3 /> );
@@ -668,6 +668,32 @@ const Creatagent = ()=>{
 		
 	  </div>
 	  </form>
+	  <div className='right-cont'>
+		 <div className='fieldcontT1'>
+              
+                          
+			  {/* <center style={{textAlign:'center'}}>Message Preview</nter><br/> */}
+			  <div className='mystCtr'>
+
+			  <div className="larger-banner"><br/>
+					  <small>
+						  <center ><b id="agenttarget">user name</b></center>
+					  </small>
+				  </div>
+				  <div className="cardsviewdetails">
+					  <p id="textpreview"><span id="textpreview2"></span></p>
+
+				  </div>
+
+			  </div>
+				  
+			
+		  
+	
+  
+</div>
+	  
+		 </div>
 	  </div>
 	  
 	  </div>

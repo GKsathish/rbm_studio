@@ -1,16 +1,20 @@
 import React from 'react'
-/// import { Sidebar } from 'react-pro-sidebar'
+
 import Header from '../Header/Header'
 import Sidebar from '../Sidebar/Sidebar'
 import './dashboard.css'
 
 const Dashboard = () => {
+
+
+  
   return (
     <>
-    <div className='cnt'>
-    <Header/>
+    
     <Sidebar/>
-    </div>
+  
+  <Header />
+    
 
     <div  className='countct'>
       <h4 className='titledash'>Dashboard</h4>
@@ -68,6 +72,8 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
+    
+    
 </>
   )
 }

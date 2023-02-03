@@ -1,90 +1,115 @@
 import React from 'react'
+// import './menu'
 import './text.css'
 
 const Textside = () => {
   return (
-    <div>
-      {/* <!--wrapper start--> */}
-        <div class="wrapper">
-            {/* <!--header menu start--> */}
-            <div class="header">
-                <div class="header-menu">
-                    <div class="title">Coding <span>Snow</span></div>
-                    <div class="sidebar-btn">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-search"></i></a></li>
-                        <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                        <li><a href="#"><i class="fas fa-power-off"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            {/* <!--header menu end-->
-            <!--sidebar start--> */}
-            <div class="sidebar">
-                <div class="sidebar-menu">
-                    <center class="profile">
-                        <img src="1.jpg" alt=""/>
-                        <p>Jessica</p>
-                    </center>
-                    <li class="item">
-                        <a href="#" class="menu-btn">
-                            <i class="fas fa-desktop"></i><span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="item" id="profile">
-                        <a href="#profile" class="menu-btn">
-                            <i class="fas fa-user-circle"></i><span>Profile <i class="fas fa-chevron-down drop-down"></i></span>
-                        </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-image"></i><span>Picture</span></a>
-                            <a href="#"><i class="fas fa-address-card"></i><span>Info</span></a>
-                        </div>
-                    </li>
-                    <li class="item" id="messages">
-                        <a href="#messages" class="menu-btn">
-                            <i class="fas fa-envelope"></i><span>Messages <i class="fas fa-chevron-down drop-down"></i></span>
-                        </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-envelope"></i><span>New</span></a>
-                            <a href="#"><i class="fas fa-envelope-square"></i><span>Sent</span></a>
-                            <a href="#"><i class="fas fa-exclamation-circle"></i><span>Spam</span></a>
-                        </div>
-                    </li>
-                    <li class="item" id="settings">
-                        <a href="#settings" class="menu-btn">
-                            <i class="fas fa-cog"></i><span>Settings <i class="fas fa-chevron-down drop-down"></i></span>
-                        </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
-                            <a href="#"><i class="fas fa-language"></i><span>Language</span></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="menu-btn">
-                            <i class="fas fa-info-circle"></i><span>About</span>
-                        </a>
-                    </li>
-                </div>
-            </div>
-            {/* <!--sidebar end-->
-            <!--main container start--> */}
-            <div class="main-container">
-                <div class="card">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                </div>
-                <div class="card">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                </div>
-                <div class="card">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                </div>
-            </div>
-            {/* <!--main container end--> */}
+//     <div class="main_box">
+//     <input type="checkbox" id="check" />
+//     <div class="btn_one">
+//       <label for="check">
+//         <i class="fas fa-bars"></i>
+//       </label>
+//     </div>
+//     <div class="sidebar_menu">
+//       <div class="logo">
+//         <a href="#">CodingLab</a>
+//           </div>
+//         <div class="btn_two">
+//           <label for="check">
+//             <i class="fas fa-times"></i>
+//           </label>
+//         </div>
+//       <div class="menu">
+//         <ul>
+//           <li><i class="fas fa-qrcode"></i>
+//             <a href="#">Dashboard</a>
+//           </li>
+//           <li>
+//             <i class="fas fa-link"></i>
+//             <a href="#">Shortcuts</a>
+//           </li>
+//           <li>
+//             <i class="fas fa-stream"></i>
+//             <a href="#">Overview</a>
+//           </li>
+//           <li>
+//             <i class="fas fa-calendar-week"></i>
+//             <a href="#">Events</a>
+//           </li>
+//           <li>
+//             <i class="fas fa-question-circle"></i>
+//             <a href="#">About</a>
+//           </li>
+//           <li>
+//             <i class="fas fa-sliders-h"></i>
+//             <a href="#">Services</a>
+//           </li>
+//           <li>
+//             <i class="fas fa-phone-volume"></i>
+//             <a href="#">Contact</a>
+//           </li>
+//           <li>
+//           <i class="far fa-comments"></i>
+//             <a href="#">Feedback</a>
+//           </li>
+//         </ul>
+//       </div>
+//       <div class="social_media">
+//         <ul>
+//           <a href="#"><i class="fab fa-facebook-f"></i></a>
+//           <a href="#"><i class="fab fa-twitter"></i></a>
+//           <a href="#"><i class="fab fa-instagram"></i></a>
+//           <a href="#"><i class="fab fa-youtube"></i></a>
+//         </ul>
+//       </div>
+//     </div>
+//   </div>
+<div class="main">
+        <div class="side-navbar">
+            <ul>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-dashboard'></i></span>
+                    <span class="text"><h2>Carpool</h2></span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-home-circle' ></i></span>
+                    <span class="text">Home</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-message-square-detail' ></i></span>
+                    <span class="text">Message</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-message-rounded-detail' ></i></span>
+                    <span class="text">Chat</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-user' ></i></span>
+                    <span class="text">Profile</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-cloud-upload' ></i></span>
+                    <span class="text">Upload</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-cog' ></i></span>
+                    <span class="text">Setting</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon"><i class='bx bxs-log-out' ></i></span>
+                    <span class="text">Log-Out</span>
+                </a></li>
+            </ul>
         </div>
-        {/* <!--wrapper end--> */}
-
+        <div class="content">
+            <div class="top-navbar">
+                <div class="bx bx-menu" id="menu-icon"></div>
+                <div class="profile">
+                    <img src="img/profile.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }

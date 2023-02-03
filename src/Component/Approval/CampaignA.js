@@ -25,7 +25,7 @@ const CampaignA = () => {
 
                         <div className="tab-cont ">
                            <div class="form-group">
-                             <input type="search" placeholder='search' className="form-control" />
+                             <input type="search" placeholder='search' className="form-controlcamp" />
                              <button onclick="Export()" class="rbtn">Resend</button>
 
                              <button onclick="Export()" class="rbtn">Approve</button>

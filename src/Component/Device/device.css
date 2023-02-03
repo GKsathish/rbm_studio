@@ -1,10 +1,12 @@
 
-.textcont{
+.textcontde{
     background: #dee2e6;
-    padding:10px;
+    padding-left:4%;
+   width:70%;
+
     
  }
- .rbtn{
+ .rbtnde{
     
         background:#666;
         padding:10px;
@@ -144,7 +146,7 @@
         padding: 5px !important;
     }
     
-    .card .card-body {
+    .cardde .card-bodyde {
         padding: 15px 5px;
     }
     
@@ -199,19 +201,19 @@
         background-color: #763b75;
         border: none;
     }
-    card .card-body {
+    card .card-bodyde {
         padding: 15px 5px;
     }
-    .card .card-body {
+    .cardde.card-bodyde {
         padding: 25px 25px;
     }
-    .card-body {
+    .card-bodyde {
         -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         padding: 10px 10px;
     }
-    .form-controlcamp {
+    .form-control {
         border: 1px solid #ccc;
         font-family: "ubuntu-regular", sans-serif;
         font-size: 18px  ;
@@ -252,6 +254,10 @@
 
       @media only screen and (max-width:1020px){
 
+        .textcontde{
+            padding-left: 10%;
+            width:100%;
+        }
         /* table {
             border: none;
             height: 200px;
@@ -261,7 +267,7 @@
             width: 10%;
 
           } */
-          .form-controlcamp {
+          .form-control {
             border: 1px solid #ccc;
             font-family: "ubuntu-regular", sans-serif;
             font-size: 18px  ;

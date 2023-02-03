@@ -1,8 +1,23 @@
 .textcontre {
     background: #dee2e6;
     /* padding:10px; */
-    padding-left: 4%;
+    padding-left: 5%;
+    height: 100vh;
+    /* width:100; */
+    /* padding: 4%; */
+    /* margin: 5%; */
 
+
+}
+.lin{
+    height:50px;
+    width:100px;
+    padding:10px;
+    /* margin:10px; */
+    text-decoration: none;
+    color:white;
+    background: #763B75;
+    border-radius: 5px;
 }
 
 .reprottitle {
@@ -75,7 +90,7 @@ table td:empty::before {
     margin: 5px !important;
 }
 
-
+/* 
 thead,
 tbody,
 tfoot,
@@ -246,7 +261,7 @@ card .card-body {
     margin-right: 20px;
     /* paddin20px; */
 
-}
+/* } */
 
 .form-group {
     display: flex;
@@ -279,12 +294,13 @@ th {
 td {
     text-align: center;
     font-size: 16px;
-}
+} */
 
 @media only screen and (max-width:1020px) {
     .textcontre{
-        padding-left: 6%;
-        /* padding-right: 6%; */
+        padding: 6%;
+    
+        
     }
     .reprottitle{
         padding-left: 5%;
@@ -318,4 +334,5 @@ td {
         overflow-x: scroll;
 
     }
+    
 }
