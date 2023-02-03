@@ -16,7 +16,7 @@ const Header = () => {
          <img    src={`${process.env.PUBLIC_URL}/images/Logow.jpg`} className="iamg" 
  />
          <Dropdown>
-      <Dropdown.Toggle  variant="violet">
+      <Dropdown.Toggle className='userbtn'>
       <div className="user">
          <BsFillPersonFill style={{ height:50,width:50}}/> 
          User 
@@ -25,7 +25,7 @@ const Header = () => {
       </div>
       </Dropdown.Toggle>
 
-      <Dropdown.Menu>
+      <Dropdown.Menu className="drop-tog">
         <Dropdown.Item href="/UserProfile">My Profile</Dropdown.Item>
         <Dropdown.Item href="/Forgotpassword">Change Password</Dropdown.Item>
         <Dropdown.Item href="/">Sign Out</Dropdown.Item>

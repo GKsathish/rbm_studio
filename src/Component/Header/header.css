@@ -8,6 +8,22 @@
     width:100%;
    
 }
+.userbtn{
+  border: none !important;
+  background: none !important;
+}
+.drop-tog{
+
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate(0px, 48.4444px) !important;
+
+}
+.btn.focus, .btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0rem !important;
+  border: none !important;
+}
 .user{
   
   display: flex;

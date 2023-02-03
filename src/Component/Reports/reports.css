@@ -1,11 +1,17 @@
+
+.data-table, .form-control{
+    width:100%!important;
+    float: left;
+}
 .textcontre {
     background: #dee2e6;
     /* padding:10px; */
-    padding-left: 5%;
+    padding: 4%;
     height: 100vh;
     /* width:100; */
     /* padding: 4%; */
     /* margin: 5%; */
+    /* position: fixed; */
 
 
 }
@@ -25,16 +31,17 @@
     padding-left: 1%;
 }
 
-.rbtn {
+.rbtne {
 
-    background: #763B75;
+    background: #763B75 !important ;
     padding: 10px;
-    height: 45px;
-    width: 200px;
+    height: 35px;
+    width: 220px;
     border-radius: 5px;
     color: #fff;
     border: none;
-    margin-right: 2px;
+    /* margin-left: 100%; */
+    /* float: right !important; */
 
 
 }
@@ -294,13 +301,16 @@ th {
 td {
     text-align: center;
     font-size: 16px;
-} */
+} 
 
 @media only screen and (max-width:1020px) {
-    .textcontre{
-        padding: 6%;
-    
-        
+    .textcontre {
+        background: #dee2e6;
+        padding: 10px;
+        padding-left: 10%;
+        height: 100vh;
+        /* padding: 4%; */
+        margin: 5%;
     }
     .reprottitle{
         padding-left: 5%;
@@ -320,8 +330,14 @@ td {
         font-family: "ubuntu-regular", sans-serif;
         font-size: 18px;
         width: 100% !important;
-        margin-right: 20px;
+        /* margin-right: 20px; */
         /* paddin20px; */
+
+    }
+    .form-control{
+        width: 89% !important;
+    margin-left: 12% !important;
+    padding: 2% !important;
 
     }
 
