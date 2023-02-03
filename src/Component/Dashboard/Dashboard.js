@@ -191,33 +191,33 @@ const Dashboard = () => {
       <h4 className='titledash'>Dashboard</h4>
       <div className='first-card'>
         <div className='ban-card1'>
-              <h3>Total Campaigns</h3>
-              <h2>464</h2>
+              <h5 className='dashtitle'>Total Campaigns</h5>
+              <h4 className='dashtitle'>464</h4>
 
         </div>
         <div className='ban-card2'>
-        <h3>Sent</h3>
-              <h2>29.5</h2>
+        <h5 className='dashtitle'>Sent</h5>
+              <h4 className='dashtitle'>29.5</h4>
         </div>
         <div className='ban-card3'>
 
-        <h3>Delivered</h3>
-              <h2>43M</h2>
+        <h5 className='dashtitle'>Delivered</h5>
+              <h4 className='dashtitle' >43M</h4>
         </div>
           <div className='ban-card4'>
-          <h3>Read</h3>
-              <h2>9.3M</h2>
+          <h5 className='dashtitle'>Read</h5>
+              <h4 className='dashtitle'>9.3M</h4>
           </div>
       </div>
 
       <div className='second-card'>
         <div className='left-card'>
-        <h3>Read</h3>
+        <h5>Read</h5>
         <hr></hr>
 
         </div>
         <div className='right-card'>
-        <h3>Delivered</h3>
+        <h5>Delivered</h5>
         <hr></hr>
 
         </div>
@@ -225,7 +225,7 @@ const Dashboard = () => {
       </div>
       <div className='third-card'>
       <div className='left-card'>
-        <h3>Agent Details</h3>
+        <h5>Agent Details</h5>
         <hr></hr>
         <h6>MOBILEMASALA <span className='text-success'>Approved</span></h6>
         <MDBDataTable
@@ -240,7 +240,10 @@ const Dashboard = () => {
 
         </div>
         <div className='right-card'>
-        <h3>Tested Devices</h3>
+          <div className='d-flex flex-row'>  <h5>Tested Devices</h5>
+         <a onclick="Export()" className="rbt">Invite</a> </div>
+      
+
         <hr style={{color:'grey'}}></hr>
         <MDBDataTable
   striped
@@ -251,12 +254,13 @@ const Dashboard = () => {
   data={reportstest}
   className="tablecont"
 />
+<a href='/Devicedetails' className="rbt2">more...</a> 
 
         </div>
       </div>
       <div className='fourth-card'>
       <div className='one-card'>
-        <h3>Campaigns</h3>
+        <h5>Campaigns</h5>
         <hr></hr>
 
 
@@ -266,7 +270,6 @@ const Dashboard = () => {
   striped
   bordered
   small
-  // <button onclick="Export()" className="rbtn">Export</button> 
   responsive
   data={reports}
   className="tablecont"
