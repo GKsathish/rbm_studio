@@ -4,18 +4,41 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import {Modal, Button} from 'react-bootstrap';  
 
 
 import './usrprofile.css'
 
 const Userprofile = () => {
+
+  const [show, setShow] = useState(false);  
+  
+  const modalClose = () => setShow(false);  
+  const modalShow = () => setShow(true);  
   const [tabIndex, setTabIndex] = useState(1);
   // const onClick = () => setShowResults(true)
   const [showResults, setShowResults] = useState(false)
   const onClick = () => setShowResults(true)
   
-  const Results = () => (
-    <div className='popup'>     
+  // const Results = () => (
+    
+  // )
+  
+
+  return (
+    <>
+<Header/>
+<Sidebar/>
+<div>  
+      
+  <Modal show={show} onHide={modalClose}>  
+  <Modal.Header closeButton>  
+    <Modal.Title>New User</Modal.Title>  
+  </Modal.Header>  
+  
+  <Modal.Body>  
+  <div className='popup'>     
 
       
       
@@ -25,62 +48,63 @@ const Userprofile = () => {
 
     
      
-            <div>
-            <button type="submit" class="bbtnu" name="createuser" onClick={()=>setShowResults(!showResults)}>x</button>
 
-                              <div >
-                                  <label>User Name</label>
-                                  <input type="text" name="username" class="form-controlp" id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
-                              </div>
+{/* <button type="submit" class="bbtnu" name="createuser" onClick={()=>setShowResults(!showResults)}>x</button> */}
 
-                              <div >
-                                        <label>Mobile Number</label>
-                                        <input type="text" name="mobile_number" class="form-controlp " id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
-                              </div>
+                  <div >
+                      <label>User Name</label>
+                      <input type="text" name="username" class="form-controlp" id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
+                  </div>
+
+                  <div >
+                            <label>Mobile Number</label>
+                            <input type="text" name="mobile_number" class="form-controlp " id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
+                  </div>
+
+                  <div >
+                            <label>Email Id</label>
+                            <input type="text" name="email_id" class="form-controlp " id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
+                  </div>
+                 <div className='Role'>
+                    <h4 className="card-title">Roles</h4>
+
+
+
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="role" id="optionsRadios1" value="5"/> Company Operations <i class="input-helper"></i><i class="input-helper"></i></label>
+
+
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="role" id="optionsRadios1" value="6"/> Company Finance <i class="input-helper"></i><i class="input-helper"></i></label>
+
+
+                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+  </Modal.Body>  
   
-                              <div >
-                                        <label>Email Id</label>
-                                        <input type="text" name="email_id" class="form-controlp " id="cardtitle req1" minlength="4" maxlength="45" size="45" required="" placeholder="Card Title with Min 4 &amp; Max 45 characters"/>
-                              </div>
-                              <h4 class="card-title">Roles</h4>
+  <Modal.Footer>  
+  <Button variant="info" name="createuser">Invite</Button>
 
-
-                              <div class="form-check">
-                                                      <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="role" id="optionsRadios1" value="5"/> Comapany Operations <i class="input-helper"></i><i class="input-helper"></i></label>
-                              </div>
-                              <div class="form-check">
-                                                      <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="role" id="optionsRadios1" value="6"/> Company Finance <i class="input-helper"></i><i class="input-helper"></i></label>
-                              </div>
-
-
-
-            </div>
-            <center>
-                <button type="submit" class="bbtnu" name="createuser">Invite</button>
-            </center>
-            <br/>
-          
-
-
-
-
-
-
-
-    </div>
-  )
-  
-
-  return (
-    <>
-<Header/>
-<Sidebar/>
+    <Button variant="danger"  onClick={modalClose}>Close Modal</Button>  
+    <Button variant="primary">Save changes</Button>  
+  </Modal.Footer>  
+</Modal>  </div>  
 
     <div class="user-maincont" >
           
-    { showResults ? <Results /> : null }
+    {/* { showResults ? <Results /> : null } */}
 
 
           <h4 style={{color: "#763b75" ,fontSize:20,paddingLeft:10}}>User Profile</h4>
@@ -131,7 +155,11 @@ const Userprofile = () => {
 
 <div class="team">
 
-<button type="submit"  class="bbtnu" value="View Balance" onClick={onClick} ><i class="fa fa-plus" aria-hidden="true"></i>Invite</button>
+  <Button  onClick={modalShow} className="m-2" >  
++InviteUser
+      </Button> 
+
+  
 
 
 
