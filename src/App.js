@@ -20,25 +20,30 @@ import Forgetpassword from './Component/Forgotpassword/Forgetpassword';
 import Devicedetails from './Component/Device/Devicedetails';
 
 import Faq from './Component/Foq/Faq'
+import SI from './Component/te/SI'
+import Newside from './Component/Dashboard/newside/Newside'
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Reports from './Component/Reports/Reports';
 // import Sidebar1 from './Component/Sidebar/Sidebar1';
-import Textside from './Component/Textside/Textside';
+// import Textside from './Component/Textside/Textside';
 
 function App() {
   return (
     <>
-    {/* <Sidebar/> */}
+    {/* <Header/>
+    // <Sidebar/> */}
 
-    <BrowserRouter>
     
+    <BrowserRouter>
+    {/* <Sidebar/> */}
       <Routes>
       <Route exact path="/Side" element={<Sidebar/>}/>
 
       <Route exact path="/" element={<Login/>}/>
       <Route  path="/Dashboard" element={<Dashboard/>}/>
+      <Route  path="/S" element={<SI/>}/>
 
         <Route path="/Creatagent" element={<Creatagent/>}/>
         <Route path="/Billing" element={<Billing/>}/>
@@ -61,14 +66,16 @@ function App() {
         <Route exact path="/Forgotpassword" element={<Forgotpassword/>}/>
         <Route exact path="/Sidebar" element={<Sidebar/>}/>
         <Route exact path="/Header" element={<Header/>}/>
-        <Route exact path="/Textside" element={<Textside/>}/>
+      
         <Route exact path="/Forgetpassword" element={<Forgetpassword/>}/>
         <Route exact path="/Devicedetails" element={<Devicedetails/>}/>
+        <Route exact path="/Newside" element={<Newside/>}/>
 
       
       </Routes>
     </BrowserRouter>
    
+    
       
     </>
   );

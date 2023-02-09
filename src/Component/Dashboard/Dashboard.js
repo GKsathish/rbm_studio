@@ -4,9 +4,17 @@ import { MDBDataTable } from 'mdbreact';
 
 import Header from '../Header/Header'
 import Sidebar from '../Sidebar/Sidebar'
+import Delchart from '../Chart/Delchart';
+import Readchart from '../Chart/Readchart';
 import './dashboard.css'
+import SI from '../te/SI';
+
+
 
 const Dashboard = () => {
+  // var CanvasJS = CanvasJSReact.CanvasJS;
+// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
   const reports = {
     columns: [
       {
@@ -178,108 +186,196 @@ const Dashboard = () => {
     
     ]
   };
-  
+
   return (
-    <>
-    
-    <Sidebar/>
+ <>
   
-  <Header />
-    
+   
 
-    <div  className='countct'>
-      <h4 className='titledash'>Dashboard</h4>
-      <div className='first-card'>
-        <div className='ban-card1'>
-              <h5 className='dashtitle'>Total Campaigns</h5>
-              <h4 className='dashtitle'>464</h4>
+   <div class="wrapper">
+        {/* <!-- Sidebar  --> */}
+        <nav id="sidebar">
+            {/* <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
 
-        </div>
-        <div className='ban-card2'>
-        <h5 className='dashtitle'>Sent</h5>
-              <h4 className='dashtitle'>29.5</h4>
-        </div>
-        <div className='ban-card3'>
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
 
-        <h5 className='dashtitle'>Delivered</h5>
-              <h4 className='dashtitle' >43M</h4>
-        </div>
-          <div className='ban-card4'>
-          <h5 className='dashtitle'>Read</h5>
-              <h4 className='dashtitle'>9.3M</h4>
-          </div>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul> */}
+            {/* <SI/> */}
+        </nav>
+
+        {/* <!-- Page Content  --> */}
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg  bg1 ">
+                
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        {/* <span>Toggle Sidebar</span> */}
+                    </button>
+                   
+                    <Header/>
+
+            
+            </nav>
+
+                  
+  <div>
+
+  
+  
+{/* <Header /> */}
+
+  <div  className='countct'>
+  {/* <Sidebar/> */}
+
+    <div>
+    <h4 className='titledash'>Dashboard</h4>
+    <div className='first-card'>
+      <div className='ban-card1'>
+            <h5 className='dashtitle'>Total Campaigns</h5>
+            <h4 className='dashtitle'>464</h4>
+
       </div>
-
-      <div className='second-card'>
-        <div className='left-card'>
-        <h5>Read</h5>
-        <hr></hr>
-
-        </div>
-        <div className='right-card'>
-        <h5>Delivered</h5>
-        <hr></hr>
-
-        </div>
-       
+      <div className='ban-card2'>
+      <h5 className='dashtitle'>Sent</h5>
+            <h4 className='dashtitle'>29.5</h4>
       </div>
-      <div className='third-card'>
+      <div className='ban-card3'>
+
+      <h5 className='dashtitle'>Delivered</h5>
+            <h4 className='dashtitle' >43M</h4>
+      </div>
+        <div className='ban-card4'>
+        <h5 className='dashtitle'>Read</h5>
+            <h4 className='dashtitle'>9.3M</h4>
+        </div>
+    </div>
+
+    <div className='second-card'>
       <div className='left-card'>
-        <h5>Agent Details</h5>
-        <hr></hr>
-        <h6>MOBILEMASALA <span className='text-success'>Approved</span></h6>
-        <MDBDataTable
-  striped
-  bordered
-  small
-  // <button onclick="Export()" className="rbtn">Export</button> 
-  responsive
-  data={reportstel}
-  className="tablecont"
+      <h5>Read</h5>
+      <hr></hr>
+   <Readchart/>
+   {/* <Delchart/> */}
+      </div>
+      <div className='right-card'>
+      <h5>Delivered</h5>
+      <hr></hr>
+      {/* <Bar data={graphdata}/> */}
+      <Delchart/>
+      </div>
+     
+    </div>
+    <div className='third-card'>
+    <div className='left-card'>
+      <h5>Agent Details</h5>
+      <hr></hr>
+      <h6>MOBILEMASALA <span className='text-success'>Approved</span></h6>
+      <MDBDataTable
+striped
+bordered
+small
+// <button onclick="Export()" className="rbtn">Export</button> 
+responsive
+data={reportstel}
+className="tablecont"
 />
 
-        </div>
-        <div className='right-card'>
-          <div className='d-flex flex-row'>  <h5>Tested Devices</h5>
-         <a onclick="Export()" className="rbt">Invite</a> </div>
-      
+      </div>
+      <div className='right-card'>
+        <div className='d-flex flex-row'>  <h5>Tested Devices</h5>
+       <a onclick="Export()" className="rbt">Invite</a> </div>
+    
 
-        <hr style={{color:'grey'}}></hr>
-        <MDBDataTable
-  striped
-  bordered
-  small
-  // <button onclick="Export()" className="rbtn">Export</button> 
-  responsive
-  data={reportstest}
-  className="tablecont"
+      <hr style={{color:'grey'}}></hr>
+      <MDBDataTable
+striped
+bordered
+small
+// <button onclick="Export()" className="rbtn">Export</button> 
+responsive
+data={reportstest}
+className="tablecont"
 />
 <a href='/Devicedetails' className="rbt2">more...</a> 
 
-        </div>
       </div>
-      <div className='fourth-card'>
-      <div className='one-card'>
-        <h5>Campaigns</h5>
-        <hr></hr>
+    </div>
+    <div className='fourth-card'>
+    <div className='one-card'>
+      <h5>Campaigns</h5>
+      <hr></hr>
 
 
-      
+    
 
 <MDBDataTable
-  striped
-  bordered
-  small
-  responsive
-  data={reports}
-  className="tablecont"
+striped
+bordered
+small
+responsive
+data={reports}
+className="tablecont"
 />
 
 
-        </div>
       </div>
     </div>
-    
+    </div>
+  </div>
+</div>
+
+</div>
+    </div>
     
 </>
   )

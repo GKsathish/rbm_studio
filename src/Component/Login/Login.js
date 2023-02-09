@@ -25,7 +25,7 @@ const Login = () => {
             <div className='r-cont'>
                 <div style={{textAlign:"center", margin:20  }}>
                   
-                    <form action="/Creatagent" >
+                    <form action="/dashboard" >
                         <center><h2>Sign In</h2></center>
                         <div>
                             {/* <label>Email</label> */}

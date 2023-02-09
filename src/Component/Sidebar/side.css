@@ -168,6 +168,7 @@
   
   .main-container {
     display: flex;
+  /* position: fixed; */
   }
   main {
     padding: 10px;
