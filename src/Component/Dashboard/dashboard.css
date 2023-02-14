@@ -1,9 +1,9 @@
-.rbt{
+.rbt {
     background: #763B75;
     /* padding: 10px; */
     height: 35px;
     /* width: 100px; */
-   
+
     color: #fff;
     border: 2px solid #763B75;
     margin-left: 80%;
@@ -11,45 +11,78 @@
     padding: 10px;
 
 }
-.rbt2{
+
+#button {
+    cursor: pointer;
+    margin: -5px;
+    padding: 10px 6px;
+    width: 102px;
+    font-size: 12px;
+    float: right;
+    background: #763B75;
+    border: 0;
+    transition: opacity 0.3s ease;
+    color: #fff;
+    line-height: 1;
+    font-family: "ubuntu-bold", sans-serif;
+    display: inline-block;
+    font-weight: 900;
+}
+
+.more {
+    float: right;
+    margin: -5px 13px;
+    color: #763B75;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.rbt2 {
     background: #763B75;
     /* padding: 10px; */
     height: 35px;
     /* width: 100px; */
-   
+
     color: #fff;
     border-radius: 2px;
     border: 2px solid #763B75;
     margin-left: 90%;
 }
+
 hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
     border-top: 1px solid #763B75 !important;
 }
-h5{
+
+h5 {
     color: #763B75;
 }
-.dashtitle{
-    color:#fff;
+
+.dashtitle {
+    color: #fff;
     padding: 10px;
 }
-.countct{
+
+.countct {
     /* margin-left: 18%; */
-    
+    position: relative;
+    top: 50px;
     padding: 2%;
-    background:#dee2e6;
+    background: #f2edf3;
     width: 100%;
-    
 }
-.titledash{
+
+.titledash {
     margin-left: 20px;
-    color:#763B75;
+    color: #763B75;
 }
-.first-card{
-    height:20%;
-    width:100%;
+
+.first-card {
+    height: 20%;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -57,15 +90,16 @@ h5{
     align-items: center;
     margin: 16px;
 }
-.ban-card1{
-    width:25%;
-    height:180px;
 
-    color:#fff;
+.ban-card1 {
+    width: 25%;
+    height: 180px;
+
+    color: #fff;
     /* background: rgb(226, 20, 5); */
-    background:linear-gradient(to right, #e37833, #cf1043) !important;
+    background: linear-gradient(to right, #e37833, #cf1043) !important;
 
-    padding:5px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -75,15 +109,15 @@ h5{
 
 }
 
-.ban-card2{
-    width:25%;
-    height:180px;
+.ban-card2 {
+    width: 25%;
+    height: 180px;
 
-    color:#fff;
+    color: #fff;
     /* background: rgb(203, 216, 22); */
-    
+
     background: linear-gradient(to right, #ebcc2f, #d7b50c) !important;
-    padding:5px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -93,14 +127,14 @@ h5{
 
 }
 
-.ban-card3{
-    width:25%;
-    height:180px;
+.ban-card3 {
+    width: 25%;
+    height: 180px;
 
-    color:#fff;
+    color: #fff;
     /* background: rgb(74, 33, 187); */
     background: linear-gradient(to right, #4a9bdd, #047edf 99%) !important;
-    padding:5px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -109,14 +143,15 @@ h5{
     margin: 10px;
 
 }
-.ban-card4{
-    width:25%;
-    height:180px;
 
-    color:#fff;
+.ban-card4 {
+    width: 25%;
+    height: 180px;
+
+    color: #fff;
     /* background: rgb(124, 218, 202); */
     background: linear-gradient(to right, #84d9d2, #07cdae) !important;
-    padding:5px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -125,28 +160,29 @@ h5{
     margin: 10px;
 }
 
-.second-card{
+.second-card {
     height: 20%;
-    width:100%;
+    width: 100%;
     margin: 15px;
     padding: 5px;
     /* background: #fff; */
     display: flex;
     justify-content: flex-start;
-    
+
 }
-.left-card{
+
+.left-card {
     height: 100%;
-    width:50%;
+    width: 50%;
     background: #fff;
     margin: 5px;
     border-radius: 8px;
     padding: 10px;
 }
 
-.right-card{
+.right-card {
     height: 100%;
-    width:50%;
+    width: 50%;
     background: #fff;
     margin: 5px;
     border-radius: 8px;
@@ -155,119 +191,138 @@ h5{
 }
 
 
-.third-card{
+.third-card {
     height: 100%;
-    width:100%;
+    width: 100%;
     margin: 15px;
     padding: 5px;
     /* background: #fff; */
     display: flex;
     justify-content: flex-start;
-    
+
 }
-.fourth-card{
+
+.fourth-card {
     height: 100%;
-    width:100%;
+    width: 100%;
     margin: 15px;
     padding: 5px;
     /* background: #fff; */
     display: flex;
     justify-content: flex-start;
-    
+
 }
-.one-card{
+
+.one-card {
     height: 100%;
-    width:100%;
+    width: 100%;
     /* width:700px; */
     background: #fff;
     margin: 5px;
     border-radius: 8px;
     padding: 10px;
 }
-.cnt{
+
+.cnt {
     display: flex;
     justify-content: flex-start;
 }
-@media only screen and (max-width:1000px){
-    .countct{
+
+@media only screen and (max-width:1000px) {
+    .countct {
         /* margin: 2%; */
-        padding:3%;
+        padding: 3%;
     }
-    .first-card{
-       
+
+    .first-card {
+
         /* margin-left: 18%; */
         display: flex;
         flex-direction: column;
         /* padding: 4%; */
-        background:#dee2e6;
+        background: #f2edf3;
         width: 100%;
         overflow-x: scroll;
 
     }
-    .second-card{
+
+    .second-card {
         /* margin-left: 18%; */
         margin-left: 8%;
         display: flex;
         flex-direction: column;
         padding: 4%;
-        background:#dee2e6;
+        background: #f2edf3;
         width: 80%;
         overflow-x: scroll;
 
     }
 
-    .third-card{
+    .third-card {
         /* margin-left: 18%; */
         margin-left: 8%;
         display: flex;
         flex-direction: column;
         padding: 4%;
-        background:#dee2e6;
+        background: #f2edf3;
         width: 80%;
         overflow-x: scroll;
     }
 
-    .fourth-card{
+    .fourth-card {
         /* margin-left: 18%; */
         margin-left: 8%;
         display: flex;
         flex-direction: column;
         padding: 4%;
-        background:#dee2e6;
+        background: #f2edf3;
         width: 80%;
         overflow-x: scroll;
     }
-    
-    
+
+
     .titledash {
         margin-left: 50px;
         color: #763B75;
     }
-   .first-card,.second-card,.third-card,.fourth-card{
+
+    .first-card,
+    .second-card,
+    .third-card,
+    .fourth-card {
         width: 95%;
         /* overflow-x: scroll; */
     }
-    .left-card,.right-card{
-        width:90%;
+
+    .left-card,
+    .right-card {
+        width: 90%;
     }
-    .ban-card1,.ban-card2,.ban-card3,.ban-card4{
+
+    .ban-card1,
+    .ban-card2,
+    .ban-card3,
+    .ban-card4 {
         width: 82%;
 
     }
 
-    .rbt{
+    .rbt {
         margin-left: 30%;
     }
-    .rbt2{
+
+    .rbt2 {
         /* margin-right:10%; */
         margin-left: 75% !important;
     }
-   
+
 }
-.dash{
+
+.dash {
     display: flex;
     flex-direction: row;
 }
-.maind{
-    margin-left:20px;
+
+.maind {
+    margin-left: 20px;
 }

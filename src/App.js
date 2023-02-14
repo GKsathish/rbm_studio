@@ -15,13 +15,13 @@ import CampaignA from './Component/Approval/CampaignA';
 import Agent from './Component/Approval/Agent';
 import User from './Component/Approval/User';
 import Support from './Component/Support/Support';
-import Forgotpassword from './Component/Forgotpassword/Forgotpassword';
+import Changepassword from './Component/Forgotpassword/Changepassword';
 import Forgetpassword from './Component/Forgotpassword/Forgetpassword';
 import Devicedetails from './Component/Device/Devicedetails';
-
+import Test from './Component/TEST/test';
 import Faq from './Component/Foq/Faq'
-import SI from './Component/te/SI'
-import Newside from './Component/Dashboard/newside/Newside'
+import createagent  from './Component/Home/createagent';
+import Bakcreate  from './Component/Home/Bakcreate';
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -32,51 +32,43 @@ import Reports from './Component/Reports/Reports';
 function App() {
   return (
     <>
-    {/* <Header/>
-    // <Sidebar/> */}
+      {/* <Header/>
+    <Sidebar/> */}
 
-    
-    <BrowserRouter>
-    {/* <Sidebar/> */}
-      <Routes>
-      <Route exact path="/Side" element={<Sidebar/>}/>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/Side" element={<Sidebar />} />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/Creatagent" element={<Creatagent />} />
+          <Route path="/Billing" element={<Billing />} />
+          <Route path="/Userprofile" element={<Userprofile />} />
+          <Route path="/Userprogile" element={<Userprogile />} />
+          <Route path="/Rcscheck" element={<Rcscheck />} />
+          <Route path="/Text" element={<Text />} />
+          <Route path="/Newtext" element={<Newtext />} />
+          <Route path="/Richcard" element={<Richcard />} />
+          <Route path="/Corousel" element={<Corousel />} />
+          <Route path="/Reports" element={<Reports />} />
+          <Route path="/CampaignA" element={<CampaignA />} />
+          <Route path="/User" element={<User />} />
+          <Route exact path="/Agent" element={<Agent />} />
+          <Route exact path="/Support" element={<Support />} />
+          <Route exact path="/Faq" element={<Faq />} />
+          <Route exact path="/Changepassword" element={<Changepassword />} />
+          <Route exact path="/Sidebar" element={<Sidebar />} />
+          <Route exact path="/Header" element={<Header />} />
+          <Route exact path="/Forgetpassword" element={<Forgetpassword />} />
+          <Route exact path="/Devicedetails" element={<Devicedetails />} />
+          <Route exact path="/Test" element={<Test />} />
+          <Route exact path="/ssss" element={<Bakcreate/>} />
 
-      <Route exact path="/" element={<Login/>}/>
-      <Route  path="/Dashboard" element={<Dashboard/>}/>
-      <Route  path="/S" element={<SI/>}/>
+          {/* <Route exact path="/cr" element={<createagent/>} /> */}
 
-        <Route path="/Creatagent" element={<Creatagent/>}/>
-        <Route path="/Billing" element={<Billing/>}/>
-        <Route path="/Userprofile" element={<Userprofile/>}/>
-        <Route path="/Userprogile" element={<Userprogile/>}/>
+        </Routes>
+      </BrowserRouter>
 
-        <Route path="/Rcscheck" element={<Rcscheck/>}/>
-        <Route path="/Text" element={<Text/>}/>
-        <Route path="/Newtext" element={<Newtext/>}/>
 
-        <Route path="/Richcard" element={<Richcard/>}/>
-        <Route path="/Corousel" element={<Corousel/>}/>
-        <Route path="/Reports" element={<Reports/>}/>
-        <Route path="/CampaignA" element={<CampaignA/>}/>
-        <Route path="/User" element={<User/>}/>
-        <Route exact  path="/Agent" element={<Agent/>}/>
-        <Route  exact path="/Support" element={<Support/>}/>
-        <Route exact  path="/Faq" element={<Faq/>}/>
-
-        <Route exact path="/Forgotpassword" element={<Forgotpassword/>}/>
-        <Route exact path="/Sidebar" element={<Sidebar/>}/>
-        <Route exact path="/Header" element={<Header/>}/>
-      
-        <Route exact path="/Forgetpassword" element={<Forgetpassword/>}/>
-        <Route exact path="/Devicedetails" element={<Devicedetails/>}/>
-        <Route exact path="/Newside" element={<Newside/>}/>
-
-      
-      </Routes>
-    </BrowserRouter>
-   
-    
-      
     </>
   );
 }

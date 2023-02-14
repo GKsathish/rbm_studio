@@ -4,7 +4,7 @@ import Header from '../Header/Header'
 import { MDBDataTable } from 'mdbreact';
 
 import './rcscheck.css'
-  
+
 
 
 const Rcscheck = () => {
@@ -506,119 +506,66 @@ const Rcscheck = () => {
       }
     ]
   };
-	return (
-		<><Header/>
-    <Sidebar/>
-    <div className="rcs-cont">
-			<div class="rcs-card">
-				<h4 class="card-title" style={{textAlign:'center',color:'purple',marginBottom:10,fonWeight:'bold'}}> RCS Check</h4>
-				{/* <p class="card-description"> </p> */}
-				<form >
-					{/* <h3 style={{ textAlign: "center" }}>RCS Check</h3> */}
-					<div class="form-groupRcs" >
-						<input type="file" name="fileToUpload" class="form-controlRC" id="card1urltitle req5" placeholder="CSV format only with MSISDN Header" accept=".csv,.CSV" />
-					
-							<button class="file-upload-browse btnRcs" type="submit" name="uploadsubmit" >Check now</button>
-						
-					</div>
-
-				</form>
-			</div>
-
-
-			{/* <div class="main-panel" >
-        
-                              <h4 style={{color: "#763b75" ,padding:8,fontSize:20}}>Reports</h4>
-
-            <div class="col-lg-12 grid-margin stretch-card">
-                    <div class="table-responsive-lg">
-                            <div class="card scroll_dash">
-                              <div class="card-bodyRc">
-  
-                               <div className="tab-contRC ">
-                                  <div class="form-groupRC">
-									<label >Search:</label>
-                                    <input type="search" placeholder='search' className="form-controlRC" />
-                                  </div> 
-                               <table className="table table-striped display" id="example">
-                                      <thead>
-                                                          <tr style={{borderTop: "1px solid #cccccc9c !important"}}>
-                                          <th> 
-                                          <div class="form-check">
-                                                                <label class="form-check-label">
-                                                                  <input type="checkbox" class="form-check-input" />  </label>
-                                                              </div>
-                                                        </th>
-                                                        <th>Uploaded File<p class="sort-by"></p></th>
-                                                        <th style={{width: "300 !important"}}> Uploaded Count <p class="sort-by"></p></th>
-                                                        <th> Rcs File<p class="sort-by"></p></th>
-                                                        <th>Rcs Count<p class="sort-by"></p></th>
-                                                                          <th> Sent<p class="sort-by"></p></th>
-                                                        <th> Download <p class="sort-by"></p></th>
-                                                                     </tr> 
-                                        </thead>
-
-
-
-                                        <tbody>
-                                   
-                                        </tbody>
-                                </table>
-                               </div>
-                              </div>
-
-                            </div>
-                    </div>
-            </div>
-      
-          
-      </div> */}
-      
-    
-
-{/* const Reports = () => { */}
-  
-
-              {/* <button onclick="Export()" className="rbtn">Export</button> */}
-              {/* <button onclick="Export()" className="rbtn">Export</button> */}
-
+  return (
+    <><Header />
+      <Sidebar />
       <div className="textcontre">
-       
-        <h4 className='reprottitle' >RCS Files</h4>   
-        
-        <div className='row'>
-          <div className='col-lg-6'>
+      <div className="rcs-cont">
+      
+        <div class="rcs-card">
+        <h4 className='reprottitle' > RCS Check</h4>
+          {/* <h4 class="card-title" style={{ textAlign: 'center', color: 'purple', marginBottom: 10, fonWeight: 'bold' }}></h4> */}
+          {/* <p class="card-description"> </p> */}
+          <form >
+            {/* <h3 style={{ textAlign: "center" }}>RCS Check</h3> */}
+            <div class="form-groupRcs" >
+              <input type="file" name="fileToUpload" class="form-controlRC" id="card1urltitle req5" placeholder="CSV format only with MSISDN Header" accept=".csv,.CSV" />
 
-          </div>
-          <div className='d-flex justify-content-end col-lg-6 '>
-        <button onclick="Export()" className="rbtne" >Export</button>
+              <button class="file-upload-browse btnRcs" type="submit" name="uploadsubmit" >Check now</button>
 
+            </div>
+
+          </form>
         </div>
-        </div>
-
-        {/* <CsvDownloader reports={reports} /> */}
-
-        {/* <CSVLink data={reports} className="lin" >Export</CSVLink> */}
-        <MDBDataTable
-          striped
-          bordered
-          small
-        // <button onclick="Export()" className="rbtn">Export</button> 
-         responsive
-          data={reports}
-          className="tablecont"
-        />
       </div>
 
+      <div className="textcontre">
 
+        <div class="rcs-card">
+          <h4 className='reprottitle' >RCS Files</h4>
+          <div className='row'>
+            <div className='col-lg-6'>
 
-		</div>
+            </div>
+            <div className='d-flex justify-content-end col-lg-6 '>
+              <button onclick="Export()" className="rbtne" >Export</button>
+
+            </div>
+          </div>
+
+          {/* <CsvDownloader reports={reports} /> */}
+
+          {/* <CSVLink data={reports} className="lin" >Export</CSVLink> */}
+          <MDBDataTable
+            striped
+            bordered
+            small
+            // <button onclick="Export()" className="rbtn">Export</button> 
+            responsive
+            data={reports}
+            className="tablecont"
+          />
+        </div>
+
+      </div>
+
+    </div>
     </>
 
 
 
 
-	)
+  )
 }
 
 export default Rcscheck;

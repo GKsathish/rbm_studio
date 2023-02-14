@@ -1,6 +1,6 @@
 
 .textcontcor{
-    background: #dee2e6;
+    background: #f2edf3;
     padding:20px;
     /* margin-left: 15%; */
     
@@ -136,7 +136,7 @@ textarea.form-controlcr {
 
 
  .mystc{
-   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+   background-image:url("../../images/preview.jpg");
    height: 480px;
    width: 260px;
            font-size:30px;
@@ -201,7 +201,7 @@ textarea.form-controlcr {
      }
 
      .mystc{
-      background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+      background-image:url("../../images/preview.jpg");
       height: 480px;
       width: 260px;
               font-size:30px;

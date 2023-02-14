@@ -4,7 +4,7 @@
     float: left;
 }
 .textcontre {
-    background: #dee2e6;
+    background: #f2edf3;
     /* padding:10px; */
     padding: 4%;
     height: 100vh;
@@ -305,7 +305,7 @@ td {
 
 @media only screen and (max-width:1020px) {
     .textcontre {
-        background: #dee2e6;
+        background: #f2edf3;
         padding: 10px;
         padding-left: 10%;
         height: 100vh;

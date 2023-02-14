@@ -24,92 +24,73 @@ function Creatagent() {
     // const setagentimage1 = (event) => {
     //   setAgentlogo(URL.createObjectURL(event.target.files[0]));
     // };
-const[agentbanner,setagentbanner]=useState();
-const[agentlogo,setagentlogo]=useState();
-const[displayname,setdisplayname]=useState();
-const[agentdesc,setagentdesc]=useState();
-const[agentpnumber,setagentpnumber]=useState();
-const[agentplabel,setagentplabel]=useState();
-const[agentwebsite,setagentwebsite]=useState();
-
-const[agentwebsitelabel,setagentwebsitelabel]=useState();
-const[agentemail,setagentemail]=useState();
-const[agentemaillabel,setagentemaillabel]=useState();
-const[privacy,setprivacy]=useState();
-const[terms,setterms]=useState();
-const[agent_experince,setagent_experience]=useState();
-const[actions,setactions]=useState();
-
-const[checked1,setchecked1]=useState(false);
-const[checked2,setchecked2]=useState(false);
-const[checked3,setchecked3]=useState(false);
-const[checked4,setchecked4]=useState(false);
 
 
-const [fileUrl, setFileUrl] = useState(null);
+    const [form3, setForm3] = useState({
+      //  agentbanner:" ",
+      //  agentlogo:" ",
+      //     displayname:" ",
+      //     agentdesc:" ",
+      //     agentpnumber:" ",
+      //     agentplabel:" ",
+      //     agentwebsite:" ",
+      //     agentwebsitelabel: " ",
+      //     agentemail:" ",
+      //     agentemaillabel:" ",
+      //     privacy:" ",
+      //      terms:" ",
+      //      agent_experince:" ",
+      //      actions:" ",
+    }
 
-const [fileUrl1, setFileUrl1] = useState(null);
-const agentbannerhandler=(e)=>{
+    );
 
 
-  const imageFile = e.target.files[0];
-      const imageUrl = URL.createObjectURL(imageFile);
-      setFileUrl(imageUrl)
-}
-const agentelogohandler=(e)=>{
+    const [fileUrl, setFileUrl] = useState([]);
+    // const [file1Url, setFile1Url] = useState(null);
 
-
-  const imageFile1 = e.target.files[0];
-      const imageUrl1 = URL.createObjectURL(imageFile1);
-      setFileUrl1(imageUrl1)
-}
-  
     const [activestep, setActivestep] = useState(0);
 
-    
+    const form3Handle = (e) => {
+
+
+      setForm3({ ...form3, [e.target.name]: e.target.value });
+      
+      const imageFile = e.target.files[0];
+      const imageUrl = URL.createObjectURL(imageFile);
+      setFileUrl(imageUrl)
+      // const image1File = e.target.files[-1];
+      // const image1Url = URL.createObjectURL(image1File);
+      // setFileUrl(image1Url)
+      // var image=setForm3(form3.agentbanner, URL.createObjectURL(e.target.files[0]));
+
+
+      // console.log(URL.createObjectURL(e.target.files[0]));
+
+      // setForm3( URL.createObjectURL(e.target.files[0]));
+
+      // console.log(setForm3(result));
+      // const image1=setForm3(...form3,URL.createObjectURL(e.target.[0]));
+    }
+    // const checkHandler=(e)=>{
+    //   setCheckedbox({...checkedbox,[e.target.name]:e.target.value})
+    // }
     const submitHandler = (e) => {
       e.preventDefault();
 
-      console.log(fileUrl);
-      console.log(fileUrl1);
-      console.log(displayname);
-      console.log(agentemail);
-      console.log(agentemaillabel);
-      console.log(agentpnumber);
-      console.log(agentplabel);
-      console.log(agentwebsite);
-      console.log(agentwebsitelabel);
-      console.log(agentplabel);
-      console.log(actions);
-
-      console.log(terms);
-      console.log(privacy);
-      console.log(agentdesc);
-
-      console.log(agent_experince);
-
-
-      console.log(checked1);
-      console.log(checked2);
-      console.log(checked3);
-
-
-      console.log(checked4);
-
-
-
-
+      console.log(form3);
     }
-
+const  imagee=form3.agentbanner;
+const imagee1=form3.agentlogo;
 
     return (
       <>
         <div>
           <h4> rbm agent info </h4>
-
+          <form onSubmit={submitHandler}>
           <div className="main">
             {/* left */}
-            <form onSubmit={submitHandler}>
+
               {activestep === 0 ? (<div className="left-cont" >
 
 
@@ -129,12 +110,11 @@ const agentelogohandler=(e)=>{
                       type="file"
                       class="form-controlCrt"
                       // id="imgInp"
-                      // value={form3.agentbanner}
+                      value={form3.agentbanner}
                       // accept="image/png, image/jpg, image/jpeg"
                       name="agentbanner"
                       required=""
-                      value={agentbanner}
-                      onChange={agentbannerhandler}
+                      onChange={form3Handle}
                     // acceptpng"
                     // onChange={setagentimage}
 
@@ -152,11 +132,11 @@ const agentelogohandler=(e)=>{
                         class="form-controlCrt"
                         // id="imgInp1"
                         name="agentlogo"
-                        value={agentlogo}
+                        value={form3.agentlogo}
                         // accept="image/png, image/jpg, image/jpeg"
                         required=""
-                        onChange={agentelogohandler}
-                        // onChange={setagentimage1}
+                        onChange={form3Handle}
+                      // onChange={setagentimage1}
 
                       />
                     </div>
@@ -168,10 +148,10 @@ const agentelogohandler=(e)=>{
                       type="text"
                       class="form-controlCrt"
                       name="displayname"
-                      value={displayname}
+                      value={form3.displayname}
 
                       placeholder="Display Name"
-                      onChange={(e)=> setdisplayname(e.target.value)}
+                      onChange={form3Handle}
                     />
                   </div>
 
@@ -186,9 +166,9 @@ const agentelogohandler=(e)=>{
                       maxlength="75"
                       size="75"
                       required=""
-                      value={agentdesc}
+                      value={form3.agentdesc}
 
-                      onChange={(e)=>setagentdesc(e.target.value)}
+                      onChange={form3Handle}
 
                     ></textarea>
                   </div>
@@ -238,13 +218,13 @@ const agentelogohandler=(e)=>{
                       class="form-controlCrt"
                       id="contact"
                       name="agentpnumber"
-                      value={agentpnumber}
+                      value={form3.agentpnumber}
 
                       placeholder="Primary phone Number"
                       maxlength="15"
                       size="15"
                       required=""
-                      onChange={e=>setagentpnumber(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -256,11 +236,11 @@ const agentelogohandler=(e)=>{
                       onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)"
                       id="labelforcontact"
                       name="agentplabel"
-                      value={agentplabel}
+                      value={form3.agentplabel}
 
                       placeholder="Label for primary phone Number"
                       required=""
-                      onChange={e=>setagentplabel(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -272,10 +252,10 @@ const agentelogohandler=(e)=>{
                       class="form-controlCrt"
                       id="website"
                       name="agentwebsite"
-                      value={agentwebsite}
+                      value={form3.agentwebsite}
                       placeholder="Primary Website"
                       required=""
-                      onChange={e=>setagentwebsite(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -290,10 +270,10 @@ const agentelogohandler=(e)=>{
                       class="form-controlCrt"
                       // id="websitelabel"
                       name="agentwebsitelabel"
-                      value={agentwebsitelabel}
+                      value={form3.agentwebsitelabel}
                       placeholder="Label Primary website"
                       required=""
-                      onChange={e=>setagentwebsitelabel(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -304,10 +284,10 @@ const agentelogohandler=(e)=>{
                       class="form-controlCrt"
                       name="agentemail"
                       // id="Email"
-                      value={agentemail}
+                      value={form3.agentemail}
                       placeholder="Email"
                       required=""
-                      onChange={e=>setagentemail(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -321,9 +301,9 @@ const agentelogohandler=(e)=>{
                       name="agentemaillabel"
                       placeholder="Label for primary Email"
                       required=""
-                      value={agentemaillabel}
+                      value={form3.agentemaillabel}
 
-                      onChange={e=>setagentemaillabel(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -335,10 +315,10 @@ const agentelogohandler=(e)=>{
                       class="form-controlCrt"
                       id="Privacy_Policy"
                       name="privacy"
-                      value={privacy}
+                      value={form3.privacy}
                       placeholder="Please enter Privacy policy URL"
                       required=""
-                      onChange={e=>setprivacy(e.target.value)}
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -352,11 +332,10 @@ const agentelogohandler=(e)=>{
                       class="form-controlCrt"
                       id="terms_of_Services"
                       name="terms"
-                      value={terms}
+                      value={form3.terms}
                       placeholder="Please enter Terms and Conditions"
                       required=""
-                      onChange={e=>setterms(e.target.value)}
-
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -409,10 +388,9 @@ const agentelogohandler=(e)=>{
                       id="mob"
                       placeholder="Please Provide your Experince"
                       required=""
-                      value={agent_experince}
+                      value={form3.agent_experince}
 
-                      onChange={e=>setagent_experience(e.target.value)}
-
+                      onChange={form3Handle}
 
                     />
                   </div>
@@ -425,9 +403,8 @@ const agentelogohandler=(e)=>{
                       name="actions"
                       placeholder="What actions trigger Messages to users?"
                       required=""
-                      
-                      value={actions}
-                      onChange={e=>setactions(e.target.value)}
+                      onChange={form3Handle}
+                      value={form3.actions}
 
                     ></textarea>
                   </div>
@@ -439,11 +416,11 @@ const agentelogohandler=(e)=>{
                         <input
                           type="checkbox"
                           name="checked1"
-                          checked={checked1}
+                          checked={form3.checked1}
 
                           class="form-check-input"
                           required=""
-                          onChange={e=>setchecked1(!checked1)}
+                          onChange={form3Handle}
 
                         />
 
@@ -459,11 +436,11 @@ const agentelogohandler=(e)=>{
                         <input
                           type="checkbox"
                           name="checked2"
-                          checked={checked2}
+                          checked={form3.checked2}
 
                           class="form-check-input"
                           required=""
-                          onChange={e=>setchecked2(!checked2)}
+                          onChange={form3Handle}
 
                         />
                         <svg width="90" height="40">
@@ -479,11 +456,11 @@ const agentelogohandler=(e)=>{
                           type="checkbox"
                           name="checked3"
 
-                          checked={checked3}
+                          checked={form3.checked3}
 
                           class="form-check-input"
                           required=""
-                          onChange={e=>setchecked3(!checked3)}
+                          onChange={form3Handle}
 
                         />
                         <svg width="90" height="40">
@@ -501,8 +478,8 @@ const agentelogohandler=(e)=>{
                           // value="Jio"
                           class="form-check-input"
                           required=""
-                          checked={checked4}
-                          onChange={e=>setchecked4(!checked4)}
+                          onChange={form3Handle}
+                          checked={form3.checked4}
 
 
                         />
@@ -548,7 +525,7 @@ const agentelogohandler=(e)=>{
               {/* <!-- Circles which indicates the steps of the form: --> */}
 
               {/* Right */}
-              </form>
+
             
             <div className="right-cont">
               <div className="fieldcontT1">
@@ -567,12 +544,12 @@ const agentelogohandler=(e)=>{
                         src={fileUrl} style={{ height: "180px", width: "240px", border: "none" }}
                       />
                       <img
-                        src={fileUrl1}
+                        src={fileUrl}
                         style={{ height: "50px", width: "50px", borderRadius: "50%" }}/>
 
 
-                      <p style={{ overflowWrap: 'break-word', fontSize: "16px", fontWeight: 'bold' }}>{displayname}</p>
-                      <p style={{ overflowWrap: 'break-word' }}>{agentdesc}</p>
+                      <p style={{ overflowWrap: 'break-word', fontSize: "16px", fontWeight: 'bold' }}>{form3.displayname}</p>
+                      <p style={{ overflowWrap: 'break-word' }}>{form3.agentdesc}</p>
                     </div>
 
                     <Tabs style={{ padding: '10px', fontSize: '12px', alignItems: 'center' }}>
@@ -583,14 +560,14 @@ const agentelogohandler=(e)=>{
 
                       <TabPanel style={{ textAlign: 'left' }}>
 
-                        <FaPhoneSquareAlt />{agentpnumber}<br />
-                        {agentplabel}<br /><br />
-                        <BiWorld />{agentwebsite}<br />
-                        {agentwebsitelabel}<br /><br />
+                        <FaPhoneSquareAlt />{form3.agentpnumber}<br />
+                        {form3.agentplabel}<br /><br />
+                        <BiWorld />{form3.agentwebsite}<br />
+                        {form3.agentwebsitelabel}<br /><br />
 
                         <MdEmail style={{ borderBottom: '1px solid #ccc' }} />
-                        {agentemail}<br />
-                        {agentemaillabel}
+                        {form3.agentemail}<br />
+                        {form3.agentemaillabel}
                       </TabPanel>
                       <TabPanel style={{ textAlign: 'left !important' }}>
                         <div className="tabp">
@@ -621,6 +598,7 @@ const agentelogohandler=(e)=>{
             
 
           </div>
+          </form>
         </div>
       </>
     );

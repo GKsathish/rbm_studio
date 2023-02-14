@@ -1,8 +1,3 @@
-
-html{
-    height: 100%;
-}
-
 input#imgrichcard {
     padding: 3px;
     margin-top: 27px; ;
@@ -184,7 +179,7 @@ button.ghost {
 
 
 .form-box-sign {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     height: 100%;
     transition: all .6s ease-in-out;
@@ -807,7 +802,7 @@ select, input[type="file"]{
 
 .img-preview{
 
-        background-image: url(../../images/preview.jpg);
+        background-image: url("../../images/phone_test123 (1).png");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 492px;

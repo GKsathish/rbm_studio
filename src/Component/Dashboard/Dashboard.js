@@ -7,13 +7,12 @@ import Sidebar from '../Sidebar/Sidebar'
 import Delchart from '../Chart/Delchart';
 import Readchart from '../Chart/Readchart';
 import './dashboard.css'
-import SI from '../te/SI';
 
 
 
 const Dashboard = () => {
   // var CanvasJS = CanvasJSReact.CanvasJS;
-// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+  // var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
   const reports = {
     columns: [
@@ -48,7 +47,7 @@ const Dashboard = () => {
         NickName: 'System Architect',
         date: 'Edinburgh',
         status: 'fail',
-      
+
       },
       {
         RbmAgent: 'Garrett Winters',
@@ -56,31 +55,31 @@ const Dashboard = () => {
         date: 'Tokyo',
         status: 'success',
 
-        
+
       },
       {
         RbmAgent: 'Ashton Cox',
         NickName: 'Junior Technical Author',
         date: 'San Francisco',
         status: 'fail',
-       
+
       },
       {
         RbmAgent: 'Cedric Kelly',
         NickName: 'Senior Javascript Developer',
         date: 'Edinburgh',
         status: '22',
-      
+
       },
       {
         RbmAgent: 'Airi Satou',
         NickName: 'Accountant',
         date: 'Tokyo',
         status: '33',
-        
+
       }
-     
-    
+
+
     ]
   };
 
@@ -113,36 +112,36 @@ const Dashboard = () => {
     ],
     rows: [
       {
-        Telco:'Airtel',
+        Telco: 'Airtel',
         status: 'Rejected',
 
         date: '01-01-2023',
-        Remark:'*'
+        Remark: '*'
       },
-     
-     
+
+
       {
-        Telco:'BSNL,IND',
+        Telco: 'BSNL,IND',
         status: 'Approved',
 
         date: '01-01-2023',
-        Remark:'*'
-      
+        Remark: '*'
+
       },
       {
-        Telco:'Jio',
+        Telco: 'Jio',
         status: 'Requested',
 
         date: '01-01-2023',
-        Remark:'*'
+        Remark: '*'
       }
-     
-    
+
+
     ]
   };
   const reportstest = {
     columns: [
-     
+
       {
         label: 'mobilenumber',
         field: 'mobilenumber',
@@ -159,225 +158,154 @@ const Dashboard = () => {
     rows: [
       {
         mobilenumber: '919705234523',
-       
+
         status: '22',
       },
       {
         mobilenumber: '919705234523',
-       
+
         status: '22',
 
-        
+
       },
       {
         mobilenumber: '919705234523',
-       
+
         status: '22',
-     
-       
+
+
       },
       {
         mobilenumber: '919705234523',
-       
+
         status: '22',
-      
+
+      },
+      {
+        mobilenumber: '919705234523',
+
+        status: '22',
+      },
+      {
+        mobilenumber: '919705234523',
+
+        status: '22',
+
+
+      },
+      {
+        mobilenumber: '919705234523',
+
+        status: '22',
+
+
+      },
+      {
+        mobilenumber: '919705234523',
+
+        status: '22',
+
       }
-     
-    
+
     ]
   };
 
   return (
- <>
-  
-   
+    <>
+      <div id="wrapper">
+        <Sidebar />
+        <div className='countct'>
 
-   <div class="wrapper">
-        {/* <!-- Sidebar  --> */}
-        <nav id="sidebar">
-            {/* <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+          <h4 className='titledash'>Dashboard</h4>
+          <div className='first-card'>
+            <div className='ban-card1'>
+              <h5 className='dashtitle'>Total Campaigns</h5>
+              <h4 className='dashtitle'>464</h4>
+
+            </div>
+            <div className='ban-card2'>
+              <h5 className='dashtitle'>Sent</h5>
+              <h4 className='dashtitle'>29.5</h4>
+            </div>
+            <div className='ban-card3'>
+
+              <h5 className='dashtitle'>Delivered</h5>
+              <h4 className='dashtitle' >43M</h4>
+            </div>
+            <div className='ban-card4'>
+              <h5 className='dashtitle'>Read</h5>
+              <h4 className='dashtitle'>9.3M</h4>
+            </div>
+          </div>
+
+          <div className='second-card'>
+            <div className='left-card'>
+              <h5>Read</h5>
+              <hr></hr>
+              <Readchart />
+              {/* <Delchart/> */}
+            </div>
+            <div className='right-card'>
+              <h5>Delivered</h5>
+              <hr></hr>
+              {/* <Bar data={graphdata}/> */}
+              <Delchart />
             </div>
 
-            <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+          </div>
+          <div className='third-card'>
+            <div className='left-card'>
+              <h5>Agent Details</h5>
+              <hr></hr>
+              <h6>MOBILEMASALA <span className='text-success'>Approved</span></h6>
+              <MDBDataTable
+                striped
 
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-                </li>
-                <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-                </li>
-            </ul> */}
-            {/* <SI/> */}
-        </nav>
+                small
+                // <button onclick="Export()" className="rbtn">Export</button> 
+                responsive
+                noBottomColumns
+                data={reportstel}
+                className="tablecont"
+              />
 
-        {/* <!-- Page Content  --> */}
-        <div id="content">
+            </div>
+            <div className='right-card'>
+              {/* <div className='d-flex flex-row'> */}
+              <button type="submit" id="button" className="btn btn-gradient-primary mr-2" name="set" >Invite Tester</button>
+              <h5>Tested Devices</h5>
 
-            <nav class="navbar navbar-expand-lg  bg1 ">
-                
+              <hr style={{ color: 'grey' }}></hr>
+              <MDBDataTable entries={5} responsive noBottomColumns data={reportstest} className="tablecont" />
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-dark">
-                        <i class="fas fa-align-left"></i>
-                        {/* <span>Toggle Sidebar</span> */}
-                    </button>
-                   
-                    <Header/>
+              <div className="more">
+                <a href="/Devicedetails" style={{ color: '#763B75' }}>More..</a>
+              </div>
 
-            
-            </nav>
+            </div>
+          </div>
+          <div className='fourth-card'>
+            <div className='one-card'>
+              <h5>Campaigns</h5>
+              <hr></hr>
 
-                  
-  <div>
 
-  
-  
-{/* <Header /> */}
 
-  <div  className='countct'>
-  {/* <Sidebar/> */}
 
-    <div>
-    <h4 className='titledash'>Dashboard</h4>
-    <div className='first-card'>
-      <div className='ban-card1'>
-            <h5 className='dashtitle'>Total Campaigns</h5>
-            <h4 className='dashtitle'>464</h4>
+              <MDBDataTable
+                noBottomColumns
+                responsive
+                data={reports}
+                className="tablecont"
+              />
 
-      </div>
-      <div className='ban-card2'>
-      <h5 className='dashtitle'>Sent</h5>
-            <h4 className='dashtitle'>29.5</h4>
-      </div>
-      <div className='ban-card3'>
 
-      <h5 className='dashtitle'>Delivered</h5>
-            <h4 className='dashtitle' >43M</h4>
-      </div>
-        <div className='ban-card4'>
-        <h5 className='dashtitle'>Read</h5>
-            <h4 className='dashtitle'>9.3M</h4>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div className='second-card'>
-      <div className='left-card'>
-      <h5>Read</h5>
-      <hr></hr>
-   <Readchart/>
-   {/* <Delchart/> */}
-      </div>
-      <div className='right-card'>
-      <h5>Delivered</h5>
-      <hr></hr>
-      {/* <Bar data={graphdata}/> */}
-      <Delchart/>
-      </div>
-     
-    </div>
-    <div className='third-card'>
-    <div className='left-card'>
-      <h5>Agent Details</h5>
-      <hr></hr>
-      <h6>MOBILEMASALA <span className='text-success'>Approved</span></h6>
-      <MDBDataTable
-striped
-bordered
-small
-// <button onclick="Export()" className="rbtn">Export</button> 
-responsive
-data={reportstel}
-className="tablecont"
-/>
 
       </div>
-      <div className='right-card'>
-        <div className='d-flex flex-row'>  <h5>Tested Devices</h5>
-       <a onclick="Export()" className="rbt">Invite</a> </div>
-    
-
-      <hr style={{color:'grey'}}></hr>
-      <MDBDataTable
-striped
-bordered
-small
-// <button onclick="Export()" className="rbtn">Export</button> 
-responsive
-data={reportstest}
-className="tablecont"
-/>
-<a href='/Devicedetails' className="rbt2">more...</a> 
-
-      </div>
-    </div>
-    <div className='fourth-card'>
-    <div className='one-card'>
-      <h5>Campaigns</h5>
-      <hr></hr>
-
-
-    
-
-<MDBDataTable
-striped
-bordered
-small
-responsive
-data={reports}
-className="tablecont"
-/>
-
-
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-</div>
-    </div>
-    
-</>
+    </>
   )
 }
 

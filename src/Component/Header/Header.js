@@ -12,16 +12,16 @@ const Header = () => {
   return (
     <>
           <div className='Head'>
-            
+           
 
          <img    src={`${process.env.PUBLIC_URL}/images/Logow.jpg`} className="iamg" 
  />
          <Dropdown>
       <Dropdown.Toggle className='userbtn'>
       <div className="user">
-         <BsFillPersonFill style={{ height:50,width:50}}/> 
-         User 
-          <br/>Admin 
+         <BsFillPersonFill style={{ height:50,width:50}}/>
+         User
+          <br/>Admin
          
       </div>
       </Dropdown.Toggle>
@@ -36,7 +36,7 @@ const Header = () => {
     {/* <Sidebar/> */}
 
 </>
-    
+   
   )
 }
 

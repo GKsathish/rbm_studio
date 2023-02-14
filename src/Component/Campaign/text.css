@@ -1,10 +1,17 @@
 
 .textcontT{
-    background: #dee2e6;
-    padding-left:4%;
+    background: #f2edf3;
+    padding:4%;
     /* margin-left:15%; */
     /* margin-top: 0px; */
     
+ }
+ .messagecont{
+   height:100%;
+   width:100%;
+
+   border-radius: 1px solid #000;
+   
  }
  .texttitle{
     /* margin-top:20px; */
@@ -27,20 +34,20 @@
 
  .fieldcontT{
     background: #fff;
-    /* height:500px; */
-    width: 60%;
+    
     margin:20px;
     padding:50px;
     border-radius: 5px;
-    
+    height: 100vh;
+
  }
  .fieldcontT1{
     background: #fff;
-    /* height:560px; */
-    width: 40%;
+    
     margin:20px;
     padding:20px;
     border-radius: 5px;
+    height: 100vh;
  }
 .btnT{
     background:#763B75;
@@ -137,12 +144,12 @@ textarea.form-controlT {
 
 
  .mystT{
-   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-   height: 480px;
-   width: 260px;
+   background-image:url("../../images/phone_test123 (1).png");
+   height: 630px;
+   width: 300px;
            font-size:20px;
          
-           margin-left:120px;
+           margin-left:50px;
 
            
            padding:20px;
@@ -151,6 +158,26 @@ textarea.form-controlT {
            
            }
 
+
+
+           /* mes */
+
+           .messagecont{
+            /* height:10%; */
+            width:100%;
+            margin: 5px;
+            /* text-overflow: wordbreak; */
+            padding:2px;
+            word-break: break-all;
+ 
+            border-radius: 6  px;
+            /* font-weight: bold; */
+           }
+           .messagecont P{
+            font-weight: bold;
+            border: 1px solid #e2e1e1;
+  height: 10%;
+           }
 
 
 @media only screen and (max-width:1020px){
@@ -165,6 +192,7 @@ textarea.form-controlT {
 }
 .texttitle{
    padding-left:4%;
+   margin-top: 10% !important;
 }
     .rowcontT{
         display: flex;
@@ -196,9 +224,8 @@ textarea.form-controlT {
 
 
      .mystT{
-      background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
-      height: 480px;
-      width: 260px;
+      background-image:url("../../images/phone_test123 (1).png");
+     
               font-size:30px;
             
               margin-left:2px;

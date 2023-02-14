@@ -1,369 +1,168 @@
-// import React, { useState } from 'react';
-// import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
-// import * as FaIcons from 'react-icons/fa';
-// import * as AiIcons from 'react-icons/ai';
-// import { SidebarData } from './SidebarData';
-// import SubMenu from './SubMenu';
-// import { IconContext } from 'react-icons/lib';
+import React, { useEffect } from 'react'
+import { BsFillPersonFill, BsArrowRightCircleFill } from "react-icons/bs";
+import { FaUserAlt, FaHome, FaLock, FaMoneyBill, FaUser, FaBars } from "react-icons/fa";
+import Dropdown from 'react-bootstrap/Dropdown';
+import { BiCog, BiRupee } from "react-icons/bi";
 
-// const Nav = styled.div`
-//   background: #763B75;
-//   height: 100px;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   // width:10%;
-  
-// `;
-
-// const NavIcon = styled(Link)`
-//   margin-left: 2rem;
-//   font-size: 2rem;
-//   height: 80px;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-// `;
-
-// const SidebarNav = styled.nav`
-//   background: #763B75;
-//   width: 250px;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   position: fixed;
-//   top: 0;
-//   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-//   transition: 350ms;
-//   z-index: 10;
-// `;
-
-// const SidebarWrap = styled.div`
-//   width: 100%;
-// `;
-
-// const Sidebar = () => {
-//   const [sidebar, setSidebar] = useState(true);
-
-//   const showSidebar = () => setSidebar(!sidebar);
-
-//   return (
-//     <>
-//       <IconContext.Provider value={{ color: '#fff' }}>
-//         <Nav>
-//           <NavIcon to='#'>
-//             <FaIcons.FaBars onClick={showSidebar} />
-//           </NavIcon>
-//         </Nav>
-//         <SidebarNav sidebar={sidebar}>
-//           <SidebarWrap>
-//             <NavIcon to='#'>
-//               <AiIcons.AiOutlineClose onClick={showSidebar} />
-//             </NavIcon>
-//             {SidebarData.map((item, index) => {
-//               return <SubMenu item={item} key={index} />;
-//             })}
-//           </SidebarWrap>
-//         </SidebarNav>
-//         <div>
-//           <img src="logo" />
-//           <div>
-//             <AiIcons/>
-//           </div>
-//         </div>
-//       </IconContext.Provider>
-//     </>
-//   );
-// };
-
-// export default Sidebar;
-
-// import React, { useState } from 'react';
-// import './side.css';
-// import { Link } from 'react-router-dom';
-
-// const Sidebar = () => {
-//   const [show, setShow] = useState();
-
-//   return (
-//     <main className={show ? 'space-toggle' : null}>
-//       <header className={`header ${show ? 'space-toggle' : null}`}>
-//         <div className='header-toggle' onClick={() => setShow(!show)}>
-//           <i className={`fas fa-bars ${show ? 'fa-solid fa-xmark' : null}`}></i>
-//         </div>
-//       </header>
-
-//       <aside className={`sidebar ${show ? 'show' : null}`}>
-//         <nav className='nav'>
-//           <div>
-//             <Link to='/' className='nav-logo'>
-//               <i className={`fas fa-home-alt nav-logo-icon`}></i>
-//               <span className='nav-logo-name'>Homepage</span>
-//             </Link>
-
-//             <div className='nav-list'>
-//               <Link to='/dashboard' className='nav-link active'>
-//                 <i className='fas fa-tachometer-alt nav-link-icon'></i>
-//                 <span className='nav-link-name'>Dashboard</span>
-//               </Link>
-//               <Link to='/hotel' className='nav-link'>
-//                 <i className='fas fa-hotel nav-link-icon'></i>
-//                 <span className='nav-link-name'>Hotel</span>
-//               </Link>
-//               <Link to='/gallery' className='nav-link'>
-//                 <i className='fas fa-image nav-link-icon'></i>
-//                 <span className='nav-link-name'>Gallery</span>
-//               </Link>
-//               <Link to='/gallery' className='nav-link'>
-//                 <i className='fas fa-dollar-sign nav-link-icon'></i>
-//                 <span className='nav-link-name'>Transaction</span>
-//               </Link>
-//             </div>
-//           </div>
-
-//           <Link to='/logout' className='nav-link'>
-//             <i className='fas fa-sign-out nav-link-icon'></i>
-//             <span className='nav-link-name'>Logout</span>
-//           </Link>
-//         </nav>
-//       </aside>
-
-//       {/* <h1>Content</h1> */}
-//     </main>
-//   );
-// };
-
-// export default Sidebar;
-
-
-import { NavLink } from "react-router-dom";
-import { FaUserAlt, FaHome, FaLock, FaMoneyBill, FaUser,FaBars } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
-import { BiAnalyse, BiSearch } from "react-icons/bi";
-import { BiCog,BiRupee } from "react-icons/bi";
-import { AiFillDashboard,AiFillCheckSquare,AiFillSound } from "react-icons/ai";
-import { BsCartCheck } from "react-icons/bs";
-import { TbReportSearch} from "react-icons/tb";
+import { AiFillDashboard, AiFillCheckSquare, AiFillSound } from "react-icons/ai";
+import { TbReportSearch } from "react-icons/tb";
 import { ImBook } from "react-icons/im";
-import {MdSupportAgent } from "react-icons/md";
+import { MdSupportAgent } from "react-icons/md";
+import './sidebar.css';
+import LOGO from '../../images/Logob.jpg';
+import $ from 'jquery';
+import { Link } from "react-router-dom";
 
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import SidebarMenu from "./SidebarMenu";
-import './side.css'
-const routes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: <AiFillDashboard/>,
-  },
-  {
-    path: "/Creatagent",
-    name: "Createagent",
-    icon: <FaUserAlt/>,
-  },
-  {
-    path: "/Rcscheck",
-    name: "RcsCheck",
-    icon: <AiFillCheckSquare/>,
-  },
- 
-  {
-    path: "/",
-    name: "Campaign",
-    icon: <AiFillSound />,
-    subRoutes: [
-      {
-        path: "/Richcard",
-        name: "Richcard",
-        icon: <FaUser />,
-      },
-      {
-        path: "/Corousel",
-        name: "Corousel",
-        icon: <FaLock />,
-      },
-      {
-        path: "/text",
-        name: "text",
-        icon: <FaMoneyBill />,
-      },
-    ],
-  },
+import 'jquery-ui-dist/jquery-ui';
 
-  {
-    path: "/CampaignA",
-    name: "Approval",
-    icon: <AiFillSound />,
-    subRoutes: [
-      {
-        path: "/CampaignA",
-        name: "Campaign",
-        icon: <FaUser />,
-      },
-      {
-        path: "/Agent",
-        name: "Agent",
-        icon: <FaLock />,
-      },
-      {
-        path: "/User",
-        name: "User",
-        icon: <FaMoneyBill />,
-      },
-    ],
-  },
-  {
-    path: "/Reports",
-    name: "Reports",
-    icon: <TbReportSearch/>,
-  },
-  {
-    path: "/billing",
-    name: "Billing",
-    icon: <BiRupee />,
-  },
-  {
-    path: "/Faq",
-    name: "FAQ",
-    icon: <ImBook />,
-    
-    
-  },
-  {
-    path: "/Support",
-    name: "Support",
-    icon: <MdSupportAgent/>,
-  },
-];
+function Sidebar() {
+  useEffect(() => {
 
-const Sidebar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-  // const inputAnimation = {
-  //   hidden: {
-  //     width: 0,
-  //     padding: 0,
-  //     // transition: {
-  //     //   duration: 0.0,
-  //     // },
-  //   },
-  //   show: {
-  //     width: "140px",
-  //     padding: "5px 15px",
-     
-  //   },
-  // };
 
-  // const showAnimation = {
-  //   hidden: {
-  //     width: 0,
-  //     opacity: 0,
-  //     // transition: {
-  //     //   duration: 0.0,
-  //     // },
-  //   },
-  //   show: {
-  //     opacity: 1,
-  //     // width: "auto",
-    
-  //   },
-  // };
+    return () => {
+      const $button = document.querySelector('#sidebar-toggle');
+      const $wrapper = document.querySelector('#wrapper');
+
+      $button.addEventListener('click', (e) => {
+        e.preventDefault();
+        $wrapper.classList.toggle('toggled');
+      });
+    }
+  }, [])
 
   return (
+
     <>
-      <div className="main-container">
-        <motion.div
-          animate={{
-            width: isOpen ? "200px" : "45px",
-          
 
-          }}
-          className={`sidebar1 `}
-          // className={`maind`}
-        >
-          <div className="top_section">
-          <div className="bars">
-              <FaBars onClick={toggle} />
-            </div>
-            {/* <AnimatePresence>
-              {isOpen && (
-                <motion.h1
-                  variants={showAnimation}
-                  initial="show"
-                  // animate="show"
-                  exit="hidden"
-                  className="logo"
-                >
-                  RBM STUDIO
-                </motion.h1>
-              )}
-            </AnimatePresence> */}
 
+      <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+          <Link class="navbar-brand brand-logo " to="/Dashboard" style={{ padding: "0", margin: "0" }}><img src={LOGO} style={{ width: "100%", height: "70px" }} alt="logo" />
+
+          </Link>
+        </div>
+        <ul class="sidebar-nav">
+          {/* <li>
+           
+              <div class="nav-profile-image profileImage">
+                <span id="firstName" class="fname"></span>
+              </div>
+              <div class="nav-profile-text d-flex flex-column">
+                <span class="font-weight-bold" id="nameu">MOBILEMASALA</span>
+                 
+                    <button type="submit" name="getbalance" id="buttons2" class="rbmbnt2 col-lg-4 balance" value="View Balance" style={{ textAlign : "left",fontSize : "12px"}}>View Balance</button>
+                  
+             
+                <p class="walletbalance">0.0</p>
+              </div>
+              <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             
-          </div>
-          {/* <div className="search">
-            <div className="search_icon">
-              <BiSearch />
+          </li> */}
+          <li>
+
+            <Link to="/dashboard"><span className='menu-title' ><AiFillDashboard className='m-2' /></span><span className='linav'> Dashboard</span>  </Link>
+
+          </li>
+
+          <li>
+              <Link to="/Creatagent"><span className='menu-title' ><FaUserAlt className='m-2' /></span><span className='linav'>Create Agent</span> </Link>
+          </li>
+
+          <li>
+            <Link to="/Rcscheck"><span className='menu-title' ><AiFillCheckSquare className='m-2' /></span><span className='linav'>Rcs Check</span></Link>
+          </li>
+
+          <li id="pageSubmenu">
+            <Link to="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span className='menu-title' ><AiFillSound className='m-2' /></span><span className='linav'>Campaign</span></Link>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+
+              <li className='ml-4'>
+                <Link to="/Richcard"><span className='menu-title' ><BsArrowRightCircleFill className='m-2' /></span><span className='linav'>Rich Card</span></Link>
+              </li>
+
+              <li className='ml-4'>
+                <Link to="/Corousel"><span className='menu-title' ><BsArrowRightCircleFill className='m-2' /></span><span className='linav'>Corousel</span></Link>
+              </li>
+
+              <li className='ml-4'>
+                <Link to="/text"><span className='menu-title' ><BsArrowRightCircleFill className='m-2' /></span><span className='linav'>Text</span></Link>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id='pageSubmenu1'>
+            <Link to="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span className='menu-title' ><AiFillSound className='m-2' /></span><span className='linav'>Approval</span></Link>
+            <ul class="collapse list-unstyled" id="pageSubmenu1">
+              <li className='ml-4'>
+                <Link to="/Campaigna"><span className='menu-title' ><BsArrowRightCircleFill className='m-2' /></span><span className='linav'>Campaign</span></Link>
+              </li>
+
+              <li className='ml-4'>
+                <Link to="/Agent"><span className='menu-title' ><BsArrowRightCircleFill className='m-2' /></span><span className='linav'>Agent</span></Link>
+              </li>
+
+              <li className='ml-4'>
+                <Link to="/User"><span className='menu-title' ><BsArrowRightCircleFill className='m-2' /></span><span className='linav'>User</span></Link>
+              </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <Link to="/Reports"><span className='menu-title' ><TbReportSearch className='m-2' /></span><span className='linav'>Reports</span></Link>
+          </li>
+
+          <li>
+            <Link to="/billing"><span className='menu-title' ><BiRupee className='m-2' /></span><span className='linav'>Billing</span></Link>
+          </li>
+        </ul>
+        <ul class="sidebar-nav" style={{  top: "83%" }}>
+        
+            <li >
+              <Link to="/faq"><span className='menu-title' ><ImBook className='m-2' /></span><span className='linav'>FAQ's</span></Link>
+            </li>
+            <li className='my-2'>
+              <Link to="/Support "><span className='menu-title' ><MdSupportAgent className='m-2' /></span><span className='linav'>Support</span></Link>
+            </li>
+        </ul>
+      </aside>
+
+      <div id="navbar-wrapper">
+        <nav class="navbar navbar-inverse" style={{ backgroundColor: "#763b75", height: "70px" }}>
+          <div class="container-fluid">
+            <div class="navbar-header" style={{ width: "100%" }}>
+              <Link to="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></Link>
+
+
+
+
+              <Dropdown style={{ float: "right" }}>
+                <Dropdown.Toggle className='userbtn'>
+                  <div className="user">
+                    <BsFillPersonFill style={{ height: 50, width: 50 }} />
+                    User
+                    <br />Admin
+
+                  </div>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="drop-tog">
+                  <Dropdown.Item href="/UserProfile">My Profile</Dropdown.Item>
+
+                  <Dropdown.Item href="/Forgotpassword">Change Password</Dropdown.Item>
+                  <Dropdown.Item href="/">Sign Out</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+
             </div>
-            <AnimatePresence>
-              {isOpen && (
-                <motion.input
-                  initial="hidden"
-                  animate="show"
-                  exit="hidden"
-                  variants={inputAnimation}
-                  type="text"
-                  placeholder="Search"
-                />
-              )}
-            </AnimatePresence>
-          </div> */}
-          <section className="routes">
-            {routes.map((route, index) => {
-              if (route.subRoutes) {
-                return (
-                  <SidebarMenu
-                    setIsOpen={setIsOpen}
-                    route={route}
-                    // showAnimation={showAnimation}
-                    isOpen={isOpen}
-                  />
-                );
-              }
-
-              return (
-                <NavLink
-                  to={route.path}
-                  key={index}
-                  className="link"
-                  activeClassName="active"
-                >
-                  <div className="icon">{route.icon}</div>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        // variants={showAnimation}
-                        initial="hidden"
-                        animate="show"
-                        exit="hidden"
-                        className="link_text"
-                      >
-                        {route.name}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </NavLink>
-              );
-            })}
-          </section>
-        </motion.div>
-
-        {/* <main>{children}</main> */}
+          </div>
+        </nav>
       </div>
+
+
     </>
-  );
-};
+  )
+}
 
 export default Sidebar;

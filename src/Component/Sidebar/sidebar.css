@@ -21,26 +21,56 @@ a:focus {
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 250px;
+  left: 260px;
   width: 0;
   height: 100%;
-  margin-left: -250px;
+  margin-left: -260px;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #222;
+  background: #ffffff;
   transition: all 0.5s ease;
 }
 
+.nav-profile-image.profileImage {
+  margin: 1px 1px 20px 2px;
+}
+
+.form-group.form-login.cambnt {
+  float: left;
+  margin-top: 7px;
+}
+
+span#nameu {
+  /* float: right; */
+  position: absolute;
+  top: 1%;
+  margin-left: 31%;
+  font-size: 19px;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eee;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  margin: 0px 4px;
+  padding-top: 8px;
+  background: #763b75
+}
+
 #wrapper.toggled #sidebar-wrapper {
-  width: 250px;
+  width: 260px;
 }
 
 .sidebar-brand {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 260px;
   text-align: center;
-  padding: 20px 0;
+
 }
 .sidebar-brand h2 {
   margin: 0;
@@ -52,7 +82,7 @@ a:focus {
 .sidebar-nav {
   position: absolute;
   top: 75px;
-  width: 250px;
+  width: 260px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -60,19 +90,34 @@ a:focus {
 .sidebar-nav > li {
   text-indent: 10px;
   line-height: 42px;
+  padding: 0 2.25rem;
+  border-bottom: 1px solid #cccccc45 !important;
+  /* line-height: 1.8; */
 }
 .sidebar-nav > li a {
   display: block;
   text-decoration: none;
-  color: #757575;
-  font-weight: 600;
-  font-size: 18px;
+  color: #3e4b5b;
+  margin: 0;
+  /* font-weight: 600; */
+  font-size: 0.875rem;
+  /* border-bottom: 1px solid #cccccc45 !important; */
 }
-.sidebar-nav > li > a:hover,
+.menu-title {
+  width: 40px;
+  font-size: 25px;
+  
+}
+
+.linav {
+  margin-top: 4px;
+  font-size: 0.875rem;
+}
+
+.sidebar-nav > li:hover,
 .sidebar-nav > li.active > a {
   text-decoration: none;
   color: #fff;
-  background: #F8BE12;
 }
 .sidebar-nav > li > a i.fa {
   font-size: 24px;
@@ -86,7 +131,7 @@ a:focus {
 }
 #wrapper.toggled #navbar-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -260px;
 }
 #navbar-wrapper .navbar {
   border-width: 0 0 0 0;
@@ -94,12 +139,15 @@ a:focus {
   font-size: 24px;
   margin-bottom: 0;
   border-radius: 0;
+  position: fixed;
+  width: 89%;
+  padding-left: 5px;
 }
 #navbar-wrapper .navbar a {
   color: #757575;
 }
 #navbar-wrapper .navbar a:hover {
-  color: #F8BE12;
+  color: #fff;
 }
 
 #content-wrapper {
@@ -110,12 +158,12 @@ a:focus {
 }
 #wrapper.toggled #content-wrapper {
   position: absolute;
-  margin-right: -250px;
+  margin-right: -260px;
 }
 
 @media (min-width: 992px) {
   #wrapper {
-    padding-left: 250px;
+    padding-left: 260px;
   }
   
   #wrapper.toggled {
@@ -123,7 +171,7 @@ a:focus {
   }
 
   #sidebar-wrapper {
-    width: 250px;
+    width: 260px;
   }
   
   #wrapper.toggled #sidebar-wrapper {
@@ -171,12 +219,12 @@ a:focus {
   
 #wrapper.toggled #navbar-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -260px;
 }
   
   #wrapper.toggled #content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -260px;
   }
 
   #navbar-wrapper {
@@ -184,7 +232,7 @@ a:focus {
   }
 
   #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 260px;
   }
 
   #content-wrapper {
@@ -195,7 +243,7 @@ a:focus {
   #wrapper.toggled #navbar-wrapper,
   #wrapper.toggled #content-wrapper {
     position: relative;
-    margin-right: 250px;
+    margin-right: 260px;
   }
 }
 
@@ -209,16 +257,16 @@ a:focus {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 260px;
   }
   #wrapper.toggled #navbar-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -260px;
   }
 
   #wrapper.toggled #content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -260px;
   }
 
   #navbar-wrapper {
@@ -226,7 +274,7 @@ a:focus {
   }
 
   #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 260px;
   }
 
   #content-wrapper {
@@ -237,6 +285,6 @@ a:focus {
   #wrapper.toggled #navbar-wrapper,
   #wrapper.toggled #content-wrapper {
     position: relative;
-    margin-right: 250px;
+    margin-right: 260px;
   }
 }

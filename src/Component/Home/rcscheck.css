@@ -1,13 +1,13 @@
 .rcs-cont{
-    background: #dee2e6;
-    height:100%;
+    background: #f2edf3;
+    /* height:100%; */
     width:100%;
     padding: 4%;
 }
 
 .rcs-card{
-    height:35%;
-    /* width:100%; */
+    /* height:35%; */
+    width:100%;
     background: #fff;
     padding:60px;
     margin-right:4%;

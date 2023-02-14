@@ -1,250 +1,3 @@
-// import Sidebar from '../Sidebar/Sidebar'
-// import Header from '../Header/Header'
-
-// import './reports.css';
-
-// const Reports = () => {
-//   return (
-
-//       <>
-//       <Header/>
-//       <Sidebar/>
-//       <div class="main-panel textcontre">
-//           <div class="content-wrapper">
-//             {/* <div class="pDescription-header">
-
-//             </div> */}
-//                               <h4 classNickName='reprottitle' >Reports</h4>
-
-//             <div class="col-lg-12 grid-margin stretch-card">
-//                     <div class="table-responsive-lg">
-//                             <div class="card scroll_dash">
-//                               <div class="card-body">
-
-//                                <div classNickName="tab-cont ">
-//                                   <div class="form-group">
-//                                     <input type="search" placeholder='search' classNickName="form-control" />
-//                                     <button onclick="Export()" class="rbtn">Export</button>
-//                                   </div> 
-//                                <table classNickName="table table-striped display" id="example">
-//                                       <thead>
-//                                                           <tr style={{borderTop: "1px solid #cccccc9c !important"}}>
-//                                           <th> 
-//                                           <div class="form-check">
-//                                                                 <label class="form-check-label">
-//                                                                   <input type="checkbox" class="form-check-input" />  </label>
-//                                                               </div>
-//                                                         </th>
-//                                                                           {/* <th> Campaign NickName <p class="arrow"><i class="icon-long-arrow-up" id="up" style="float: right;"></i></p><p class="arrow"><i class="icon-long-arrow-down" id="up" style="float: right;"></i></p></th>--> */}
-//                                                         <th> <p class="arrow sort-by"></p>sNick NickName</th>
-//                                                         <th style={{width: "300 !important"}}> <p class="arrow sort-by"></p> MsgType</th>
-//                                                         <th> Title <p class="arrow sort-by"></p></th>
-//                                                         <th> Descriptionription <p class="arrow sort-by"></p></th>
-//                                                         <th> Date <p class="arrow sort-by"></p></th>
-//                                                                           <th> Sent <p class="arrow sort-by"></p></th>
-//                                                         <th> Delivered <p class="arrow sort-by"></p></th>
-//                                                         <th> Read <p class="arrow sort-by"></p></th>
-//                                                         <th> Status<p class="arrow sort-by"></p></th>
-//                                                                         </tr>
-//                                         </thead>
-
-
-
-//                                         <tbody>
-//                                         {/* <tr>
-
-
-
-
-//                                                             <td class="py-1">
-//                                                                 <div class="form-check">
-//                                                                 <label class="form-check-label">
-//                                                                   <input type="checkbox" class="form-check-input"/>  </label>
-//                                                               </div>
-
-//                                                             </td> */}
-//                                   {/* <!--			  <td><?php echo $Campaignid; ?> </td>--> */}
-//                                           {/* <td title="<?php echo $NickName;?>"><p class="textoverlap"><?php echo $NickName; ?></p> </td> */}
-//                                           {/* <td><?php echo $MessDescription_type; ?> </td> */}
-//                                           {/* <td title="<?php echo $title;?>"><p class="textoverlap"><?php echo $title; ?></p></td>
-//                                           <td title="<?php echo $MessDescription;?>"><p class="textoverlap"><?php echo $MessDescription; ?></p> </td>
-//                                         <td><?php echo $CDT; ?> </td>
-//                                                             <td> <?php $sent = "numfmt --to=si ".$SENT_COUNT; echo $s = exec($sent);?></td>
-//                                           <td> <?php $del = "numfmt --to=si ".$DLVD_COUNT; echo $d = exec($del);?></td>
-//                                         <td> <?php $red = "numfmt --to=si ".$READ_COUNT; echo $r = exec($red);?></td>
-
-//                                           <td>
-
-//                                                 <?php 
-//                                   if ($status == 'Completed') { echo '<label class="badge badge-success">Completed</label>'; } else if ($status == 'In-Process') {echo '<label class="badge badge-gradient-warning">In-Process</label>'; } else if ( $status == 'Scheduled') { echo '<label class="badge badge-gradient-info">Scheduled</label>'; } else if ( $status == 'Rejected') { echo '<label class="badge badge-gradient-danger">Rejected</label>'; }
-//                                   ?> */}
-//                                   {/* </td> */}
-//                                         {/* </tr>
-//                                         <?php  } ?> */}
-//                                         <tr>
-//                                         <td>1</td>
-//                                         <td>test</td>
-//                                         <td>test</td>
-//                                         <td>test</td>
-//                                         <td>test</td>
-//                                         <td>test</td>
-
-//                                         <td>test</td>
-
-//                                         <td>test</td>
-//                                         <td>test</td>
-
-//                                         <td>test</td>
-
-//                                         </tr>
-//                                         </tbody>
-//                                 </table>
-//                                </div>
-//                               </div>
-
-//                             </div>
-//                     </div>
-//             </div>
-
-//           </div>
-//       </div></>
-
-
-
-
-
-
-//   )
-// }
-
-// // App.js
-// import {React,useState} from 'react';
-// import './reports.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'react-bootstrap-table-next/dist/react-bootstrap-table2.css';
-// import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-// import BootstrapTable from 'react-bootstrap-table-next';
-// import paginationFactory from 'react-bootstrap-table2-paginator';
-// import {CSVLink, CSVDownload} from 'react-csv';
-
-// // import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
-
-// import Header from '../Header/Header'
-// import Sidebar from '../Sidebar/Sidebar';
-// import filterFactory from 'react-bootstrap-table2-filter';
-
-// function Reports() {
-
-
-
-//   const products = [
-//     { id: 1, NickName: 'adfgh',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 2, NickName: 'Geosdfrge',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-
-//     { id: 3, NickName: 'rty',MsgType: 'Mwonkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 4, NickName: 'aff',MsgType: 'Monqekey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 5, NickName: 'sD',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 6, NickName: 'George',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 7, NickName: 'ADAgf',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 8, NickName: 'George',MsgType: 'Mfgashsonkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 9, NickName: 'George',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 10, NickName: 'asfgds',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-
-//     { id: 11, NickName: 'George',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 12, NickName: 'George',MsgType: 'Monkretey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 13, NickName: 'George',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-//     { id: 14, NickName: 'George',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' },
-
-//     { id: 15, NickName: 'George',MsgType: 'Monkey',Title: 'Monkey',Description: 'Monkey', ImageUrl: 'Monkey',Date: 'Monkey',Sent: 'Monkey',Delivered: 'Monkey',Read: 'Monkey',Status: 'Monkey' }
-
-
-
-
-//   ];
-
-//   const columns = [
-//     { dataField: 'id', text: 'id', sort: true },
-
-//     { dataField: 'NickName', text: 'NickName', sort: true },
-//     { dataField: 'MsgType', text: 'MsgType', sort: true },
-//     { dataField: 'Title', text: 'Title', sort: true },
-
-//     { dataField: 'Description', text: 'Description', sort: true },
-//     { dataField: 'ImageUrl', text: 'ImageUrl', sort: true },
-
-//     { dataField: 'Date', text: 'Date', sort: true },
-
-//     { dataField: 'Sent', text: 'Sent', sort: true },
-//     { dataField: 'Delivered', text: 'Delivered', sort: true },
-//     { dataField: 'Read', text: 'Read', sort: true },
-//     { dataField: 'Status', text: 'Status', sort: true }
-
-
-//   ];
-
-//   const defaultSorted = [{
-//     dataField: 'id',
-//     order: 'Desc'
-//   }];
-
-//   const pagination = paginationFactory({
-//     pDescription: 1,
-//     sizePerPDescription: 10,
-//     lastPDescriptionText: '>>',
-//     firstPDescriptionText: '<<',
-//     nextPDescriptionText: '>',
-//     prePDescriptionText: '<',
-//     showTotal: true,
-//     alwaysShowAllBtns: true,
-//     onPDescriptionChange: function (pDescription, sizePerPDescription) {
-//       console.log('pDescription', pDescription);
-//       console.log('sizePerPDescription', sizePerPDescription);
-//     },
-//     onSizePerPDescriptionChange: function (pDescription, sizePerPDescription) {
-//       console.log('pDescription', pDescription);
-//       console.log('sizePerPDescription', sizePerPDescription);
-//     }
-//   });
-
-//   const { value, setValue } = useState('');
-//   const { dataSource, setdataSource } = useState(products);
-//   const [tableFilter,settableFilter]=useState([]);
-
-//   const filterData=(e)=>{
-
-//            if(value !=""){
-//             setValue(e.target.value); 
-//             const filterTable=dataSource.filter(o=>Object.keys(o).some(k=>String(o[k]).toLowerCase().includes(e.target.value.toLowerCase())
-//             ));
-//             settableFilter([...filterTable]);
-//            }else{
-//             setValue(e.target.value);
-//             setdataSource([...dataSource]);
-//            }
-//   }
-
-//   return (
-//     <>
-//     <Header/>
-//     <Sidebar/>
-//     <div className='textcontre'>
-//                                 <h4 classNickName='reprottitle' >Reports</h4>
-//                                <div>  
-//                                <center ><input type="text"  value={value} placeholder="search" onChange={filterData}/></center>
-
-// <center style={{textAlign:'end',marginBottom:10}}><CSVLink data={products} className="lin" >Export</CSVLink></center>
-//                                </div>
-
-
-//       <BootstrapTable bootstrap4 keyField='id' data={products} columns={columns} defaultSorted={defaultSorted} pagination={pagination}  filter={filterFactory()} />
-//     </div></>
-
-//   );
-// }
-
-// export default Reports;
-
-
 import React from 'react';
 // import {CSVLink, CSVDownload} from 'react-csv';
 
@@ -760,39 +513,41 @@ const Reports = () => {
 
   return (
     <>
-      <Header />
-      <Sidebar />
-      {/* <button onclick="Export()" className="rbtn">Export</button> */}
-      {/* <button onclick="Export()" className="rbtn">Export</button> */}
+      <div id="wrapper">
+        <Sidebar />
+        {/* <button onclick="Export()" className="rbtn">Export</button> */}
+        {/* <button onclick="Export()" className="rbtn">Export</button> */}
 
-      <div className="textcontre">
+        <div className="textcontre">
 
-        <h4 className='reprottitle' >Reports</h4>
+          <h4 className='reprottitle' >Reports</h4>
+          <div class="card-body">
+          <div className='row'>
+            <div className='col-lg-6'>
 
-        <div className='row'>
-          <div className='col-lg-6'>
+            </div>
+            <div className='d-flex justify-content-end col-lg-6 '>
+              <button onclick="Export()" className="rbtne" >Export</button>
 
+            </div>
           </div>
-          <div className='d-flex justify-content-end col-lg-6 '>
-            <button onclick="Export()" className="rbtne" >Export</button>
 
-          </div>
+          {/* <CsvDownloader reports={reports} /> */}
+
+          {/* <CSVLink data={reports} className="lin" >Export</CSVLink> */}
+          <MDBDataTable
+            striped
+            bordered
+            small
+            noBottomColumns
+            // <button onclick="Export()" className="rbtn">Export</button> 
+            responsive
+            data={reports}
+            className="tablecont"
+          />
         </div>
-
-        {/* <CsvDownloader reports={reports} /> */}
-
-        {/* <CSVLink data={reports} className="lin" >Export</CSVLink> */}
-        <MDBDataTable
-          striped
-          bordered
-          small
-          // <button onclick="Export()" className="rbtn">Export</button> 
-          responsive
-          data={reports}
-          className="tablecont"
-        />
+        </div>
       </div>
-
     </>
 
   );

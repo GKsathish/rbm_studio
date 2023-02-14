@@ -1,6 +1,6 @@
 
 .textcontR{
-    background: #dee2e6;
+    background: #f2edf3;
     padding:5%;
     /* margin-left:15%; */
     margin-top: 0px;
@@ -137,7 +137,7 @@ textarea.from-controlR {
 
 
 
- .mystR{   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+ .mystR{   background-image:url("../../images/preview.jpg");
    height: 481px;
    width: 261px;
            font-size:20px;
@@ -183,7 +183,7 @@ textarea.from-controlR {
 
 
  .mystR{
-   background-image:url("/home/satish/rbm_studio/public/images/preview.jpg");
+   background-image:url("../../images/preview.jpg");
       /* height: 442px;
       width: 222px; */
            font-size:30px;
