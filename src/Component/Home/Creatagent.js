@@ -103,25 +103,32 @@ const agentelogohandler=(e)=>{
 
 
     return (
-      <>
-        <div>
-          <h4> rbm agent info </h4>
+      
+      
 
-          <div className="main">
+          <>
             {/* left */}
-            <form onSubmit={submitHandler}>
-              {activestep === 0 ? (<div className="left-cont" >
+
+            <div style={{marginTop:'20px'}}>
+            <h4 style={{paddingLeft:"30px"}}> rbm agent info </h4>
+
+            <form onSubmit={submitHandler} className="form-cont">
+< div className=" left bg-white">
+              {activestep === 0 ? (
+              <div >
 
 
 
 
-                <div className="leftinside">
+                
                   <h2 style={{ marginLeft: 15 }}>Branding</h2>
                   <div class="form-groupCrt">
 
 
+
                     <label>Upload Banner</label>
                     <br />
+                    <div class="input-group col-xs-12">
 
                     <small>Large Banner Image (1440x448)</small>
                     <br />
@@ -139,6 +146,7 @@ const agentelogohandler=(e)=>{
                     // onChange={setagentimage}
 
                     />
+                  </div>
                   </div>
 
                   <div class="form-groupCrt">
@@ -164,6 +172,8 @@ const agentelogohandler=(e)=>{
 
                   <div class="form-groupCrt">
                     <label for="exampleInputUsername1">Display Name</label>
+                    <div class="input-group col-xs-12">
+
                     <input
                       type="text"
                       class="form-controlCrt"
@@ -173,10 +183,12 @@ const agentelogohandler=(e)=>{
                       placeholder="Display Name"
                       onChange={(e)=> setdisplayname(e.target.value)}
                     />
+</div>
                   </div>
 
                   <div class="form-groupCrt">
                     <label for="exampleInputUsername1">Descripition</label>
+                    
                     <textarea
                       type="text"
                       class="form-controlCrt"
@@ -207,7 +219,7 @@ const agentelogohandler=(e)=>{
                       Next
                     </button>
                   </div>
-                </div>
+                
                 {/* 2 */}
 
                 {/* 3 */}
@@ -215,190 +227,173 @@ const agentelogohandler=(e)=>{
 
 
 
-              {/* <!-- Circles which indicates the steps of the form: --> */}
+              {activestep === 1 ? (<div className="m-2">
+                <h2>Point of Contact</h2>
 
-              {/* Right */}
+<div class="form-groupCrt">
+  <label for="exampleInputUsername1">Primary phone Number</label>
+  <input
+    type="number"
+    class="form-controlCrt"
+    id="contact"
+    name="agentpnumber"
+    value={agentpnumber}
 
+    placeholder="Primary phone Number"
+    maxlength="15"
+    size="15"
+    required=""
+    onChange={e=>setagentpnumber(e.target.value)}
 
+  />
+</div>
+<div class="form-groupCrt">
+  <label for="exampleInputUsername1">Label phone Number</label>
+  <input
+    type="text"
+    class="form-controlCrt"
+    onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)"
+    id="labelforcontact"
+    name="agentplabel"
+    value={agentplabel}
 
+    placeholder="Label for primary phone Number"
+    required=""
+    onChange={e=>setagentplabel(e.target.value)}
 
+  />
+</div>
 
+<div class="form-groupCrt">
+  <label for="exampleInputUsername1">Primary Website</label>
+  <input
+    type="url"
+    class="form-controlCrt"
+    id="website"
+    name="agentwebsite"
+    value={agentwebsite}
+    placeholder="Primary Website"
+    required=""
+    onChange={e=>setagentwebsite(e.target.value)}
 
+  />
+</div>
+<div class="form-groupCrt">
+  <label for="exampleInputUsername1">
+    {" "}
+    Label Primary Website
+  </label>
+  <input
+    type="text"
+    onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)"
+    class="form-controlCrt"
+    // id="websitelabel"
+    name="agentwebsitelabel"
+    value={agentwebsitelabel}
+    placeholder="Label Primary website"
+    required=""
+    onChange={e=>setagentwebsitelabel(e.target.value)}
 
-              {/* left */}
-              {activestep === 1 ? (<div className="left-cont">
-                {/* 2 */}
-                <div className="leftinside">
-                  <h2>Point of Contact</h2>
+  />
+</div>
+<div class="form-groupCrt">
+  <label for="exampleInputUsername1">Email</label>
+  <input
+    type="email"
+    class="form-controlCrt"
+    name="agentemail"
+    // id="Email"
+    value={agentemail}
+    placeholder="Email"
+    required=""
+    onChange={e=>setagentemail(e.target.value)}
 
-                  <div class="form-groupCrt">
-                    <label for="exampleInputUsername1">Primary phone Number</label>
-                    <input
-                      type="number"
-                      class="form-controlCrt"
-                      id="contact"
-                      name="agentpnumber"
-                      value={agentpnumber}
+  />
+</div>
 
-                      placeholder="Primary phone Number"
-                      maxlength="15"
-                      size="15"
-                      required=""
-                      onChange={e=>setagentpnumber(e.target.value)}
+<div class="form-groupCrt">
+  <label for="exampleInputUsername1">Label Primary Email</label>
+  <input
+    type="email"
+    class="form-controlCrt"
+    id="Emaillabel"
+    name="agentemaillabel"
+    placeholder="Label for primary Email"
+    required=""
+    value={agentemaillabel}
 
-                    />
-                  </div>
-                  <div class="form-groupCrt">
-                    <label for="exampleInputUsername1">Label phone Number</label>
-                    <input
-                      type="text"
-                      class="form-controlCrt"
-                      onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)"
-                      id="labelforcontact"
-                      name="agentplabel"
-                      value={agentplabel}
+    onChange={e=>setagentemaillabel(e.target.value)}
 
-                      placeholder="Label for primary phone Number"
-                      required=""
-                      onChange={e=>setagentplabel(e.target.value)}
+  />
+</div>
 
-                    />
-                  </div>
+<div class="form-groupCrt">
+  <label for="exampleInputPassword1">Privacy Policy*</label>
+  <input
+    type="url"
+    class="form-controlCrt"
+    id="Privacy_Policy"
+    name="privacy"
+    value={privacy}
+    placeholder="Please enter Privacy policy URL"
+    required=""
+    onChange={e=>setprivacy(e.target.value)}
 
-                  <div class="form-groupCrt">
-                    <label for="exampleInputUsername1">Primary Website</label>
-                    <input
-                      type="url"
-                      class="form-controlCrt"
-                      id="website"
-                      name="agentwebsite"
-                      value={agentwebsite}
-                      placeholder="Primary Website"
-                      required=""
-                      onChange={e=>setagentwebsite(e.target.value)}
+  />
+</div>
 
-                    />
-                  </div>
-                  <div class="form-groupCrt">
-                    <label for="exampleInputUsername1">
-                      {" "}
-                      Label Primary Website
-                    </label>
-                    <input
-                      type="text"
-                      onkeydown="return /^[ A-Za-z_@./#&amp;+-]*$/i.test(event.key)"
-                      class="form-controlCrt"
-                      // id="websitelabel"
-                      name="agentwebsitelabel"
-                      value={agentwebsitelabel}
-                      placeholder="Label Primary website"
-                      required=""
-                      onChange={e=>setagentwebsitelabel(e.target.value)}
-
-                    />
-                  </div>
-                  <div class="form-groupCrt">
-                    <label for="exampleInputUsername1">Email</label>
-                    <input
-                      type="email"
-                      class="form-controlCrt"
-                      name="agentemail"
-                      // id="Email"
-                      value={agentemail}
-                      placeholder="Email"
-                      required=""
-                      onChange={e=>setagentemail(e.target.value)}
-
-                    />
-                  </div>
-
-                  <div class="form-groupCrt">
-                    <label for="exampleInputUsername1">Label Primary Email</label>
-                    <input
-                      type="email"
-                      class="form-controlCrt"
-                      id="Emaillabel"
-                      name="agentemaillabel"
-                      placeholder="Label for primary Email"
-                      required=""
-                      value={agentemaillabel}
-
-                      onChange={e=>setagentemaillabel(e.target.value)}
-
-                    />
-                  </div>
-
-                  <div class="form-groupCrt">
-                    <label for="exampleInputPassword1">Privacy Policy*</label>
-                    <input
-                      type="url"
-                      class="form-controlCrt"
-                      id="Privacy_Policy"
-                      name="privacy"
-                      value={privacy}
-                      placeholder="Please enter Privacy policy URL"
-                      required=""
-                      onChange={e=>setprivacy(e.target.value)}
-
-                    />
-                  </div>
-
-                  <div class="form-groupCrt">
-                    <label for="exampleInputConfirmPassword1">
-                      Terms and Conditions*
-                    </label>
-                    <input
-                      type="url"
-                      class="form-controlCrt"
-                      id="terms_of_Services"
-                      name="terms"
-                      value={terms}
-                      placeholder="Please enter Terms and Conditions"
-                      required=""
-                      onChange={e=>setterms(e.target.value)}
+<div class="form-groupCrt">
+  <label for="exampleInputConfirmPassword1">
+    Terms and Conditions*
+  </label>
+  <input
+    type="url"
+    class="form-controlCrt"
+    id="terms_of_Services"
+    name="terms"
+    value={terms}
+    placeholder="Please enter Terms and Conditions"
+    required=""
+    onChange={e=>setterms(e.target.value)}
 
 
-                    />
-                  </div>
+  />
+</div>
 
-                  <div>
-                    <button
-                      type="button"
-                      id="prevbtncre"
-                      onClick={() => {
-                        setActivestep(activestep - 1);
-                      }}
-                      className="btncre"
-                    >
-                      Previous
-                    </button>
-                    <button
-                      type="button"
-                      // name="createAgent"
-                      // id="nextbtncre"
-                      onClick={() => {
-                        setActivestep(activestep + 1);
-                      }}
-                      className="btncre"
-                    >
-                      Next
-                    </button>
-                  </div>
-                </div>
-              </div>
+<div>
+  <button
+    type="button"
+    id="prevbtncre"
+    onClick={() => {
+      setActivestep(activestep - 1);
+    }}
+    className="btncre"
+  >
+    Previous
+  </button>
+  <button
+    type="button"
+    // name="createAgent"
+    // id="nextbtncre"
+    onClick={() => {
+      setActivestep(activestep + 1);
+    }}
+    className="btncre"
+  >
+    Next
+  </button>
+</div>
+</div>
+            
+              
+                 
+              
               ) : ("")}
 
-
-
-
-
-
-              {/* left */}
-
-              {activestep === 2 ? (<div className="left-cont" >
+              {activestep === 2 ? (<div  >
                 {/* 3 */}
 
-                <div className="leftinside">
+                
                   <h2 class="rbm_agent_heading">Agent Experince</h2>
                   <div class="form-groupCrt">
                     <label for="mob">Agent Experince</label>
@@ -543,15 +538,13 @@ const agentelogohandler=(e)=>{
                       Submit
                     </button>
                   </div>
-                </div>
+                
               </div>) : ("")}
-              {/* <!-- Circles which indicates the steps of the form: --> */}
-
-              {/* Right */}
-              </form>
+             
+    </div>    
             
-            <div className="right-cont">
-              <div className="fieldcontT1">
+            <div className=" bg-white  right  ">
+              
                 {/* <center style={{textAlign:'center'}}>Message Preview</nter><br/> */}
                 <div className="mystCtr">
                   <div>
@@ -562,23 +555,23 @@ const agentelogohandler=(e)=>{
                     </center>
 
 
-                    <div style={{ padding: '0px', textAlign: 'center' }}>
-                      <img
-                        src={fileUrl} style={{ height: "180px", width: "240px", border: "none" }}
-                      />
-                      <img
-                        src={fileUrl1}
-                        style={{ height: "50px", width: "50px", borderRadius: "50%" }}/>
+                    <div >
+                    <div className="prev-img-cont">
+                  <img src={fileUrl} className="file"/>
+                  <img src={fileUrl1} className="file1"/>
+                    </div>
 
 
-                      <p style={{ overflowWrap: 'break-word', fontSize: "16px", fontWeight: 'bold' }}>{displayname}</p>
+
+                    
+                      <p style={{ overflowWrap: 'break-word', fontSize: '16px', fontWeight: 'bold' }}>{displayname}</p>
                       <p style={{ overflowWrap: 'break-word' }}>{agentdesc}</p>
                     </div>
 
                     <Tabs style={{ padding: '10px', fontSize: '12px', alignItems: 'center' }}>
                       <TabList>
-                        <Tab style={{ padding: '10px', fontSize: '12px' }} > Info</Tab>
-                        <Tab style={{ padding: '10px', fontSize: '12px' }}>Options</Tab>
+                        <Tab style={{ paddingRight: '70px', fontSize: '14px' }} > Info</Tab>
+                        <Tab style={{ paddingRight: '60px', fontSize: '14px' }}>Options</Tab>
                       </TabList>
 
                       <TabPanel style={{ textAlign: 'left' }}>
@@ -616,13 +609,17 @@ const agentelogohandler=(e)=>{
 
 
                 </div>
-              </div>
+              
             </div>
+
+            
+          </form>
+          </div>
             
 
-          </div>
-        </div>
-      </>
+          </>
+        
+    
     );
   };
   return (

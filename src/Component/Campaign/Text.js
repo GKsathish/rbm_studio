@@ -32,19 +32,19 @@
                    <h4 className='texttitle'>Text Message Campaign</h4>
 
 
-                    <div className=' bg-white  col-12 col-lg-6 m-3 ' style={{height:'100vh'}}>
+                    <div className=' bg-white  col-12 col-lg-6 m-3 ' style={{height:'100vh' ,padding:'20px'}}>
 
                       <div class="form-groupT">
                         <label className="p-2">Campaign  Name</label><br />
 
-                        <input type="text" name="" class="form-controlT" id="carddesc" placeholder="Campaign Nick Name" required minlength="5" maxlength="10" size="10" />
+                        <input type="text" name="" class="form-controlT"  placeholder="Campaign Nick Name" required minlength="5" maxlength="10" size="10" />
                       </div>
 
                       <div class="form-groupT">
                         <label>Select agent</label><br />
                         <select class="form-controlT" name="agent" required onChange={handleSelectChange}>
                           <option>-Select Agent-</option>
-                          <option value="Mobile Masala">MobileMasala</option>
+                          <option value="Mobile Masala">Mobile Masala</option>
                           <option value="Zing">Zing</option>
 
 
@@ -54,9 +54,9 @@
 
 
                       <div class="form-groupT">
-                        <label>Message</label><br />
+                        <label >Message</label><br />
 
-                        <textarea class="form-controlT" id="messagetext" name="textmessage" rows="5" placeholder="Please enter text message" minlength="10" maxlength="320" size="320" required onChange={handleSelectChangemesage}></textarea>
+                        <textarea class="form-controlT" id="messagetext" name="textmessage" rows="5" col="20" placeholder="Please enter text message" minlength="10" maxlength="320" size="320" required onChange={handleSelectChangemesage} ></textarea>
                       </div>
 
                       <div class="form-groupT">
@@ -69,8 +69,8 @@
 
                         </select>
                       </div>
-                      <button type="submit" name="textsubmit" class="btnT  m-3" >Test Campaign</button>
-                      <button type="submit" name="settest" class="btnT1 m-3" >Set Campaign</button>
+                      <button type="submit" name="textsubmit" class="btn-primary btn-bg  rounded-2 m-3 b-0" >Test Campaign</button>
+                      <button type="submit" name="settest" class="btn-primary btn-bg rounded-2 m-3 b-0" >Set Campaign</button>
 
 
 
@@ -82,17 +82,17 @@
                     <div className=' bg-white col-12 col-lg-5 m-3' style={{height:'100vh'}}>
 
 
-                      <center>Message Preview</center><br />
+                      <center><h6 style={{marginBottom:'8px'}}>Message Preview</h6></center>
                       <div className='mystT'>
 
                         <div style={{display:'flex',marginTop:'40px'}}>
-                        <AiOutlineArrowLeft style={{ width:'40px', height:'20',marginTop:'4px',paddingRight:'5px'}}/>
+                        <AiOutlineArrowLeft style={{ width:'40px', height:'20',marginTop:'5px',paddingRight:'5px'}}/>
                       
                       {selectedoperator} 
                         </div>
-                      <div  className='messagecont'>
-                      <p>{selectedmessage}</p>
-                      </div>
+                      <p className='messagecont' >
+                      {selectedmessage}</p>
+                      
 
                       </div>
 

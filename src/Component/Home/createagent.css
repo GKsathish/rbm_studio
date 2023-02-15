@@ -13,15 +13,27 @@
   font-weight:normal;
 
 }
+.form-cont{
+  display: flex;
+}
+.left{
+width:500px;
+margin:20px;
+padding: 20px;
+}
+.right{
+  width:500px;
+  margin:20px;
+  padding: 20px;
+}
 .agt-cont{
     background: #f2edf3;
     height:100vh !important;
-    /* width:100%; */
-    padding-top: 10%;
-    padding-left: 4%;
+    padding-top: 8%;
+    /* padding-left: 4%; */
     /* margin-left:4%; */
     /* padding-left:6%; */
-    padding-right: 4%;
+    /* padding-right: 4%; */
     /* position: s; */
     display: flex;
 }
@@ -40,18 +52,18 @@ h4{
     /* padding:10px; */
 }
 .left-cont{
-    width:600px;
+    width:60;
     /* height:60%; */
-    height:100vh !important;
+    height:100% !important;
 
     background: #fff;
-    padding: 5px;
+    padding: 20px;
     overflow-x: hidden;
     border-radius: 8px;
 
 }
 .right-cont{
-    width:500px;
+    width:55%;
     height:100% !important;
 
     /* height:60%; */
@@ -112,7 +124,7 @@ textarea.form-controlCrt {
 }
 .form-controlCrt {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 10px 20px;
     font-size: 0.8125rem;
     font-weight: 400;
@@ -159,6 +171,29 @@ textarea.form-controlCrt {
 
 
 @media only screen and (max-width:1020px){
+.form-cont{
+  display: flex;
+  flex-direction:column;
+}
+.left{
+  /* margin-right: 20%; */
+width:150px;
+}
+.right{
+  /* margin-right: 20%; */
+width:150px;
+}
+
+  .agt-cont{
+    
+    /* padding-left: 4%; */
+    /* margin-left:4%; */
+    /* padding-left:6%; */
+    /* padding: 9% !important; */
+    /* position: s; */
+    display: flex;
+    flex-direction: column;
+}
     /* .rowcontT{
         display: flex;
         flex-direction: column;
@@ -191,10 +226,10 @@ textarea.form-controlCrt {
      .main{
         display: flex;
         flex-direction: column;
-        /* padding:10px; */
     }
     .left-cont{
         width:100%;
+        margin-top: 10px;
     }
   .right-cont{
     width: 100%;
@@ -212,8 +247,40 @@ textarea.form-controlCrt {
     
     /* padding: 10px; */
     /* margin-left:4%; */
-    padding-left:14%;
-    padding-right: 4%;
+   
 }
 
+.left{
+  width:500px;
+  margin-right:20px;
+  }
+  .right{
+    width:500px;
+    margin-right:20px;
+  }
+
  }
+.prev-img-cont{
+ position: relative;
+ display: inline;
+text-align: center;
+ border: 1px solid #fff;
+}
+.file{
+ height: 180px;
+ width: 240px;
+ /* display: block; */
+ /* border: 1px solid #fff; */
+box-shadow: 1px 1px 1px 1px;
+}
+.file1{
+   height: 70px;
+   width: 70px;
+    border-radius: 50%;
+     top:-40px;
+     left: 80px;
+     position: relative;
+     /* border: 1px solid #fff; */
+     box-shadow: 1px 1px 1px 1px;
+
+}
