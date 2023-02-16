@@ -554,12 +554,13 @@ const agentelogohandler=(e)=>{
                       <b id="agenttarget">Info & Options</b>
                     </center>
 
-
-                    <div >
-                    <div className="prev-img-cont">
-                  <img src={fileUrl} className="file"/>
-                  <img src={fileUrl1} className="file1"/>
-                    </div>
+                    <div style={{width: "230px",height: "65px"}}>
+					<img id="blah" class="previewbanner" src={fileUrl} style={{width: '100%',height: '100%'}}/>
+					<div>
+						<img id="blah1" src={fileUrl1} class="log-round previewbanner2" />
+					</div>
+					</div>
+                  
 
 
 

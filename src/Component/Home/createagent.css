@@ -284,3 +284,21 @@ box-shadow: 1px 1px 1px 1px;
      box-shadow: 1px 1px 1px 1px;
 
 }
+.log-round{
+  width: 60px;
+  height: 60px;
+  border-radius: 43px;
+  position: absolute;
+  left: 115px;
+  top: 150px;
+  margin: 0 auto;
+  margin-top: 12px;
+  border: 2px solid #fff;
+
+}
+.previewbanner {
+  display: none;
+}
+.previewbanner2{
+  display: none;
+}
