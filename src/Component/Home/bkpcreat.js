@@ -1,6 +1,6 @@
 
 
-import React, { useState,useEffect} from "react";
+import React, { useState,useRef} from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -8,7 +8,6 @@ import { BiWorld } from "react-icons/bi";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "./createagent.css";
-import $ from 'jquery'
 
 // import { yupResolver } from '@hookform/resolvers/yup'
 // import { useForm } from 'react-hook-form'
@@ -20,152 +19,11 @@ function Creatagent() {
 
 
   const Createagent1 = () => {
-
-
-
     const [errorMsg, setErrorMsg] = useState('');
-    // const [successMsg, setSuccessMsg] = useState('');
+    const [successMsg, setSuccessMsg] = useState('');
   
-
-const infofunction=()=>{
-
-
-
-
-
-
-
-// fileUrl.onchange = evt => {
-//   const [file] = fileUrl.files
-//   if (file) {
-//     fileUrl.src = URL.createObjectURL(file)
-//   }
-// }
-
-// fileUrl1.onchange = evt => {
-//   const [file] = fileUrl1.files
-//   if (file) {
-//     fileUrl1.src = URL.createObjectURL(file)
-//   }
-// }
-
-
-
-        
-
-
-  $(document).ready(function() {
-    $("#opt-hide").click(function() {
-      
-
-      $(".info-hide").hide();
-      $(".opt-hide").show();
-    })
-
-    $("#info-hide").click(function() {
-
-      $(".info-hide").show();
-      $(".opt-hide").hide();
-    })
-
-    $("#contact").keypress(function() {
-      $(".icon-phone-sign").show();
-      $(".infocon").show();
-
-    });
-
-    $("#website").keypress(function() {
-      $(".icon-globe").show();
-      $(".infoweb").show();
-    });
-
-    $("#Email").keypress(function() {
-      $(".icon-envelope").show();
-      $(".infoemail").show();
-    });
-
-  });
-
-
-
-  $("#imgInp").change(function() {
-    $('.previewbanner').show();
-  });
-
-  $("#imgInp1").change(function() {
-    $('.previewbanner2').show();
-  });
-
-
-  $("#opt-hide").click(function() {
-    $(".info").removeClass("active2");
-    $(".opt").addClass("active2");
-  })
-
-
-  $("#info-hide").click(function() {
-    $(".opt").removeClass("active2");
-    $(".info1").addClass("active2");
-  })
-
-
-
-
-  $('#displayname').keyup(function() {
-    $('#displaynametarget').html($(this).val());
-  });
-
-
-
-  $('#discription').keyup(function() {
-    $('#discriptiontarget').html($(this).val());
-  });
-
-
-
-  $('#contact').keyup(function() {
-    $('#contacttarget').html($(this).val());
-  });
-
-
-  $('#labelforcontact').keyup(function() {
-    $('#labelforcontacttarget').html($(this).val());
-  });
-
-
-
-  $('#website').keyup(function() {
-    $('#websitetarget').html($(this).val());
-  });
-
-
-  $('#Email').keyup(function() {
-    $('#Emailtarget').html($(this).val());
-  });
-
-
-  $('#Emaillabel').keyup(function() {
-    $('#Emaillabeltarget').html($(this).val());
-  });
-
-
-  $('#websitelabel').keyup(function() {
-    $('#websitelabeltarget').html($(this).val());
-  });
-
-
-
-  $('#terms_of_Services').keyup(function() {
-    $('#terms_of_Servicestarget').html($(this).val());
-  });
-
-}
-
-
-  useEffect(() => {
-    infofunction()
-  })
-  
+    const emailRef = useRef();
+    const passwordRef = useRef();
 
 
     
@@ -190,6 +48,43 @@ const[checked2,setchecked2]=useState(false);
 const[checked3,setchecked3]=useState(false);
 const[checked4,setchecked4]=useState(false);
 
+const [state, setState] = useState({
+  agentbanner: '',
+  agentlogo: '',
+  display:''
+});
+
+const validateInput = () => {
+  const fields = [
+    {
+      name: 'agentbanner',
+      value: state.agentbanner,
+      message: 'agentbanner should not be blank.'
+    },
+    {
+      name: 'agentlogo',
+      value: state.agentlogo,
+      message: 'agentlogo should not be blank.'
+    },
+    
+  ];
+  const isNotFilled = fields.some(field => {
+    if (field.value.trim() === '') {
+      setErrorMsg(field.message);
+      field.name === 'agentbanner'
+        ? agentbannerRef.current.focus()
+        : agentlogoRef.current.focus();
+      return true;
+    }
+    setErrorMsg('');
+    return false;
+  });
+  return isNotFilled;
+
+}
+  const agentbannerRef = useRef();
+  const agentlogoRef = useRef();
+  // const displayRef = useRef();
 
 
 
@@ -218,27 +113,13 @@ const agentelogohandler=(e)=>{
     const submitHandler =  async(e) => {
       
       e.preventDefault();
-
-        if(agentbanner==="" || agentlogo ==="" || displayname===""){
-          setErrorMsg(true);
-        }else{
-          setActivestep(activestep+1);
-        }
-      
-      
-    
-
-      if(agentplabel==="" || agentpnumber ==="" || agentemail==="" || agentemaillabel==="" || agentwebsite===" " || agentwebsitelabel==="" || privacy===""){
-        setErrorMsg(true);
-      }else{
-        setActivestep(activestep+1);
+      const isInvalid = validateInput();
+      if (!isInvalid) {
+        setSuccessMsg("You're good to go!");
+      } else {
+        setSuccessMsg('');
+      }
      
-      }
-      if(agent_experince==="" || actions ===""){
-        setErrorMsg(true);
-      }else{
-        setActivestep(activestep+1);
-      }
        
     console.log(fileUrl);
       console.log(fileUrl1);
@@ -277,18 +158,12 @@ const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_ex
     })
       .then(response => {
        console.log(response);
-     
       })
       .catch(error => {
         console.log(error);
       })
+  }
 
-     
-        
-      
-      
-  
-    }
 
     return (
       
@@ -312,11 +187,11 @@ const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_ex
 
                                           
                                           {activestep === 0 ? (
-                                              <div  id="form1"  >
+                                              <div  id="form1" >
 
 
 
-                                             <h2 class = "rbm_agent_heading">Branding</h2>
+      <h2 class = "rbm_agent_heading">Branding</h2>
 
                                             
                                               {/* <h2 style={{ marginLeft: '1' }}>Branding</h2> */}
@@ -335,14 +210,14 @@ const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_ex
                                                   class="form-control"
                                                 id="agentbanner"
                                                   name="agentbanner"
-required
+                                                  ref={agentbannerRef}
+
                                                   value={agentbanner}
                                                   onChange={agentbannerhandler}
                                                
                             style={{width:'100%'}}
                                                 />
-   
-
+                                             
                                               </div>
                                               </div>
 
@@ -358,14 +233,13 @@ required
                                                id="agentlogo"
                                                     name="agentlogo"
                                                     value={agentlogo}
-required
+                                                    ref={agentlogoRef}
+
                                                     onChange={agentelogohandler}
                                                     
 
                                                   />
-                                                                                                                                                     
-
-   
+                                                      
                                                 </div>
                                               </div>
 
@@ -378,14 +252,13 @@ required
                                                   class="form-control"
                                                   name="displayname"
                                                   value={displayname}
-                                                required
+                                                  
 
                                                   id="displayname"
                                                   placeholder="Display Name"
                                                   onChange={(e)=> setdisplayname(e.target.value)}
                                                 />
-                                                                                                                                                  {errorMsg ?(<p style={{color:'red'}}>Required</p>):""}   
-    
+                                                   
                             </div>
                                               </div>
 
@@ -400,24 +273,24 @@ required
                                                   placeholder="Descripition"
                                                   maxlength="75"
                                                   size="75"
-                                                  required
+                                                  // required
                                                   value={agentdesc}
 
                                                   onChange={(e)=>setagentdesc(e.target.value)}
 
                                                 ></textarea>
-                                                                                                       
-
                                               </div>
 
                                               <div>
                                                 {/* <button type="button" id="prevbtncre" onclick="nextPrev(-1)" className='btncre'>Previous</button> */}
                                                 <button
-                                                  // type="submit"
+                                                  type="submit"
                                                    name="createAgent"
-                                                 
+                                                  //  id="nextbtncre"
+                                                  onClick={() => {
+                                                    setActivestep(activestep +1);
+                                                  }}
                                                   className="btncre"
-                                                  // onClick={onfirstSubmit}
                                                 >
                                                   Next
                                                 </button>
@@ -535,7 +408,7 @@ required
                             <div class="form-group">
                               <label for="exampleInputPassword1">Privacy Policy*</label>
                               <input
-                                type="text"
+                                type="url"
                                 class="form-control"
                                 id="Privacy_Policy"
                                 name="privacy"
@@ -552,7 +425,7 @@ required
                                 Terms and Conditions*
                               </label>
                               <input
-                                type="text"
+                                type="url"
                                 class="form-control"
                                 id="terms_of_Services"
                                 name="terms"
@@ -567,10 +440,12 @@ required
 
                             <div>
                                <button
-                                // type="submit"
+                                type="submit"
                                 name="createAgent"
                                 // id="nextbtncre"
-                                
+                                onClick={() => {
+                                  setActivestep(activestep + 1);
+                                }}
                                 className="btncre"
                               >
                                 Next
@@ -589,7 +464,7 @@ required
                             </div>
                             </div>) : ("")}
 
-                                          {activestep === 2 ? ( <div >
+                                          {activestep === 2 ? ( <>
 
                             <h2 class = "rbm_agent_heading" >Agent Experince</h2>
                                           
@@ -735,29 +610,29 @@ required
                                                
                                               </div>
                                             
-                                          </div>) : ("")}
+                                          </>) : ("")}
                                         
-                                          {activestep === 3 ? ( <div >
-
-<center style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>Form is Submitted Successfully</center>
-                
-              </div>) : ("")}      
+                                  
                                         
                           </form>
                     
                     <div class="col-md-6 col-12 mt-1 round-2 " style={{background: '#fff',padding: '10px',borderLeft: '1px solid #dddddd87'}}>
             
-                    <div class="img-preview">
+                      <div class="img-preview">
                         <div class="larger-banner">
                         
                                     <center style={{fontWeight:'bold',marginRight:'50%'}}>Info & options</center>
                                   
-                                    <div style={{width: '275px',height: '160px'}}>
-                <img id="blah" class="previewbannercre" src={fileUrl} style={{width: '100%',height: '100%'}} alt=''/>
-                <div>
-                  <img id="blah1" src={fileUrl1} class="log-roundcre previewbannercre2" alt ='' />
-                </div>
-                </div>
+                                    <div style={{width:'292px',height:'160px !important'}}>
+                                        <img
+                                          src={fileUrl} className='file' alt='' />
+                                        <img
+                                          src={fileUrl1}
+                                          className='file1' alt=''/>
+
+
+                    
+                                    </div>
                                 <p className="infotitle">{displayname}</p>
                                   <p className="infodesc">{agentdesc}</p>
                                   <Tabs style={{ padding: '10px', fontSize: '12px', alignItems: 'center' }}>
@@ -815,7 +690,6 @@ required
     
     );
   };
-
   return (
     <>
       < div id="wrapper" >
@@ -830,4 +704,5 @@ required
     </>
   );
 }
+
 export default Creatagent;

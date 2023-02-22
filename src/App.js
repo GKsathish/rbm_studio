@@ -20,8 +20,7 @@ import Forgetpassword from './Component/Forgotpassword/Forgetpassword';
 import Devicedetails from './Component/Device/Devicedetails';
 import Test from './Component/TEST/test';
 import Faq from './Component/Foq/Faq'
-import createagent  from './Component/Home/createagent';
-import Bakcreate  from './Component/Home/Bakcreate';
+
 
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -61,7 +60,6 @@ function App() {
           <Route exact path="/Forgetpassword" element={<Forgetpassword />} />
           <Route exact path="/Devicedetails" element={<Devicedetails />} />
           <Route exact path="/Test" element={<Test />} />
-          <Route exact path="/ssss" element={<Bakcreate/>} />
 
           {/* <Route exact path="/cr" element={<createagent/>} /> */}
 
