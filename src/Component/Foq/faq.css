@@ -8,12 +8,6 @@
     padding: 50px;
 width:100%;
 }
-/* .accordian{
- height:20px;
- width:100%;
- background: #dee2e6;
- color:aqua;
-} */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css);
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css);
@@ -33,7 +27,7 @@ a, a:hover, a:focus {
 .text-primary{
     color : #5a8dee !important;
 }
-.card {
+/* .card {
      box-shadow: 0px 5px 10px rgba(90, 116, 148, 0.3);
     background-color: #fff;
     border-radius: 8px;
@@ -42,7 +36,7 @@ a, a:hover, a:focus {
     letter-spacing: 0.3px;
     color: #475f7b;
     overflow: hidden;
-}
+} */
 .rc-accordion-toggle {
     display: flex;
     align-items: flex-start;

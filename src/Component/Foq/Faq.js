@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-import Sidebar from '../Sidebar/Sidebar';
-import Header from '../Header/Header';
+import Sidebar from '../Sidebar/Sidebar'
 import './faq.css'
-// import ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
+
 
 const faqs = [
     {
@@ -48,6 +47,7 @@ const faqs = [
 ]
 
 const AccordionItem = (props) => {
+
     const contentEl = useRef();
     const { handleToggle, active, faq } = props;
     const { header, id, text } = faq;

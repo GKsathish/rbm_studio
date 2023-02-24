@@ -10,9 +10,6 @@ import { getByPlaceholderText } from '@testing-library/react';
 
 
 
-// var showdate=new Date();
-// var scheduler111=showdate.getDate()+'/'+showdate.getMonth()+'/'+showdate.getFullyear();
-
 
 
 const [ datetime, setDatetime ] = useState('');
@@ -205,7 +202,7 @@ Now</label>
 
                     </div>
 
-                    <div className=' bg-white col-12 col-lg-5 m-3 rightT' >
+                    <div className=' bg-white col-12 col-lg-5 m-3 rightT h-100' >
 
 
                       <center><h6 style={{marginBottom:'8px'}}>Message Preview</h6></center>

@@ -135,8 +135,8 @@ textarea.form-controlcr {
 
 
 
- .mystc{
-   background-image:url("../../images/preview.jpg");
+ .myst{
+   background-image:url("../../images/phone_test123 (1).png");
    height: 480px;
    width: 260px;
            font-size:30px;
@@ -157,6 +157,26 @@ textarea.form-controlcr {
             border: 1px solid #763B75;
             margin-bottom: 30px;
         }
+        .card2 {
+         padding: 20px;
+         border: 1px solid #763B75;
+         margin-bottom: 30px;
+     }
+     .card3 {
+      padding: 20px;
+      border: 1px solid #763B75;
+      margin-bottom: 30px;
+  }
+  .card4 {
+   padding: 20px;
+   border: 1px solid #763B75;
+   margin-bottom: 30px;
+}
+.card5 {
+   padding: 20px;
+   border: 1px solid #763B75;
+   margin-bottom: 30px;
+}
 
         .cr {
             padding: 10px;
@@ -201,7 +221,7 @@ textarea.form-controlcr {
      }
 
      .mystc{
-      background-image:url("../../images/preview.jpg");
+      background-image:url("../../images/phone_test123 (1).png");
       height: 480px;
       width: 260px;
               font-size:30px;
@@ -225,4 +245,26 @@ textarea.form-controlcr {
 }
    
 
+ }
+
+ .corousel{
+   display: flex !important;
+   width:250px;
+   height:250px;
+   overflow-y: hidden;
+
+   
+  
+ }
+ .corousel::-webkit-scrollbar {
+   display: none;
+}
+ .corousel div{
+   height:250px;
+   width:250px;
+   padding: 20px;
+ }
+ .corousel div img{
+   height:180px;
+   width:220px;
  }
