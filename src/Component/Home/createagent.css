@@ -245,7 +245,7 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
   }
   
   .previewbannercre {
-      display: block;
+      display: none;
   }
   
   .log-roundcre {
@@ -261,7 +261,7 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
       border: 2px solid #fff;
   }
   .previewbannercre2 {
-      display: block;
+      display: none;
   }
   
   #labelforcontacttarget,#Emaillabeltarget,#websitelabeltarget{
@@ -342,7 +342,7 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
   
   @media screen and  (max-width : 1024px){
   
-  .log-round {
+  .log-roundcre {
   margin-left: 107px;
   }
 
@@ -386,7 +386,7 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
   
   
   
-  .log-round {
+  .log-roundcre {
       width: 60px;
       height: 60px;
       border-radius: 43px;
@@ -412,10 +412,11 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
   
   }
   
-  .form-group {
-      margin-bottom: 10px;
+  .form-groupcreat{
+      /* margin-bottom: 10px ; */
       display: flex;
       flex-direction: column;
+      margin-bottom: 10px !important;
   }
   
   
@@ -548,10 +549,16 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
   .rbm_agent_heading {
       font-size: 25px;
       margin-top: 25px;
-      margin-left: 25px;
   }
   
-  
+  .form-controlcreat{
+    border: 1px solid #ccc;
+    font-family: "ubuntu-regular", sans-serif;
+    font-size: 0.8125rem;
+    border: 1px solid #ccc;
+    font-family: "ubuntu-regular", sans-serif;
+    font-size: 0.8125rem;
+  }
   
   p.rbm_agent_bubble {
       color: #fff;
@@ -602,9 +609,7 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
     border: none !important;
     /* position: absolute; */
    }
-  .form-group{
-    margin-bottom: 5px !important;
-  }
+ 
   
   
   .page-title{
@@ -615,7 +620,7 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
     float: right;
     
   }
-  .form-group label{
+  .form-groupcreat label{
     font-size: 0.875rem !important;
     line-height: 1 !important;
     vertical-align: top !important;
@@ -625,10 +630,12 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
 
 
   }
+  .form-groupcreat{
+    margin-bottom: 20px!important;
+  }
   .rbm_agent_heading {
     font-size: 25px;
     margin-top: 25px;
-    color:rgb(39, 31, 31);
 }
 .infotitle{
   /* margin: 41px 10px; */
@@ -678,3 +685,4 @@ button.btn.btn-gradient-primary.btn-lg.me-2.agentbnt {
     padding: 1rem 1rem;
 }
 }
+

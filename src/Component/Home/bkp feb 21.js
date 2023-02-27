@@ -683,3 +683,27 @@ required
   );
 }
 export default Creatagent;
+
+let handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      let res = await fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          mobileNumber: mobileNumber,
+        }),
+      });
+      let resJson = await res.json();
+      if (res.status === 200) {
+        setName("");
+        setEmail("");
+        setMessage("User created successfully");
+      } else {
+        setMessage("Some error occured");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };

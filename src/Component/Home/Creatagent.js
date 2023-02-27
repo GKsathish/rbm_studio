@@ -35,26 +35,19 @@ const infofunction=()=>{
 
 
 
-// fileUrl.onchange = evt => {
-//   const [file] = fileUrl.files
-//   if (file) {
-//     fileUrl.src = URL.createObjectURL(file)
-//   }
-// }
-
-// fileUrl1.onchange = evt => {
-//   const [file] = fileUrl1.files
-//   if (file) {
-//     fileUrl1.src = URL.createObjectURL(file)
-//   }
-// }
-
-
-
-        
+ 
 
 
   $(document).ready(function() {
+
+    $("#imgInp").change(function() {
+    $('.previewbannercre').show();
+  });
+
+  $("#imgInp1").change(function() {
+    $('.previewbannercre2').show();
+  });
+
     $("#opt-hide").click(function() {
       
 
@@ -88,13 +81,6 @@ const infofunction=()=>{
 
 
 
-  $("#imgInp").change(function() {
-    $('.previewbanner').show();
-  });
-
-  $("#imgInp1").change(function() {
-    $('.previewbanner2').show();
-  });
 
 
   $("#opt-hide").click(function() {
@@ -185,11 +171,20 @@ const[terms,setterms]=useState();
 const[agent_experince,setagent_experience]=useState();
 const[actions,setactions]=useState();
 
-const[checked1,setchecked1]=useState(false);
-const[checked2,setchecked2]=useState(false);
-const[checked3,setchecked3]=useState(false);
-const[checked4,setchecked4]=useState(false);
+// const[checked1,setchecked1]=useState(false);
+// const[checked2,setchecked2]=useState(false);
+// const[checked3,setchecked3]=useState(false);
+// const[checked4,setchecked4]=useState(false);
 
+
+const [userinfo, setUserInfo] = useState(
+  
+  );
+  
+  const setcheck = (e) => {
+  
+    setUserInfo({...userinfo,[e.target.name]:e.target.value});
+  };
 
 
 
@@ -240,6 +235,10 @@ const agentelogohandler=(e)=>{
         setActivestep(activestep+1);
       }
        
+
+
+
+
     console.log(fileUrl);
       console.log(fileUrl1);
       console.log(displayname);
@@ -259,24 +258,35 @@ const agentelogohandler=(e)=>{
       console.log(agent_experince);
 
 
-      console.log(checked1);
-      console.log(checked2);
-      console.log(checked3);
+      // console.log(checked1);
+      // console.log(checked2);
+      // console.log(checked3);
 
 
-      console.log(checked4);
-
-
-const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_experince,actions,terms,privacy,agentpnumber,agentplabel,agentwebsite,agentwebsitelabel]
+      // console.log(checked4);
 
     
-    const response = await fetch("http://172.22.9.72:5000/agent_registration", {
+    const response = await fetch("http://172.22.9.90:5000/agent_registration", {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(formBody)
+      body: JSON.stringify({
+        "companyname": "TESTING",
+    "agentname": displayname,
+    "description": agentdesc,
+    "mobilenumber": agentpnumber,
+    "mobilelabel": agentplabel,
+    "website": agentwebsite,
+    "websitelabel": agentwebsitelabel,
+    "email": agentemail,
+    "privacy_url": privacy,
+    "teams_url": "https://mobilemasala.com",
+    "experience": agent_experince,
+    "actions": actions,
+        "operators": userinfo
+      })
     })
       .then(response => {
-       console.log(response);
+       console.log(response.agentname);
      
       })
       .catch(error => {
@@ -306,7 +316,7 @@ const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_ex
       <h3 class="page-title" style={{marginTop:'60px',marginLeft:'0px'}} > rbm agent info </h3>
                     
       
-                          <form onSubmit={submitHandler}  class=" card card-body col-md-6 col-12  " id="myform">
+                          <form onSubmit={submitHandler}  class=" card card-body col-md-6 col-12 m-2  " id="myform">
                                         
 
 
@@ -320,7 +330,7 @@ const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_ex
 
                                             
                                               {/* <h2 style={{ marginLeft: '1' }}>Branding</h2> */}
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
 
 
 
@@ -333,20 +343,20 @@ const formBody=[fileUrl,fileUrl1,displayname,agentemail,agentemaillabel,agent_ex
                                                 <input
                                                   type="file"
                                                   class="form-control"
-                                                id="agentbanner"
+                                                id="imgInp"
                                                   name="agentbanner"
 required
                                                   value={agentbanner}
                                                   onChange={agentbannerhandler}
                                                
-                            style={{width:'100%'}}
+                            style={{width:'100% !important'}}
                                                 />
    
 
                                               </div>
                                               </div>
 
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
                                                 <label>Upload Logo</label>
 
                                                 <div class="input-group col-xs-12">
@@ -355,7 +365,7 @@ required
                                                   <input
                                                     type="file"
                                                     class="form-control"
-                                               id="agentlogo"
+                                               id="imgInp1"
                                                     name="agentlogo"
                                                     value={agentlogo}
 required
@@ -369,7 +379,7 @@ required
                                                 </div>
                                               </div>
 
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
                                                 <label for="exampleInputUsername1">Display Name</label>
                                                 <div class="input-group col-xs-12">
 
@@ -389,7 +399,7 @@ required
                             </div>
                                               </div>
 
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
                                                 <label for="exampleInputUsername1">Description</label>
                                                 
                                                 <textarea
@@ -435,7 +445,7 @@ required
 
                                             <h2 class = "rbm_agent_heading" >Point of Contact</h2>
 
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputUsername1">Primary phone Number</label>
                               <input
                                 type="number"
@@ -452,7 +462,7 @@ required
 
                               />
                             </div>
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputUsername1">Label phone Number</label>
                               <input
                                 type="text"
@@ -469,7 +479,7 @@ required
                               />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputUsername1">Primary Website</label>
                               <input
                                 type="url"
@@ -483,7 +493,7 @@ required
 
                               />
                             </div>
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputUsername1">
                                 {" "}
                                 Label Primary Website
@@ -501,7 +511,7 @@ required
 
                               />
                             </div>
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputUsername1">Email</label>
                               <input
                                 type="email"
@@ -516,7 +526,7 @@ required
                               />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputUsername1">Label Primary Email</label>
                               <input
                                 type="email"
@@ -532,7 +542,7 @@ required
                               />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputPassword1">Privacy Policy*</label>
                               <input
                                 type="text"
@@ -547,7 +557,7 @@ required
                               />
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-groupcreat">
                               <label for="exampleInputConfirmPassword1">
                                 Terms and Conditions*
                               </label>
@@ -593,7 +603,7 @@ required
 
                             <h2 class = "rbm_agent_heading" >Agent Experince</h2>
                                           
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
                                                 <label for="mob">Agent Experince</label>
                                                 <input
                                                   type="text"
@@ -609,7 +619,7 @@ required
 
                                                 />
                                               </div>
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
                                                 <label for="address">
                                                   What actions trigger Messages to users?
                                                 </label>
@@ -625,18 +635,19 @@ required
                                                 ></textarea>
                                               </div>
 
-                                              <div class="form-group">
+                                              <div class="form-groupcreat">
                                                 <label for="address">Select the Required Operator</label>
                                                 <div class="row_operator">
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="checked1"
-                                                      checked={checked1}
+                                                      name="operators"
+                                                      // checked={checked1}
 
                                                       class="form-check-input"
-                                                      required
-                                                      onChange={e=>setchecked1(!checked1)}
+                                                                          value="Airtel"
+
+                                                      onChange={setcheck}
 
                                                     />
 
@@ -651,12 +662,14 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="checked2"
-                                                      checked={checked2}
+                                                      name="operators"
+                                                      // checked={checked2}
 
                                                       class="form-check-input"
-                                                      required
-                                                      onChange={e=>setchecked2(!checked2)}
+                                                      // required
+                                                                          value="VIIDEA"
+
+                                                      onChange={setcheck}
 
                                                     />
                                                     <svg width="90" height="40">
@@ -670,13 +683,14 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="checked3"
+                                                      name="operators"
 
-                                                      checked={checked3}
+                                                      // checked={checked3}
 
                                                       class="form-check-input"
-                                                      required
-                                                      onChange={e=>setchecked3(!checked3)}
+                                                                          value="BSNL"
+
+                                                      onChange={setcheck}
 
                                                     />
                                                     <svg width="90" height="40">
@@ -690,12 +704,14 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="checked4"
+                                                      name="operators"
                                                       // value="Jio"
                                                       class="form-check-input"
-                                                      required
-                                                      checked={checked4}
-                                                      onChange={e=>setchecked4(!checked4)}
+                                                      // required
+                                                      // checked={checked4}
+                                                                          value="JIO"
+
+                                                      onChange={setcheck}
 
 
                                                     />
@@ -745,7 +761,7 @@ required
                                         
                           </form>
                     
-                    <div class="col-md-6 col-12 mt-1 round-2 " style={{background: '#fff',padding: '10px',borderLeft: '1px solid #dddddd87'}}>
+                    <div class="col-md-5 col-12 m-2  round-2 " style={{background: '#fff',borderLeft: '1px solid #dddddd87'}}>
             
                     <div class="img-preview">
                         <div class="larger-banner">
@@ -758,8 +774,9 @@ required
                   <img id="blah1" src={fileUrl1} class="log-roundcre previewbannercre2" alt ='' />
                 </div>
                 </div>
+                               <div style={{height:'8%'}}>
                                 <p className="infotitle">{displayname}</p>
-                                  <p className="infodesc">{agentdesc}</p>
+                                  <p className="infodesc">{agentdesc}</p></div> 
                                   <Tabs style={{ padding: '10px', fontSize: '12px', alignItems: 'center' }}>
                                   <TabList>
                                     <Tab style={{ padding: '10px', fontSize: '12px' }} > Info</Tab>

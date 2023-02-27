@@ -12,8 +12,8 @@
     /* margin-left:15%; */
     /* margin-top: 0px; */
     
- }
  
+}
  .texttitle{
     /* margin-top:20px; */
     padding-top:2%;
@@ -87,11 +87,11 @@
 
 
  .form-groupT label {
-    font-size: 14px;
+    font-size: 0.875rem !important;
     
     line-height: 1;
     vertical-align: top;
-    margin-bottom: 15px;
+    margin-bottom: 0.5rem !important;
 }
 .form-controlT {
     border: 1px solid #ccc;
@@ -103,7 +103,7 @@ textarea.form-controlT {
 }
 .form-controlT {
     display: block;
-    width: 92%;
+    width: 100%;
     padding: 10px 20px;
     font-size: 0.8125rem;
     font-weight: 400;
@@ -237,7 +237,7 @@ margin-top: 10px;
         width:120px;
      }
      .form-controlT{
-        width:85% !important;
+        width:100% !important;
      }
 
 
@@ -273,4 +273,12 @@ border:  none !important;
    margin-bottom: 0.5rem !important;
    color: rgb(39, 31, 31);
    font-weight: normal !important;
+}
+select.form-controlT {
+   padding: 1rem;
+   border: 0;
+   outline: 1px solid #ccc;
+   color: #000 !important;
+   background-color: #fff !important;
+   height: 45px;
 }
