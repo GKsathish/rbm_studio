@@ -269,7 +269,7 @@ const agentelogohandler=(e)=>{
       console.log(agentdesc);
 
       console.log(agent_experince);
-console.log(userinfo[0]);                  
+console.log(userinfo);                  
 
       // console.log(checked1);
       // console.log(checked2);
@@ -277,8 +277,10 @@ console.log(userinfo[0]);
 
 
       // console.log(checked4);
+
 var reqbody={
-        "companyname": "TESTING",
+  
+          "companyname": "TESTING",
     "agentname": displayname,
     "description": agentdesc,
     "mobilenumber": agentpnumber,
@@ -290,12 +292,17 @@ var reqbody={
     "teams_url": "https://mobilemasala.com",
     "experience": agent_experince,
     "actions": actions,                                 
-        "operators": userinfo
+        "operators": userinfo,    
+
+        "BANNER":fileUrl,
+        "LOGO":fileUrl1
         }
-    console.log('requestbody'+JSON.stringify(reqbody));
+      
+
+    console.log(reqbody);
     const response = await fetch("http://172.22.9.90:5000/agent_registration", {
       method: "POST",
-      headers: {'Content-Type': 'application/json'},
+      headers:  {"Content-Type": "application/json"},
       body: JSON.stringify(reqbody)
       
     })
