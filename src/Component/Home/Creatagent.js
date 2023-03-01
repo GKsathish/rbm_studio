@@ -177,14 +177,27 @@ const[actions,setactions]=useState();
 // const[checked4,setchecked4]=useState(false);
 
 
-const [userinfo, setUserInfo] = useState(
-  
+const [userinfo, setUserInfo] = useState({
+  operator:[]}
   );
   
   const setcheck = (e) => {
-  
-    setUserInfo({...userinfo,[e.target.name]:e.target.value});
+  const { value, checked } = e.target;
+      const { operator } = userinfo;
+          console.log(`${value} is ${checked}`);
+if (checked) {
+      setUserInfo({
+        operator: [...operator, value]
+      });
+    }
+else {
+      setUserInfo({
+        operator: operator.filter((e) => e !== value)
+      });
+    }
+
   };
+
 
 
 
@@ -256,7 +269,7 @@ const agentelogohandler=(e)=>{
       console.log(agentdesc);
 
       console.log(agent_experince);
-
+console.log(userinfo[0]);                  
 
       // console.log(checked1);
       // console.log(checked2);
@@ -264,12 +277,7 @@ const agentelogohandler=(e)=>{
 
 
       // console.log(checked4);
-
-    
-    const response = await fetch("http://172.22.9.90:5000/agent_registration", {
-      method: "POST",
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
+var reqbody={
         "companyname": "TESTING",
     "agentname": displayname,
     "description": agentdesc,
@@ -281,12 +289,18 @@ const agentelogohandler=(e)=>{
     "privacy_url": privacy,
     "teams_url": "https://mobilemasala.com",
     "experience": agent_experince,
-    "actions": actions,
+    "actions": actions,                                 
         "operators": userinfo
-      })
+        }
+    console.log('requestbody'+JSON.stringify(reqbody));
+    const response = await fetch("http://172.22.9.90:5000/agent_registration", {
+      method: "POST",
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(reqbody)
+      
     })
       .then(response => {
-       console.log(response.agentname);
+       console.log(response);
      
       })
       .catch(error => {
@@ -577,9 +591,9 @@ required
 
                             <div>
                                <button
-                                // type="submit"
+                                // type="button"
                                 name="createAgent"
-                                // id="nextbtncre"
+                                id="nextbtncre"
                                 
                                 className="btncre"
                               >
@@ -641,7 +655,7 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="operators"
+                                                      name="operator"
                                                       // checked={checked1}
 
                                                       class="form-check-input"
@@ -662,7 +676,7 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="operators"
+                                                      name="operator"
                                                       // checked={checked2}
 
                                                       class="form-check-input"
@@ -683,7 +697,7 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="operators"
+                                                      name="operator"
 
                                                       // checked={checked3}
 
@@ -704,7 +718,7 @@ required
                                                   <div class="coloumn_operator">
                                                     <input
                                                       type="checkbox"
-                                                      name="operators"
+                                                      name="operator"
                                                       // value="Jio"
                                                       class="form-check-input"
                                                       // required

@@ -15,7 +15,7 @@
    /* flex-direction: column; */
    justify-content: flex-start;
 }
- /* .img-preview2 {
+ .img-preview2 {
     background-size: 100%;
     background-repeat: no-repeat;
     height: 492px;
@@ -25,7 +25,7 @@
     border-top-left-radius: 43px;
     border-bottom-left-radius: 60px 59px;
     border-bottom-right-radius: 63px;
-} */
+}
 
  .fieldcont{
     background: #fff;
@@ -135,13 +135,13 @@ textarea.form-controlcr {
 
 
 
- .myst{
+ .mystc{
    background-image:url("../../images/phone_test123 (1).png");
-   height: 480px;
-   width: 260px;
+   height: 630px;
+   width: 300px;
            font-size:30px;
          
-           margin-left:112px;
+           margin-left:12px;
 
            
            padding:20px;
@@ -230,12 +230,10 @@ textarea.form-controlcr {
      }
 
      .mystc{
-      background-image:url("../../images/phone_test123 (1).png");
-      height: 480px;
-      width: 260px;
+    
               font-size:30px;
             
-              margin-left  : 2px;
+              margin-left  : -80px;
    
               
               padding:20px;
@@ -305,13 +303,44 @@ textarea.form-controlcr {
     height: 300px;
     display: none;
 }
-.imf{
+/* .imf{
     width:100%;
 }
 
+ */
+
+/* side */
+
+
+.cocard1preview{
+  width:260px;
+
+}
+
+.previewscroll{
+    width:260px;
+    display: flex;
+        overflow-x: scroll;
+
+     text-align: center; 
+ } 
+
+
+ .orcard1img{
+width:260px !important;
+height:200px !important;
+padding:10px;
+}
+.image{
+    height:120px;
+    width:240px;
+}
+
+
+
 .orcard1titleprestyle {
-    text-align: center;
-    margin: 5px;
+    text-align: center !important;
+    margin: 2px;
     text-transform: capitalize;
     font-weight: bold;
     white-space: nowrap;
@@ -321,7 +350,7 @@ textarea.form-controlcr {
 
 .card1url1style {
     text-align: center;
-    margin: 5px;
+    margin: 2px;
     text-transform: capitalize;
     font-weight: bold;
     white-space: nowrap;
@@ -329,6 +358,93 @@ textarea.form-controlcr {
     overflow: hidden;
 }
 .despre1 {
+    margin: 2px;
+    word-break: break-all;
+} 
+
+/* php */
+/* .previewscroll {
+    width: 910px !important;
+}
+
+.corcard1preview {
+    width: 232px;
+    overflow-x: scroll;
+    margin-left: 15px;
+    float: left;
+}
+.orcard1img {
+    width: 175px;
+    float: left !important;
+    margin: 3px;
+    border: 1px solid #ccc;
+    margin-top: 25px;
+    height: 300px;
+    display: none;
+}
+
+.orcard2img {
+    width: 175px;
+    float: left !important;
+    margin: 3px;
+    border: 1px solid #ccc;
+    margin-top: 25px;
+    height: 300px;
+    display: none;
+}
+
+.orcard3img {
+    width: 175px;
+    float: left !important;
+    margin: 3px;
+    border: 1px solid #ccc;
+    margin-top: 25px;
+    height: 300px;
+    display: none;
+}
+
+.orcard4img {
+    width: 175px;
+    float: left !important;
+    margin: 3px;
+    border: 1px solid #ccc;
+    margin-top: 25px;
+    height: 300px;
+    display: none;
+}
+
+.orcard5img {
+    width: 175px;
+    float: left !important;
+    margin: 3px;
+    border: 1px solid #ccc;
+    margin-top: 25px;
+    height: 300px;
+    display: none;
+}
+
+#orcard1titleprestyle {
+    text-align: center;
+    margin: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#card1url1style {
+    text-align: center;
+    margin: 5px;
+    text-transform: capitalize;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+#despre1 {
     margin: 5px;
     word-break: break-all;
-}
+} */
