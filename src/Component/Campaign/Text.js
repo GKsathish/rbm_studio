@@ -202,7 +202,7 @@ Now</label>
 
                     </div>
 
-                    <div className=' bg-white col-12 col-lg-5 m-3 rightT h-100' >
+                    <div className=' bg-white col-12 col-lg-5 m-3 rightT ' >
 
 
                       <center><h6 style={{marginBottom:'8px'}}>Message Preview</h6></center>

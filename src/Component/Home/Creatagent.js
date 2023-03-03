@@ -171,10 +171,6 @@ const[terms,setterms]=useState();
 const[agent_experince,setagent_experience]=useState();
 const[actions,setactions]=useState();
 
-// const[checked1,setchecked1]=useState(false);
-// const[checked2,setchecked2]=useState(false);
-// const[checked3,setchecked3]=useState(false);
-// const[checked4,setchecked4]=useState(false);
 
 
 const [userinfo, setUserInfo] = useState({
@@ -201,22 +197,35 @@ else {
 
 
 
-const [fileUrl, setFileUrl] = useState(null);
+const [fileUrl, setFileUrl] = useState(null)
 
-const [fileUrl1, setFileUrl1] = useState(null);
+const [fileUrl1, setFileUrl1] = useState(null)
+const [preview1, setpreview1] = useState("");
+const [preview2, setPreview2] = useState("");
+
 const agentbannerhandler=(e)=>{
 
 
-  const imageFile = e.target.files[0];
-      const imageUrl = URL.createObjectURL(imageFile);
-      setFileUrl(imageUrl)
+  const name1 = e.target.files[0];
+   setFileUrl(name1)
+      const imageUrl = URL.createObjectURL(name1);
+    
+
+     
+      setpreview1(imageUrl)
 }
-const agentelogohandler=(e)=>{
+const agentelogohandler=(ev)=>{
 
 
-  const imageFile1 = e.target.files[0];
-      const imageUrl1 = URL.createObjectURL(imageFile1);
-      setFileUrl1(imageUrl1)
+  
+    const name2=ev.target.files[0];
+      setFileUrl1(name2)
+
+
+      const imageUrl1 = URL.createObjectURL(name2);
+
+            setPreview2(imageUrl1)
+
 }
   
     const [activestep, setActivestep] = useState(0);
@@ -288,30 +297,40 @@ var reqbody={
     "website": agentwebsite,
     "websitelabel": agentwebsitelabel,
     "email": agentemail,
+     "emaillabel": agentemaillabel,
     "privacy_url": privacy,
-    "teams_url": "https://mobilemasala.com",
+    "teams_url": terms,
     "experience": agent_experince,
     "actions": actions,                                 
         "operators": userinfo,    
 
-        "BANNER":fileUrl,
-        "LOGO":fileUrl1
         }
       
+      console.log(reqbody)
 
-    console.log(reqbody);
+const reqbody1=new FormData();
+reqbody1.append('MESSAGE',JSON.stringify(reqbody));
+
+reqbody1.append('BANNER',fileUrl);
+reqbody1.append('LOGO',fileUrl1);
+
+    // console.log(reqbody1);
     const response = await fetch("http://172.22.9.90:5000/agent_registration", {
+       
       method: "POST",
-      headers:  {"Content-Type": "application/json"},
-      body: JSON.stringify(reqbody)
+      // headers: new Headers(  { "Content-Type": "multipart/form-data"}),
+      body: reqbody1
       
     })
       .then(response => {
        console.log(response);
+      // window.location.href = '/Creatagent';
+
      
       })
       .catch(error => {
         console.log(error);
+
       })
 
      
@@ -337,7 +356,7 @@ var reqbody={
       <h3 class="page-title" style={{marginTop:'60px',marginLeft:'0px'}} > rbm agent info </h3>
                     
       
-                          <form onSubmit={submitHandler}  class=" card card-body col-md-6 col-12 m-2  " id="myform">
+                          <form onSubmit={submitHandler}  class=" card card-body col-md-6 col-12 m-2  " id="myform" encType='multipart/form-data'>
                                         
 
 
@@ -790,9 +809,9 @@ required
                                     <center style={{fontWeight:'bold',marginRight:'50%'}}>Info & options</center>
                                   
                                     <div style={{width: '275px',height: '160px'}}>
-                <img id="blah" class="previewbannercre" src={fileUrl} style={{width: '100%',height: '100%'}} alt=''/>
+                <img id="blah" class="previewbannercre" src={preview1} style={{width: '100%',height: '100%'}} alt=''/>
                 <div>
-                  <img id="blah1" src={fileUrl1} class="log-roundcre previewbannercre2" alt ='' />
+                  <img id="blah1" src={preview2} class="log-roundcre previewbannercre2" alt ='' />
                 </div>
                 </div>
                                <div style={{height:'8%'}}>
